@@ -1,30 +1,54 @@
+import { caughtIn, matchesView } from "../model/catalog.js";
+import { isShinyMode } from "../model/mode.js";
 import { escapeHtml } from "./html.js";
-import { matchesView } from "../model/catalog.js";
 
-export function renderProgress(root, catalog, gameId = "") {
+function modeToggle(mode) {
+  const shiny = isShinyMode(mode);
+  const sparkle = `<svg class="mode-sparkle" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M8 1.1 9.2 6.1 14.2 8 9.2 9.9 8 14.9 6.8 9.9 1.8 8 6.8 6.1Z"></path></svg>`;
+  return `
+    <div class="mode-toggle" role="group" aria-label="Living Dex mode">
+      <button type="button" class="mode-btn${shiny ? "" : " is-active"}" data-mode="normal" aria-pressed="${shiny ? "false" : "true"}">Normal</button>
+      <button type="button" class="mode-btn${shiny ? " is-active" : ""}" data-mode="shiny" aria-pressed="${shiny ? "true" : "false"}">${sparkle} Shiny</button>
+    </div>
+  `;
+}
+
+export function renderProgress(root, catalog, { gameId = "", mode = "normal" } = {}) {
+  const shiny = isShinyMode(mode);
   const game = catalog.games.find((item) => item.id === gameId) ?? null;
   const pool = game ? catalog.entries.filter((entry) => entry.games.includes(game.id)) : catalog.entries;
   const total = pool.length;
-  const caught = pool.filter((entry) => entry.caught).length;
+  const caught = pool.filter((entry) => caughtIn(entry, mode)).length;
   const percent = total === 0 ? 0 : Math.round((caught / total) * 100);
   const summary = game
     ? `of ${total} catchable in ${escapeHtml(game.short)} are caught`
-    : `of ${total} tracked Pokémon caught`;
+    : shiny
+      ? `of ${total} tracked shiny Pokémon caught`
+      : `of ${total} tracked Pokémon caught`;
+  const eyebrow = game
+    ? (shiny ? "Shiny Living Dex · Nintendo Switch" : "Catchable on Nintendo Switch")
+    : (shiny ? "Shiny Living Dex progress" : "Living Dex progress");
+  const barLabel = game
+    ? `Caught among Pokémon catchable in ${game.short}`
+    : (shiny ? "Shiny Living Dex progress" : "Living Dex progress");
 
   root.innerHTML = `
     <div class="card progress-card">
       <div class="card-body">
         <div class="d-flex flex-wrap justify-content-between align-items-end gap-2">
           <div>
-            <p class="eyebrow mb-1">${game ? "Catchable on Nintendo Switch" : "Living Dex progress"}</p>
+            <p class="eyebrow mb-1">${eyebrow}</p>
             <p class="progress-count mb-0">
               <strong>${caught}</strong>
               <span>${summary}</span>
             </p>
           </div>
-          <p class="progress-meta mb-0">${percent}% caught</p>
+          <div class="progress-tools">
+            ${modeToggle(mode)}
+            <p class="progress-meta mb-0">${percent}% caught</p>
+          </div>
         </div>
-        <div class="progress home-progress mt-3" role="progressbar" aria-valuenow="${percent}" aria-valuemin="0" aria-valuemax="100" aria-label="${game ? `Caught among Pokémon catchable in ${escapeHtml(game.short)}` : "Living Dex progress"}">
+        <div class="progress home-progress mt-3" role="progressbar" aria-valuenow="${percent}" aria-valuemin="0" aria-valuemax="100" aria-label="${escapeHtml(barLabel)}">
           <div class="progress-bar" style="width:${percent}%"></div>
         </div>
       </div>
@@ -32,11 +56,12 @@ export function renderProgress(root, catalog, gameId = "") {
   `;
 }
 
-export function renderFilters(root, { filter, gameId = "", games, boxEntries, enabled }) {
+export function renderFilters(root, { filter, gameId = "", games, boxEntries, enabled, mode = "normal" }) {
+  const view = { gameId, mode };
   const counts = {
-    all: boxEntries.filter((entry) => matchesView(entry, { filter: "all", gameId })).length,
-    caught: boxEntries.filter((entry) => matchesView(entry, { filter: "caught", gameId })).length,
-    missing: boxEntries.filter((entry) => matchesView(entry, { filter: "missing", gameId })).length,
+    all: boxEntries.filter((entry) => matchesView(entry, { filter: "all", ...view })).length,
+    caught: boxEntries.filter((entry) => matchesView(entry, { filter: "caught", ...view })).length,
+    missing: boxEntries.filter((entry) => matchesView(entry, { filter: "missing", ...view })).length,
   };
   const options = [
     ["all", "All"],
@@ -71,7 +96,7 @@ export function renderFilters(root, { filter, gameId = "", games, boxEntries, en
         </div>
       </div>
       <div class="legend" aria-hidden="true">
-        <span><i class="swatch swatch-caught"></i> Caught</span>
+        <span><i class="swatch swatch-caught"></i> ${isShinyMode(mode) ? "Shiny caught" : "Caught"}</span>
         <span><i class="swatch swatch-missing"></i> Missing</span>
       </div>
     </div>

@@ -1,4 +1,5 @@
 import { entriesInBox, loadCatalog } from "./model/catalog.js";
+import { normalizeMode, isShinyMode } from "./model/mode.js";
 import { spaceIndexForBox } from "./model/spaces.js";
 import { searchEntries } from "./model/search.js";
 import { loadPreferences, savePreferences } from "./state/store.js";
@@ -35,7 +36,12 @@ function remember() {
     selectedId: state.selectedId,
     filter: state.filter,
     gameId: state.gameId,
+    mode: state.mode,
   });
+}
+
+function applyModeClass() {
+  document.body.classList.toggle("is-shiny-mode", isShinyMode(state.mode));
 }
 
 function viewedSpaceIndex() {
@@ -55,18 +61,20 @@ function paint({ scrollSlot = false } = {}) {
   const restoreAction = document.activeElement?.dataset?.action;
   const box = currentBox();
   const entries = entriesInBox(catalog.entries, box.id);
-  renderProgress($("#progress-root"), catalog, state.gameId);
+  renderProgress($("#progress-root"), catalog, { gameId: state.gameId, mode: state.mode });
   renderFilters($("#filter-root"), {
     filter: state.filter,
     gameId: state.gameId,
     games: catalog.games,
     boxEntries: entries,
     enabled: box.catalogued,
+    mode: state.mode,
   });
   renderStrip($("#strip-root"), catalog, {
     boxId: state.boxId,
     spaceIndex: viewedSpaceIndex(),
     open: state.spaceOpen,
+    mode: state.mode,
   });
   renderBox($("#box-root"), {
     box,
@@ -75,9 +83,10 @@ function paint({ scrollSlot = false } = {}) {
     gameId: state.gameId,
     selectedId: state.selectedId,
     highlightId: state.highlightId,
+    mode: state.mode,
   });
 
-  const html = renderDetail(selectedEntry(), activeGame());
+  const html = renderDetail(selectedEntry(), activeGame(), state.mode);
   $("#detail-desktop").innerHTML = html;
   $("#detail-offcanvas-body").innerHTML = html;
   const selected = selectedEntry();
@@ -141,6 +150,17 @@ function selectEntry(entry, { pulse = false, jump = false } = {}) {
   } else {
     window.bootstrap.Offcanvas.getInstance($("#detail-offcanvas"))?.hide();
   }
+}
+
+function setMode(mode) {
+  const next = normalizeMode(mode);
+  if (next === state.mode) return;
+  state.mode = next;
+  applyModeClass();
+  remember();
+  if (state.query.trim()) refreshSearch();
+  paint();
+  document.querySelector(`.mode-btn[data-mode="${state.mode}"]`)?.focus();
 }
 
 function setFilter(filter) {
@@ -214,6 +234,12 @@ function bind() {
       state.spaceCursor = null;
       paint();
     }
+  });
+
+  $("#progress-root").addEventListener("click", (event) => {
+    const button = event.target.closest("[data-mode]");
+    if (!button) return;
+    setMode(button.dataset.mode);
   });
 
   $("#filter-root").addEventListener("click", (event) => {
@@ -323,6 +349,7 @@ async function start() {
     selectedId: view.selectedId,
     filter: ["all", "caught", "missing"].includes(prefs.filter) ? prefs.filter : "all",
     gameId: catalog.games.some((game) => game.id === prefs.gameId) ? prefs.gameId : "",
+    mode: normalizeMode(prefs.mode),
     spaceOpen: false,
     spaceCursor: null,
     highlightId: null,
@@ -330,6 +357,7 @@ async function start() {
     results: [],
     activeIndex: 0,
   };
+  applyModeClass();
   remember();
 
   bind();

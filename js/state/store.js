@@ -1,5 +1,8 @@
 const STORAGE_KEY = "nld.preferences";
 
+// UI state stays in localStorage so the address bar can stay on the site URL.
+// Fields: boxId, selectedId, filter, gameId, mode ("normal" | "shiny").
+
 export function loadPreferences() {
   try {
     const raw = localStorage.getItem(STORAGE_KEY);

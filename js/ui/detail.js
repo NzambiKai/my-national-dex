@@ -1,9 +1,13 @@
-import { formatDex } from "../model/location.js";
-import { escapeHtml, gamePill, spritePath, typePill } from "./html.js";
+import { caughtIn } from "../model/catalog.js";
+import { formatDex, locationText } from "../model/location.js";
+import { isShinyMode } from "../model/mode.js";
+import { spriteFileFor, spriteNoteFor } from "../model/sprites.js";
+import { escapeHtml, gamePill, typePill } from "./html.js";
 
-function statusBanner(entry) {
-  if (entry.caught) {
-    return `<p class="status-banner is-caught">In the Living Dex</p>`;
+function statusBanner(entry, mode) {
+  if (caughtIn(entry, mode)) {
+    const label = isShinyMode(mode) ? "In the Shiny Living Dex" : "In the Living Dex";
+    return `<p class="status-banner is-caught">${label}</p>`;
   }
   return `<p class="status-banner is-missing">Still missing</p>`;
 }
@@ -41,7 +45,7 @@ function gamesSection(entry, activeGame) {
   `;
 }
 
-export function renderDetail(entry, activeGame = null) {
+export function renderDetail(entry, activeGame = null, mode = "normal") {
   if (!entry) {
     return `
       <div class="detail-empty">
@@ -59,7 +63,7 @@ export function renderDetail(entry, activeGame = null) {
   return `
     <article class="detail-body">
       <div class="detail-hero">
-        <img src="${spritePath(entry.spriteId)}" alt="${escapeHtml(entry.title)}" width="240" height="240">
+        <img src="${spriteFileFor(entry, mode)}" alt="${escapeHtml(entry.title)}" width="240" height="240">
       </div>
       <p class="detail-dex">${formatDex(entry.nationalDex)}</p>
       <div class="detail-name-row">
@@ -67,11 +71,11 @@ export function renderDetail(entry, activeGame = null) {
         ${form}
       </div>
       <div class="type-row">${entry.types.map(typePill).join("")}</div>
-      ${entry.spriteNote ? `<p class="detail-note">${escapeHtml(entry.spriteNote)}</p>` : ""}
-      ${statusBanner(entry)}
+      ${spriteNoteFor(entry, mode) ? `<p class="detail-note">${escapeHtml(spriteNoteFor(entry, mode))}</p>` : ""}
+      ${statusBanner(entry, mode)}
       <section class="detail-section">
         <h3>Box location</h3>
-        <p class="location-callout">${escapeHtml(entry.locationText)}</p>
+        <p class="location-callout">${escapeHtml(locationText(entry.box, entry.slot, mode))}</p>
         <button type="button" class="btn home-btn" data-action="focus-selected">Highlight this slot</button>
       </section>
       ${gamesSection(entry, activeGame)}

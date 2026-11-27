@@ -1,5 +1,7 @@
 import { locationText, slotPosition } from "./location.js";
+import { isShinyMode } from "./mode.js";
 import { normalizeQuery } from "./search.js";
+import { shinySpriteRecord } from "./sprites.js";
 import { buildBoxSpaces } from "./spaces.js";
 
 const boxIndex = new WeakMap();
@@ -12,21 +14,26 @@ async function fetchJson(path) {
   return response.json();
 }
 
+function caughtIdsFrom(collection) {
+  if (Array.isArray(collection?.caught)) return new Set(collection.caught);
+  return new Set(
+    (collection?.entries ?? []).filter((entry) => entry.caught === true).map((entry) => entry.id),
+  );
+}
+
 export async function loadCatalog() {
-  const [dex, boxFile, gameFile, collection] = await Promise.all([
+  const [dex, boxFile, gameFile, collection, shinySprites] = await Promise.all([
     fetchJson("./data/dex.json"),
     fetchJson("./data/boxes.json"),
     fetchJson("./data/games.json"),
     fetchJson("./data/collection.json"),
+    fetchJson("./data/shiny-sprites.json"),
   ]);
 
   const games = gameFile.games;
   const gameById = new Map(games.map((game) => [game.id, game]));
-  const caughtIds = new Set(
-    Array.isArray(collection.caught)
-      ? collection.caught
-      : (collection.entries ?? []).filter((entry) => entry.caught === true).map((entry) => entry.id),
-  );
+  const caughtIds = caughtIdsFrom(collection);
+  const shinyCaughtIds = new Set(Array.isArray(collection.shinyCaught) ? collection.shinyCaught : []);
   const boxById = new Map(boxFile.boxes.map((box) => [box.id, box]));
 
   const entries = dex.entries.map((entry) => {
@@ -34,9 +41,13 @@ export async function loadCatalog() {
     if (!box) {
       throw new Error(`Entry ${entry.id} points at unknown box ${entry.boxId}`);
     }
+    const shinySprite = shinySpriteRecord(shinySprites, entry.spriteId);
     return {
       ...entry,
       caught: caughtIds.has(entry.id),
+      shinyCaught: shinyCaughtIds.has(entry.id),
+      shinySpriteFile: shinySprite.file,
+      shinySpriteNote: shinySprite.note ?? null,
       box,
       position: slotPosition(entry.slot),
       locationText: locationText(box, entry.slot),
@@ -68,8 +79,13 @@ export async function loadCatalog() {
   };
 }
 
-export function matchesView(entry, { filter = "all", gameId = "" } = {}) {
-  const statusOk = filter === "all" || (filter === "caught" ? entry.caught : !entry.caught);
+export function caughtIn(entry, mode = "normal") {
+  return isShinyMode(mode) ? entry.shinyCaught === true : entry.caught === true;
+}
+
+export function matchesView(entry, { filter = "all", gameId = "", mode = "normal" } = {}) {
+  const caught = caughtIn(entry, mode);
+  const statusOk = filter === "all" || (filter === "caught" ? caught : !caught);
   const gameOk = !gameId || entry.games.includes(gameId);
   return statusOk && gameOk;
 }
@@ -80,9 +96,9 @@ export function entriesInBox(entries, boxId) {
   return entries.filter((entry) => entry.boxId === boxId).sort((a, b) => a.slot - b.slot);
 }
 
-export function boxProgress(entries, boxId) {
+export function boxProgress(entries, boxId, mode = "normal") {
   const list = entriesInBox(entries, boxId);
   if (list.length === 0) return null;
-  const caught = list.filter((entry) => entry.caught).length;
+  const caught = list.filter((entry) => caughtIn(entry, mode)).length;
   return { caught, total: list.length };
 }
