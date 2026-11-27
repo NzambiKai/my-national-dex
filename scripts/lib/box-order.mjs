@@ -1,8 +1,8 @@
 /**
- * National Living Dex box order from https://pokedexapp.net/pokedex/.
+ * National Living Dex box order from the original box-order reference.
  *
- * The page does not ship a static box list. `printDex.js` builds it at runtime
- * from `js/dexDB.json` (`const dexData = [...]`):
+ * The reference does not ship a static box list. `printDex.js` builds it at runtime
+ * from its dex database (`const dexData = [...]`):
  *
  *   writeDex('nat', 'normal')  — standard boxes, 30 Pokémon per box, National Dex order
  *   writeDex('alt', 'normal')  — Alt Forms, in this section order:
@@ -17,7 +17,7 @@
  *        opens on a multiple of 30 when the next National Dex row exists
  *        (`dexData[dexID]` in printDex.js).
  *     4. Species boxes, in this order: Unown, Vivillon, then Alcremie.
- *        Alcremie (non-shiny) is `flavors × toppings` in the array order on the site.
+ *        Alcremie (non-shiny) is `flavors × toppings` in the array order in the reference.
  *
  * Shiny boxes repeat the same order and are not part of this tracker.
  * Mega Evolution and Gigantamax flags are stored on dexData but printDex.js never
@@ -53,7 +53,7 @@ function slot(pokemon, extra) {
 
 export function layoutFromDexData(dexData) {
   if (!Array.isArray(dexData) || dexData.length === 0) {
-    throw new Error("pokedexapp dexData is empty");
+    throw new Error("box-order dexData is empty");
   }
 
   const boxes = [];

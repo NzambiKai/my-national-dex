@@ -6,12 +6,12 @@ The address bar stays on the site URL. The last box, the selected Pokémon, the 
 
 ## What is in the dex
 
-The catalog follows the box order at [pokedexapp.net/pokedex](https://pokedexapp.net/pokedex/). That page does not publish a box list. `printDex.js` builds the cards from `js/dexDB.json`:
+The catalog follows the original box-order reference. That reference does not publish a box list. `printDex.js` builds the cards from its dex database:
 
 1. Standard National Dex, #0001–#1025, 30 Pokémon per box.
-2. Alt Forms / Variants, in the site's alt order: Alolan, Galarian, Hisuian, then Paldean forms (each region starts a new box), then gender-specific forms, then other forms, then Unown, Vivillon, and Alcremie. Sneasel adds Hisuian Male and Hisuian Female. Shiny, Mega, and Gigantamax are not slots.
+2. Alt Forms / Variants, in the reference's alt order: Alolan, Galarian, Hisuian, then Paldean forms (each region starts a new box), then gender-specific forms, then other forms, then Unown, Vivillon, and Alcremie. Sneasel adds Hisuian Male and Hisuian Female. Shiny, Mega, and Gigantamax are not slots.
 
-`scripts/lib/pokedexapp-order.mjs` is that packing. `scripts/sync-data.mjs` downloads the live `dexDB.json`, saves it at `data/sources/pokedexapp-dexdb.js`, and writes one row per card. `node scripts/check.mjs --live` rebuilds the layout from the snapshot and from the live file and requires them to match, slot for slot.
+`scripts/lib/box-order.mjs` is that packing. `scripts/sync-data.mjs` reads the snapshot at `data/sources/dexdb.js` and writes one row per card. `node scripts/check.mjs` rebuilds the layout from that snapshot and checks `data/dex.json` slot for slot. To refresh the snapshot, or to run `node scripts/check.mjs --live`, set `DEXDB_URL` or put the address in the gitignored file `data/sources/dexdb.url`.
 
 Boxes are grouped the way Pokémon HOME groups them: Box Spaces of 30. Standards come first, then Alt Forms, with the Alt Forms block labelled on its own inside the Box Space picker. The current catalog is 1,025 standard Pokémon and 513 alt forms, 1,538 cards in 56 boxes and 2 Box Spaces.
 
@@ -31,13 +31,7 @@ Add an id from `data/dex.json` when a Pokémon is caught, for example `"0001"` o
 
 ## Run it
 
-From the repository root:
-
-```bash
-python3 -m http.server 4173
-```
-
-Open `http://127.0.0.1:4173/`. Opening `index.html` as a file will not load the JSON modules.
+From the repository root, serve the folder with any static file server. Opening `index.html` as a file will not load the JSON modules.
 
 Search by name or Dex number, then press Enter. A Dex number returns every form of that species (Alcremie included) and jumps to the one you pick. The grid jumps to that box, pulses the slot, and opens the detail panel: a side card on a wide screen, an offcanvas sheet on a phone.
 
@@ -46,7 +40,7 @@ The All / Caught / Missing filter combines with a Nintendo Switch game filter. M
 ## Layout
 
 - `data/dex.json` is every card. `data/boxes.json` is the box map. `data/games.json` is the ten Switch games. `data/collection.json` is the caught list.
-- `data/sources/pokedexapp-dexdb.js` is the pokedexapp snapshot the order check uses.
+- `data/sources/dexdb.js` is the box-order snapshot the order check uses.
 - `data/sprite-fallbacks.json` lists forms that have no dedicated HOME file in PokeAPI/sprites and which local sprite is used instead.
 - `js/model/` loads that data and owns slot math, Box Spaces, and search. Search text is indexed once when the catalog loads.
 - `js/state/store.js` persists the box, the selected Pokémon, the status filter, and the game filter.
@@ -61,9 +55,9 @@ The All / Caught / Missing filter combines with a Nintendo Switch game filter. M
 
 ```bash
 node scripts/sync-data.mjs
-node scripts/check.mjs --live
+node scripts/check.mjs
 ```
 
-Pass `--force` to replace files that are already on disk. Pass `--no-sprites` to rewrite the JSON without downloading. The site never requests those URLs itself.
+Pass `--force` to replace files that are already on disk. Pass `--no-sprites` to rewrite the JSON without downloading. The site never requests those URLs itself. With `DEXDB_URL` unset, sync keeps the committed box-order snapshot and still rebuilds the catalog from it. `node scripts/check.mjs --live` compares that snapshot with the original box-order reference only when the address is configured.
 
-`node scripts/check.mjs` checks the pokedexapp order, placement, search, the Switch-game cases, collection ids, and that every sprite file exists and is a PNG.
+`node scripts/check.mjs` checks the box order, placement, search, the Switch-game cases, collection ids, and that every sprite file exists and is a PNG.

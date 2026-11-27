@@ -1,6 +1,6 @@
 {
-  "note": "Full National Living Dex. Standard boxes follow National Dex order, 30 slots per box, in the order https://pokedexapp.net/pokedex/ builds from js/dexDB.json. Alt Forms / Variants follow that site's alt section: Alolan, Galarian, Hisuian, Paldean, gender differences, other forms, then Unown, Vivillon, and Alcremie. spriteId is the local Pokémon HOME file in assets/sprites. games lists Nintendo Switch main-series titles where this exact form is obtainable in-game. Row and column use a 6-column box.",
-  "source": "https://pokedexapp.net/js/dexDB.json",
+  "note": "Full National Living Dex. Standard boxes follow National Dex order, 30 slots per box, in the order the original box-order reference builds from its dex database. Alt Forms / Variants follow that reference's alt section: Alolan, Galarian, Hisuian, Paldean, gender differences, other forms, then Unown, Vivillon, and Alcremie. spriteId is the local Pokémon HOME file in assets/sprites. games lists Nintendo Switch main-series titles where this exact form is obtainable in-game. Row and column use a 6-column box.",
+  "source": "original box-order reference",
   "entries": [
     {
       "id": "0001",
@@ -26658,7 +26658,7 @@
       "aliases": [
         "paldean tauros"
       ],
-      "spriteNote": "pokedexapp's single Paldean Tauros card has no separate HOME sprite; using Combat Breed."
+      "spriteNote": "The single Paldean Tauros card has no separate HOME sprite; using Combat Breed."
     },
     {
       "id": "0194-paldea",

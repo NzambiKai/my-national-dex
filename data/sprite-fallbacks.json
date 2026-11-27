@@ -1,12 +1,12 @@
 {
-  "note": "Slots whose pokedexapp form has no dedicated Pokémon HOME sprite in PokeAPI/sprites. The app still loads the local file named by spriteId.",
+  "note": "Slots whose form has no dedicated Pokémon HOME sprite in PokeAPI/sprites. The app still loads the local file named by spriteId.",
   "count": 146,
   "fallbacks": [
     {
       "id": "0128-paldea",
       "name": "Paldean Tauros",
       "spriteId": 10250,
-      "note": "pokedexapp's single Paldean Tauros card has no separate HOME sprite; using Combat Breed."
+      "note": "The single Paldean Tauros card has no separate HOME sprite; using Combat Breed."
     },
     {
       "id": "0412-sandy",
