@@ -1,9 +1,8 @@
 /**
- * Verify the Living Dex against the pokedexapp.net box order.
+ * Verify the Living Dex against the original box-order reference.
  *
- * Order source: https://pokedexapp.net/pokedex/ loads /js/dexDB.json and
- * /js/printDex.js. printDex.js does not ship a box list. It appends cards in
- * this order, 30 per box:
+ * That reference loads a dex database and printDex.js. printDex.js does not
+ * ship a box list. It appends cards in this order, 30 per box:
  *   1. writeDex('nat') — National Dex #0001–#1025.
  *   2. writeDex('alt') — Alolan, Galarian, Hisuian, then Paldean forms.
  *      Each region starts a new box.
@@ -12,18 +11,20 @@
  *   5. Unown, Vivillon, then Alcremie (flavors × toppings).
  * Shiny, Mega, and Gigantamax flags are not slots.
  *
- * scripts/lib/pokedexapp-order.mjs is that packing. This script rebuilds it
- * from data/sources/pokedexapp-dexdb.js (the file scripts/sync-data.mjs saved
- * from the live dexDB) and checks data/dex.json slot for slot. Pass --live to
- * also download the current dexDB and require the snapshot to still match.
+ * scripts/lib/box-order.mjs is that packing. This script rebuilds it from
+ * data/sources/dexdb.js (the snapshot scripts/sync-data.mjs saved) and checks
+ * data/dex.json slot for slot. Pass --live to also download the current
+ * database when DEXDB_URL or data/sources/dexdb.url is set, and require the
+ * snapshot to still match.
  */
 
 import { access, readFile } from "node:fs/promises";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
+import { DEXDB_SNAPSHOT, readDexdbUrl } from "./lib/dexdb-source.mjs";
 import { entryId } from "./lib/entry-id.mjs";
 import { loadDexData } from "./lib/load-dex.mjs";
-import { flattenLayout, layoutFromDexData } from "./lib/pokedexapp-order.mjs";
+import { flattenLayout, layoutFromDexData } from "./lib/box-order.mjs";
 import { matchesView } from "../js/model/catalog.js";
 import { locationText, slotPosition, standardPlacement } from "../js/model/location.js";
 import { searchEntries } from "../js/model/search.js";
@@ -42,10 +43,10 @@ const dex = await readJson("data/dex.json");
 const boxes = await readJson("data/boxes.json");
 const games = await readJson("data/games.json");
 const collection = await readJson("data/collection.json");
-const snapshot = await readFile(join(root, "data/sources/pokedexapp-dexdb.js"), "utf8");
+const snapshot = await readFile(join(root, DEXDB_SNAPSHOT), "utf8");
 const expected = flattenLayout(layoutFromDexData(loadDexData(snapshot)));
 
-expect(expected.length === dex.entries.length, `catalog has ${dex.entries.length} rows, pokedexapp layout has ${expected.length}`);
+expect(expected.length === dex.entries.length, `catalog has ${dex.entries.length} rows, box-order layout has ${expected.length}`);
 expected.forEach((slot, index) => {
   const entry = dex.entries[index];
   if (!entry) return;
@@ -156,13 +157,17 @@ expect(missingSprites === 0, `${missingSprites} HOME sprites are missing`);
 expect(badSprites === 0, `${badSprites} sprite files are not PNGs`);
 
 if (live) {
-  const response = await fetch("https://pokedexapp.net/js/dexDB.json");
-  expect(response.ok, `live dexDB returned ${response.status}`);
-  if (response.ok) {
-    const body = await response.text();
-    const liveSlots = flattenLayout(layoutFromDexData(loadDexData(body)));
-    const same = liveSlots.length === expected.length && liveSlots.every((slot, index) => entryId(slot) === entryId(expected[index]) && slot.boxId === expected[index].boxId && slot.slot === expected[index].slot);
-    expect(same, "live pokedexapp.net dexDB order differs from data/sources/pokedexapp-dexdb.js — re-run node scripts/sync-data.mjs");
+  const url = await readDexdbUrl(root);
+  expect(url, "DEXDB_URL is not set. Offline check used the committed snapshot. Set DEXDB_URL, or write the address in data/sources/dexdb.url, to compare it with the original box-order reference.");
+  if (url) {
+    const response = await fetch(url);
+    expect(response.ok, `live dex database returned ${response.status}`);
+    if (response.ok) {
+      const body = await response.text();
+      const liveSlots = flattenLayout(layoutFromDexData(loadDexData(body)));
+      const same = liveSlots.length === expected.length && liveSlots.every((slot, index) => entryId(slot) === entryId(expected[index]) && slot.boxId === expected[index].boxId && slot.slot === expected[index].slot);
+      expect(same, "live box-order reference differs from data/sources/dexdb.js — re-run node scripts/sync-data.mjs");
+    }
   }
 }
 
@@ -172,4 +177,4 @@ if (failures.length) {
 }
 
 const fallbacks = dex.entries.filter((entry) => entry.spriteNote).length;
-console.log(`Catalog ok: ${dex.entries.length} Pokémon (${standard.length} standard, ${alt.length} alt), ${boxes.boxes.length} boxes, ${spaces.length} Box Spaces, ${fallbacks} sprite fallbacks${live ? ", live pokedexapp order matches" : ""}.`);
+console.log(`Catalog ok: ${dex.entries.length} Pokémon (${standard.length} standard, ${alt.length} alt), ${boxes.boxes.length} boxes, ${spaces.length} Box Spaces, ${fallbacks} sprite fallbacks${live ? ", live box order matches" : ""}.`);

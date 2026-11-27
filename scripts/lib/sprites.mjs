@@ -1,5 +1,5 @@
 /**
- * Map a pokedexapp slot onto a Pokémon HOME sprite in PokeAPI/sprites.
+ * Map a box-order slot onto a Pokémon HOME sprite in PokeAPI/sprites.
  *
  * Files live at sprites/pokemon/other/home/<pokemon id>.png.
  * Female differences that are not their own Pokémon id live at
@@ -166,7 +166,7 @@ export function resolveSprite(slot, byIdentifier, fallbackPokemon = null) {
   const intendedDefault = slot.kind === "standard" || slot.kind === "gender" || DEFAULT_ART.has(slot.formSuffix || "");
   let note = null;
   if (slot.kind === "regional" && slot.speciesSlug === "tauros" && slot.region === "paldea" && chosen.identifier.includes("combat")) {
-    note = "pokedexapp's single Paldean Tauros card has no separate HOME sprite; using Combat Breed.";
+    note = "The single Paldean Tauros card has no separate HOME sprite; using Combat Breed.";
   } else if (speciesDefault && !intendedDefault) {
     note = `No dedicated HOME sprite in PokeAPI/sprites; using ${chosen.identifier}.`;
   }

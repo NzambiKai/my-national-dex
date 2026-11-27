@@ -1,12 +1,13 @@
 #!/usr/bin/env node
 /**
- * Build the National Living Dex from pokedexapp.net and bundle HOME sprites.
+ * Build the National Living Dex from the original box-order reference and bundle HOME sprites.
  *
- * Order: https://pokedexapp.net/js/dexDB.json fed through
- * scripts/lib/pokedexapp-order.mjs, which follows printDex.js
- * (writeDex nat, then alt). The snapshot is saved at
- * data/sources/pokedexapp-dexdb.js. scripts/check.mjs rebuilds the layout
- * from that snapshot and can compare it with the live file.
+ * Order: the committed snapshot at data/sources/dexdb.js, fed through
+ * scripts/lib/box-order.mjs, which follows printDex.js
+ * (writeDex nat, then alt). Set DEXDB_URL, or write the address in the
+ * gitignored file data/sources/dexdb.url, to refresh that snapshot.
+ * scripts/check.mjs rebuilds the layout from the snapshot and can compare
+ * it with the live file when that address is set.
  *
  * Sprites: https://github.com/PokeAPI/sprites sprites/pokemon/other/home
  * Downloads happen here, at build time. The site only reads assets/sprites.
@@ -22,8 +23,9 @@ import { fileURLToPath } from "node:url";
 import { parseCsv } from "./lib/csv.mjs";
 import { entryId } from "./lib/entry-id.mjs";
 import { assignGames } from "./lib/games.mjs";
+import { DEXDB_SNAPSHOT, readDexdbUrl } from "./lib/dexdb-source.mjs";
 import { loadDexData } from "./lib/load-dex.mjs";
-import { flattenLayout, layoutFromDexData } from "./lib/pokedexapp-order.mjs";
+import { flattenLayout, layoutFromDexData } from "./lib/box-order.mjs";
 import { resolveSprite } from "./lib/sprites.mjs";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
@@ -173,8 +175,14 @@ async function loadSources() {
   const { gamesFromRegionalCell } = await import("./lib/games.mjs");
   regionalParser = { gamesFromRegionalCell };
 
-  const dexSource = await cached("pokedexapp-dexdb.js", "https://pokedexapp.net/js/dexDB.json");
-  await writeFile(join(root, "data/sources/pokedexapp-dexdb.js"), dexSource);
+  const configuredUrl = await readDexdbUrl(root);
+  const dexSource = configuredUrl
+    ? await cached("dexdb.js", configuredUrl)
+    : await readFile(join(root, DEXDB_SNAPSHOT), "utf8");
+  if (!configuredUrl) {
+    console.log("DEXDB_URL is not set. Using the committed snapshot at data/sources/dexdb.js.");
+  }
+  await writeFile(join(root, DEXDB_SNAPSHOT), dexSource);
 
   const csvNames = ["pokemon.csv", "pokemon_types.csv", "types.csv", "pokemon_species_names.csv", "pokemon_dex_numbers.csv", "encounters.csv"];
   const csv = {};
@@ -550,8 +558,8 @@ const fallbacks = entries
   .map((entry) => ({ id: entry.id, name: entry.title, spriteId: entry.spriteId, note: entry.spriteNote }));
 
 await writeFile(join(root, "data/dex.json"), `${JSON.stringify({
-  note: "Full National Living Dex. Standard boxes follow National Dex order, 30 slots per box, in the order https://pokedexapp.net/pokedex/ builds from js/dexDB.json. Alt Forms / Variants follow that site's alt section: Alolan, Galarian, Hisuian, Paldean, gender differences, other forms, then Unown, Vivillon, and Alcremie. spriteId is the local Pokémon HOME file in assets/sprites. games lists Nintendo Switch main-series titles where this exact form is obtainable in-game. Row and column use a 6-column box.",
-  source: "https://pokedexapp.net/js/dexDB.json",
+  note: "Full National Living Dex. Standard boxes follow National Dex order, 30 slots per box, in the order the original box-order reference builds from its dex database. Alt Forms / Variants follow that reference's alt section: Alolan, Galarian, Hisuian, Paldean, gender differences, other forms, then Unown, Vivillon, and Alcremie. spriteId is the local Pokémon HOME file in assets/sprites. games lists Nintendo Switch main-series titles where this exact form is obtainable in-game. Row and column use a 6-column box.",
+  source: "original box-order reference",
   entries,
 }, null, 2)}\n`);
 
@@ -572,7 +580,7 @@ await writeFile(join(root, "data/collection.json"), `${JSON.stringify({
 }, null, 2)}\n`);
 
 await writeFile(join(root, "data/sprite-fallbacks.json"), `${JSON.stringify({
-  note: "Slots whose pokedexapp form has no dedicated Pokémon HOME sprite in PokeAPI/sprites. The app still loads the local file named by spriteId.",
+  note: "Slots whose form has no dedicated Pokémon HOME sprite in PokeAPI/sprites. The app still loads the local file named by spriteId.",
   count: fallbacks.length,
   fallbacks,
 }, null, 2)}\n`);
@@ -581,8 +589,10 @@ const standardCount = entries.filter((entry) => entry.kind === "standard").lengt
 const altCount = entries.length - standardCount;
 console.log(`Wrote ${entries.length} entries (${standardCount} standard, ${altCount} alt) in ${boxes.length} boxes. Sprite fallbacks: ${fallbacks.length}.`);
 
-if (await exists("/tmp/golden-dex.json")) {
-  const golden = JSON.parse(await readFile("/tmp/golden-dex.json", "utf8"));
+// Optional gitignored comparison file. A normal checkout does not include it.
+const goldenPath = join(root, "data/sources/golden-dex.json");
+if (await exists(goldenPath)) {
+  const golden = JSON.parse(await readFile(goldenPath, "utf8"));
   const byId = new Map(entries.map((entry) => [entry.id, entry]));
   const mismatches = [];
   for (const old of golden.entries) {
