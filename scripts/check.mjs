@@ -3,6 +3,8 @@ import { access } from "node:fs/promises";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { locationText, standardPlacement } from "../js/model/location.js";
+import { buildRegions } from "../js/model/regions.js";
+import { matchesView } from "../js/model/catalog.js";
 import { searchEntries } from "../js/model/search.js";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
@@ -21,6 +23,24 @@ const collection = await readJson("data/collection.json");
 const boxById = new Map(boxes.boxes.map((box) => [box.id, box]));
 const gameIds = new Set(games.games.map((game) => game.id));
 const caughtById = new Map(collection.entries.map((entry) => [entry.id, entry.caught]));
+
+const regions = buildRegions(boxes);
+expect(
+  regions.map((region) => region.label).join("|") === "Kanto|Johto|Hoenn|Sinnoh|Unova|Kalos|Alola|Galar|Hisui / Paldea|Alt Forms",
+  "region jump tabs drifted",
+);
+for (const box of boxes.boxes) {
+  expect(regions.some((region) => region.boxes.some((item) => item.id === box.id)), `${box.id} is missing from region jump`);
+}
+expect(regions.find((region) => region.id === "kanto").boxes[0].id === "standard-01", "Kanto should open on Box 1");
+expect(regions.find((region) => region.id === "hisui-paldea").boxes.at(-1).id === "standard-35", "Hisui / Paldea should reach Box 35");
+expect(regions.find((region) => region.id === "alt").boxes[0].id === "alt-01", "Alt Forms should open Alt Box 1");
+
+const sample = dex.entries.find((entry) => entry.id === "0006");
+expect(matchesView(sample, { filter: "all", gameId: "s" }) === sample.games.includes("s"), "game filter should follow Scarlet");
+expect(matchesView({ caught: false, games: ["s"] }, { filter: "missing", gameId: "s" }), "missing + game keeps catchable gaps");
+expect(!matchesView({ caught: true, games: ["s"] }, { filter: "missing", gameId: "s" }), "missing + game hides caught");
+expect(!matchesView({ caught: false, games: [] }, { filter: "missing", gameId: "s" }), "missing + game hides Pokémon that are not in that game");
 
 expect(boxes.boxes.filter((box) => box.group === "standard").length === 35, "expected 35 standard boxes");
 expect(boxes.boxes.filter((box) => box.catalogued).map((box) => box.id).join() === "standard-01,standard-02,standard-34,alt-01", "unexpected catalogued boxes");

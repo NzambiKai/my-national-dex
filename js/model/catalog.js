@@ -1,4 +1,5 @@
 import { locationText, slotPosition } from "./location.js";
+import { buildRegions } from "./regions.js";
 
 async function fetchJson(path) {
   const response = await fetch(path);
@@ -40,10 +41,17 @@ export async function loadCatalog() {
     entries,
     boxes: boxFile.boxes,
     groups: boxFile.groups,
+    regions: buildRegions(boxFile),
     games,
     columns: boxFile.columns,
     slotsPerBox: boxFile.slotsPerBox,
   };
+}
+
+export function matchesView(entry, { filter = "all", gameId = "" } = {}) {
+  const statusOk = filter === "all" || (filter === "caught" ? entry.caught : !entry.caught);
+  const gameOk = !gameId || entry.games.includes(gameId);
+  return statusOk && gameOk;
 }
 
 export function entriesInBox(entries, boxId) {

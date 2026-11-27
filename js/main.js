@@ -1,4 +1,5 @@
 import { entriesInBox, loadCatalog } from "./model/catalog.js";
+import { regionContaining } from "./model/regions.js";
 import { searchEntries } from "./model/search.js";
 import { loadPreferences, savePreferences } from "./state/store.js";
 import { renderBox, renderStrip, scrollCurrentChip } from "./ui/box.js";
@@ -24,6 +25,24 @@ function currentBox() {
   return catalog.boxes.find((box) => box.id === state.boxId) ?? catalog.boxes[0];
 }
 
+function activeGame() {
+  return catalog.games.find((game) => game.id === state.gameId) ?? null;
+}
+
+function remember() {
+  savePreferences({
+    boxId: state.boxId,
+    selectedId: state.selectedId,
+    regionId: state.regionId,
+    filter: state.filter,
+    gameId: state.gameId,
+  });
+}
+
+function syncRegion(preferredId) {
+  state.regionId = regionContaining(catalog.regions, currentBox(), preferredId ?? state.regionId)?.id ?? state.regionId;
+}
+
 function closeSearch() {
   state.query = "";
   state.results = [];
@@ -35,18 +54,25 @@ function closeSearch() {
 function paint({ scrollSlot = false, scrollChip = false } = {}) {
   const box = currentBox();
   const entries = entriesInBox(catalog.entries, box.id);
-  renderProgress($("#progress-root"), catalog);
-  renderFilters($("#filter-root"), state.filter, entries, box.catalogued);
-  renderStrip($("#strip-root"), catalog, state.boxId);
+  renderProgress($("#progress-root"), catalog, state.gameId);
+  renderFilters($("#filter-root"), {
+    filter: state.filter,
+    gameId: state.gameId,
+    games: catalog.games,
+    boxEntries: entries,
+    enabled: box.catalogued,
+  });
+  renderStrip($("#strip-root"), catalog, state.boxId, state.regionId);
   renderBox($("#box-root"), {
     box,
     entries,
     filter: state.filter,
+    gameId: state.gameId,
     selectedId: state.selectedId,
     highlightId: state.highlightId,
   });
 
-  const html = renderDetail(selectedEntry());
+  const html = renderDetail(selectedEntry(), activeGame());
   $("#detail-desktop").innerHTML = html;
   $("#detail-offcanvas-body").innerHTML = html;
   const selected = selectedEntry();
@@ -59,11 +85,16 @@ function paint({ scrollSlot = false, scrollChip = false } = {}) {
   }
 }
 
-function goToBox(boxId) {
-  if (!catalog.boxes.some((box) => box.id === boxId)) return;
+function goToBox(boxId, { regionId } = {}) {
+  const box = catalog.boxes.find((item) => item.id === boxId);
+  if (!box) return;
+  const entries = entriesInBox(catalog.entries, boxId);
+  const keepSelection = entries.some((entry) => entry.id === state.selectedId);
   state.boxId = boxId;
   state.highlightId = null;
-  savePreferences({ boxId });
+  state.selectedId = keepSelection ? state.selectedId : (entries[0]?.id ?? null);
+  syncRegion(regionId);
+  remember();
   paint({ scrollChip: true });
 }
 
@@ -73,12 +104,25 @@ function stepBox(delta) {
   goToBox(ids[(index + delta + ids.length) % ids.length]);
 }
 
+function goToRegion(regionId) {
+  const region = catalog.regions.find((item) => item.id === regionId);
+  if (!region || region.boxes.length === 0) return;
+  if (region.boxes.some((box) => box.id === state.boxId)) {
+    state.regionId = regionId;
+    remember();
+    paint({ scrollChip: true });
+    return;
+  }
+  goToBox(region.boxes[0].id, { regionId });
+}
+
 function selectEntry(entry, { pulse = false, jump = false } = {}) {
   state.selectedId = entry.id;
   state.boxId = entry.boxId;
   if (jump) state.filter = "all";
   state.highlightId = pulse ? entry.id : state.highlightId;
-  savePreferences({ boxId: state.boxId, filter: state.filter });
+  syncRegion();
+  remember();
   closeSearch();
   paint({ scrollSlot: pulse, scrollChip: jump });
   if (!isDesktop()) {
@@ -90,7 +134,13 @@ function selectEntry(entry, { pulse = false, jump = false } = {}) {
 
 function setFilter(filter) {
   state.filter = filter;
-  savePreferences({ filter });
+  remember();
+  paint();
+}
+
+function setGame(gameId) {
+  state.gameId = catalog.games.some((game) => game.id === gameId) ? gameId : "";
+  remember();
   paint();
 }
 
@@ -151,12 +201,22 @@ function bind() {
   });
 
   $("#filter-root").addEventListener("click", (event) => {
+    const gameButton = event.target.closest("[data-game-id]");
+    if (gameButton) {
+      setGame(gameButton.dataset.gameId);
+      return;
+    }
     const button = event.target.closest("[data-filter]");
     if (!button || button.disabled) return;
     setFilter(button.dataset.filter);
   });
 
   $("#strip-root").addEventListener("click", (event) => {
+    const regionButton = event.target.closest("[data-region-id]");
+    if (regionButton) {
+      goToRegion(regionButton.dataset.regionId);
+      return;
+    }
     const button = event.target.closest("[data-box-id]");
     if (button) goToBox(button.dataset.boxId);
   });
@@ -211,6 +271,14 @@ function showError(message) {
   error.textContent = message;
 }
 
+function initialView(prefs) {
+  const saved = catalog.entries.find((entry) => entry.id === prefs.selectedId);
+  if (saved) return { boxId: saved.boxId, selectedId: saved.id };
+  const knownBox = catalog.boxes.some((box) => box.id === prefs.boxId);
+  const boxId = knownBox ? prefs.boxId : "standard-01";
+  return { boxId, selectedId: entriesInBox(catalog.entries, boxId)[0]?.id ?? null };
+}
+
 async function start() {
   try {
     catalog = await loadCatalog();
@@ -220,16 +288,20 @@ async function start() {
   }
 
   const prefs = loadPreferences();
-  const knownBox = catalog.boxes.some((box) => box.id === prefs.boxId);
+  const view = initialView(prefs);
   state = {
-    boxId: knownBox ? prefs.boxId : "standard-01",
+    boxId: view.boxId,
+    selectedId: view.selectedId,
+    regionId: prefs.regionId ?? "",
     filter: ["all", "caught", "missing"].includes(prefs.filter) ? prefs.filter : "all",
-    selectedId: null,
+    gameId: catalog.games.some((game) => game.id === prefs.gameId) ? prefs.gameId : "",
     highlightId: null,
     query: "",
     results: [],
     activeIndex: 0,
   };
+  syncRegion(prefs.regionId);
+  remember();
 
   bind();
   paint({ scrollChip: true });

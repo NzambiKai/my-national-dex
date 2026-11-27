@@ -1,4 +1,4 @@
-import { boxProgress } from "../model/catalog.js";
+import { boxProgress, matchesView } from "../model/catalog.js";
 import { boxLabel, formatDex } from "../model/location.js";
 import { escapeHtml, spritePath } from "./html.js";
 
@@ -7,45 +7,64 @@ function chevron(direction) {
   return `<svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><polyline points="${points}" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></polyline></svg>`;
 }
 
-export function renderStrip(root, catalog, currentBoxId) {
-  const groups = catalog.groups
-    .map((group) => {
-      const boxes = catalog.boxes.filter((box) => box.group === group.id);
-      const chips = boxes
-        .map((box) => {
-          const progress = boxProgress(catalog.entries, box.id);
-          const current = box.id === currentBoxId;
-          const width = progress ? Math.round((progress.caught / progress.total) * 100) : 0;
-          const meta = progress ? `${progress.caught}/${progress.total}` : "—";
-          const label = progress
-            ? `${boxLabel(box)}, ${box.title}, ${progress.caught} of ${progress.total} caught`
-            : `${boxLabel(box)}, ${box.title}, ${box.rangeLabel}, not in this mockup catalog`;
-          return `
-            <button type="button" class="strip-chip${current ? " is-current" : ""}${progress ? "" : " is-pending"}" data-box-id="${escapeHtml(box.id)}" aria-current="${current ? "true" : "false"}" aria-label="${escapeHtml(label)}">
-              <span class="strip-num">${box.group === "alt" ? `A${box.number}` : box.number}</span>
-              <span class="strip-bar"><span style="width:${width}%"></span></span>
-              <span class="strip-meta">${meta}</span>
-            </button>
-          `;
-        })
-        .join("");
+function chipLabel(box, progress) {
+  const name = box.group === "alt" ? `Alt Box ${box.number}` : `Box ${box.number}`;
+  if (!progress) return `${name}, ${box.title}, ${box.rangeLabel}`;
+  return `${name}, ${box.title}, ${progress.caught} of ${progress.total} caught`;
+}
+
+function regionCaption(region) {
+  if (!region.boxes.length) return region.label;
+  if (region.boxes[0].group === "alt") return "Alt Forms / Variants";
+  const numbers = region.boxes.map((box) => box.number);
+  const span = numbers[0] === numbers[numbers.length - 1] ? `Box ${numbers[0]}` : `Boxes ${numbers[0]}–${numbers[numbers.length - 1]}`;
+  return `${region.label} · ${span}`;
+}
+
+export function renderStrip(root, catalog, currentBoxId, regionId) {
+  const currentRegion =
+    catalog.regions.find((region) => region.id === regionId) ??
+    catalog.regions.find((region) => region.boxes.some((box) => box.id === currentBoxId)) ??
+    catalog.regions[0];
+  const tabs = catalog.regions
+    .map((region) => {
+      const current = region.id === currentRegion?.id;
+      return `<button type="button" class="region-tab${current ? " is-current" : ""}" role="tab" data-region-id="${escapeHtml(region.id)}" aria-selected="${current ? "true" : "false"}">${escapeHtml(region.label)}</button>`;
+    })
+    .join("");
+  const chips = (currentRegion?.boxes ?? [])
+    .map((box) => {
+      const progress = boxProgress(catalog.entries, box.id);
+      const current = box.id === currentBoxId;
+      const width = progress ? Math.round((progress.caught / progress.total) * 100) : 0;
+      const meta = progress ? `${progress.caught}/${progress.total}` : "—";
+      const number = box.group === "alt" ? `A${box.number}` : box.number;
       return `
-        <div class="strip-group">
-          <h2 class="strip-label">${escapeHtml(group.label)}</h2>
-          <div class="strip-scroll">${chips}</div>
-        </div>
+        <button type="button" class="strip-chip${current ? " is-current" : ""}${progress ? "" : " is-pending"}" data-box-id="${escapeHtml(box.id)}" aria-current="${current ? "true" : "false"}" aria-label="${escapeHtml(chipLabel(box, progress))}">
+          <span class="strip-num">${number}</span>
+          <span class="strip-bar"><span style="width:${width}%"></span></span>
+          <span class="strip-meta">${meta}</span>
+        </button>
       `;
     })
     .join("");
 
-  root.innerHTML = `<div class="card strip-card"><div class="card-body">${groups}</div></div>`;
+  root.innerHTML = `
+    <div class="card strip-card">
+      <div class="card-body">
+        <div class="region-scroll" role="tablist" aria-label="Jump to a region">${tabs}</div>
+        <p class="picker-caption">${escapeHtml(regionCaption(currentRegion))}</p>
+        <div class="box-picker" role="group" aria-label="${escapeHtml(currentRegion?.label ?? "Boxes")}">${chips}</div>
+      </div>
+    </div>
+  `;
 }
 
 export function scrollCurrentChip(root) {
-  const chip = root.querySelector(".strip-chip.is-current");
-  const scroller = chip?.parentElement;
-  if (!chip || !scroller) return;
-  scroller.scrollLeft = chip.offsetLeft - scroller.clientWidth / 2 + chip.offsetWidth / 2;
+  const scroller = root.querySelector(".region-scroll");
+  const tab = scroller?.querySelector(".region-tab.is-current");
+  if (!tab || !scroller) return;
+  scroller.scrollLeft = tab.offsetLeft - scroller.clientWidth / 2 + tab.offsetWidth / 2;
 }
 
 function slotButton(entry, { selected, highlighted, filtered }) {
@@ -77,7 +96,7 @@ function slotButton(entry, { selected, highlighted, filtered }) {
   `;
 }
 
-export function renderBox(root, { box, entries, filter, selectedId, highlightId }) {
+export function renderBox(root, { box, entries, filter, gameId = "", selectedId, highlightId }) {
   const progress = entries.length
     ? `${entries.filter((entry) => entry.caught).length}/${entries.length}`
     : "—";
@@ -86,12 +105,14 @@ export function renderBox(root, { box, entries, filter, selectedId, highlightId 
       <button type="button" class="box-nav" data-action="prev" aria-label="Previous box">${chevron("left")}</button>
       <div class="box-heading">
         <p class="eyebrow mb-1">${escapeHtml(boxLabel(box))} · ${escapeHtml(box.title)}</p>
-        <h2 class="box-title">${escapeHtml(box.rangeLabel)}</h2>
+        <div class="box-title-line">
+          <h2 class="box-title">${escapeHtml(box.rangeLabel)}</h2>
+          <div class="box-count" aria-label="${entries.length ? `${progress} caught in this box` : "Sprites not loaded yet"}">
+            <strong>${escapeHtml(progress)}</strong>
+            <span>${entries.length ? "caught" : "pending"}</span>
+          </div>
+        </div>
         <p class="box-subtitle mb-0">${escapeHtml(box.subtitle)}</p>
-      </div>
-      <div class="box-count" aria-label="${entries.length ? `${progress} caught in this box` : "Catalog pending"}">
-        <strong>${escapeHtml(progress)}</strong>
-        <span>${entries.length ? "caught" : "pending"}</span>
       </div>
       <button type="button" class="box-nav" data-action="next" aria-label="Next box">${chevron("right")}</button>
     </div>
@@ -105,7 +126,7 @@ export function renderBox(root, { box, entries, filter, selectedId, highlightId 
           <div class="pending">
             <p class="eyebrow">Catalog pending</p>
             <h3>This box is reserved on the Living Dex map</h3>
-            <p>${escapeHtml(box.subtitle)} will land in ${escapeHtml(boxLabel(box))} when the full National Dex is filled in. Boxes 1, 2, and 34, plus Alt Box 1, are bundled in this mockup so search, highlights, and Switch games can be tried with real artwork.</p>
+            <p>${escapeHtml(box.subtitle)} is reserved in ${escapeHtml(boxLabel(box))}. Sprites for this range are not loaded yet.</p>
           </div>
         </div>
       </section>
@@ -115,8 +136,7 @@ export function renderBox(root, { box, entries, filter, selectedId, highlightId 
 
   const cells = entries
     .map((entry) => {
-      const filtered =
-        (filter === "caught" && !entry.caught) || (filter === "missing" && entry.caught);
+      const filtered = entry.id !== selectedId && entry.id !== highlightId && !matchesView(entry, { filter, gameId });
       return slotButton(entry, {
         selected: entry.id === selectedId,
         highlighted: entry.id === highlightId,
