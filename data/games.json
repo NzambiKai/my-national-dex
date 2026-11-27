@@ -1,0 +1,75 @@
+{
+  "note": "Nintendo Switch main-series games only. Pok\u00e9mon GO and pre-Switch games are intentionally absent. Legends: Z-A is included because it is a main-series Switch game.",
+  "games": [
+    {
+      "id": "lgp",
+      "name": "Let's Go, Pikachu!",
+      "short": "Let's Go Pikachu",
+      "color": "#e3b505",
+      "ink": "#3d3204"
+    },
+    {
+      "id": "lge",
+      "name": "Let's Go, Eevee!",
+      "short": "Let's Go Eevee",
+      "color": "#c47a45",
+      "ink": "#fffaf5"
+    },
+    {
+      "id": "sw",
+      "name": "Sword",
+      "short": "Sword",
+      "color": "#00a0e4",
+      "ink": "#ffffff"
+    },
+    {
+      "id": "sh",
+      "name": "Shield",
+      "short": "Shield",
+      "color": "#e31c5a",
+      "ink": "#ffffff"
+    },
+    {
+      "id": "bd",
+      "name": "Brilliant Diamond",
+      "short": "Brilliant Diamond",
+      "color": "#3d78b4",
+      "ink": "#ffffff"
+    },
+    {
+      "id": "sp",
+      "name": "Shining Pearl",
+      "short": "Shining Pearl",
+      "color": "#e06a9a",
+      "ink": "#ffffff"
+    },
+    {
+      "id": "la",
+      "name": "Legends: Arceus",
+      "short": "Legends: Arceus",
+      "color": "#5f8f72",
+      "ink": "#ffffff"
+    },
+    {
+      "id": "s",
+      "name": "Scarlet",
+      "short": "Scarlet",
+      "color": "#e23b3b",
+      "ink": "#ffffff"
+    },
+    {
+      "id": "v",
+      "name": "Violet",
+      "short": "Violet",
+      "color": "#7a3ff0",
+      "ink": "#ffffff"
+    },
+    {
+      "id": "za",
+      "name": "Legends: Z-A",
+      "short": "Legends: Z-A",
+      "color": "#2f6f9f",
+      "ink": "#ffffff"
+    }
+  ]
+}

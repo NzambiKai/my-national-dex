@@ -1,0 +1,845 @@
+{
+  "instructions": "Living Dex caught flags for the bundled catalog. Set caught to true or false and send a pull request. Do not change id. name, box, and slot are labels so a review reads clearly; the app treats id as the key and reads placement from data/dex.json.",
+  "entries": [
+    {
+      "id": "0001",
+      "name": "Bulbasaur",
+      "box": "Box 1",
+      "slot": 1,
+      "caught": true
+    },
+    {
+      "id": "0002",
+      "name": "Ivysaur",
+      "box": "Box 1",
+      "slot": 2,
+      "caught": true
+    },
+    {
+      "id": "0003",
+      "name": "Venusaur",
+      "box": "Box 1",
+      "slot": 3,
+      "caught": true
+    },
+    {
+      "id": "0004",
+      "name": "Charmander",
+      "box": "Box 1",
+      "slot": 4,
+      "caught": true
+    },
+    {
+      "id": "0005",
+      "name": "Charmeleon",
+      "box": "Box 1",
+      "slot": 5,
+      "caught": true
+    },
+    {
+      "id": "0006",
+      "name": "Charizard",
+      "box": "Box 1",
+      "slot": 6,
+      "caught": true
+    },
+    {
+      "id": "0007",
+      "name": "Squirtle",
+      "box": "Box 1",
+      "slot": 7,
+      "caught": true
+    },
+    {
+      "id": "0008",
+      "name": "Wartortle",
+      "box": "Box 1",
+      "slot": 8,
+      "caught": true
+    },
+    {
+      "id": "0009",
+      "name": "Blastoise",
+      "box": "Box 1",
+      "slot": 9,
+      "caught": true
+    },
+    {
+      "id": "0010",
+      "name": "Caterpie",
+      "box": "Box 1",
+      "slot": 10,
+      "caught": true
+    },
+    {
+      "id": "0011",
+      "name": "Metapod",
+      "box": "Box 1",
+      "slot": 11,
+      "caught": true
+    },
+    {
+      "id": "0012",
+      "name": "Butterfree",
+      "box": "Box 1",
+      "slot": 12,
+      "caught": false
+    },
+    {
+      "id": "0013",
+      "name": "Weedle",
+      "box": "Box 1",
+      "slot": 13,
+      "caught": true
+    },
+    {
+      "id": "0014",
+      "name": "Kakuna",
+      "box": "Box 1",
+      "slot": 14,
+      "caught": true
+    },
+    {
+      "id": "0015",
+      "name": "Beedrill",
+      "box": "Box 1",
+      "slot": 15,
+      "caught": false
+    },
+    {
+      "id": "0016",
+      "name": "Pidgey",
+      "box": "Box 1",
+      "slot": 16,
+      "caught": true
+    },
+    {
+      "id": "0017",
+      "name": "Pidgeotto",
+      "box": "Box 1",
+      "slot": 17,
+      "caught": false
+    },
+    {
+      "id": "0018",
+      "name": "Pidgeot",
+      "box": "Box 1",
+      "slot": 18,
+      "caught": true
+    },
+    {
+      "id": "0019",
+      "name": "Rattata",
+      "box": "Box 1",
+      "slot": 19,
+      "caught": true
+    },
+    {
+      "id": "0020",
+      "name": "Raticate",
+      "box": "Box 1",
+      "slot": 20,
+      "caught": true
+    },
+    {
+      "id": "0021",
+      "name": "Spearow",
+      "box": "Box 1",
+      "slot": 21,
+      "caught": false
+    },
+    {
+      "id": "0022",
+      "name": "Fearow",
+      "box": "Box 1",
+      "slot": 22,
+      "caught": false
+    },
+    {
+      "id": "0023",
+      "name": "Ekans",
+      "box": "Box 1",
+      "slot": 23,
+      "caught": true
+    },
+    {
+      "id": "0024",
+      "name": "Arbok",
+      "box": "Box 1",
+      "slot": 24,
+      "caught": true
+    },
+    {
+      "id": "0025",
+      "name": "Pikachu",
+      "box": "Box 1",
+      "slot": 25,
+      "caught": true
+    },
+    {
+      "id": "0026",
+      "name": "Raichu",
+      "box": "Box 1",
+      "slot": 26,
+      "caught": true
+    },
+    {
+      "id": "0027",
+      "name": "Sandshrew",
+      "box": "Box 1",
+      "slot": 27,
+      "caught": true
+    },
+    {
+      "id": "0028",
+      "name": "Sandslash",
+      "box": "Box 1",
+      "slot": 28,
+      "caught": true
+    },
+    {
+      "id": "0029",
+      "name": "Nidoran\u2640",
+      "box": "Box 1",
+      "slot": 29,
+      "caught": true
+    },
+    {
+      "id": "0030",
+      "name": "Nidorina",
+      "box": "Box 1",
+      "slot": 30,
+      "caught": false
+    },
+    {
+      "id": "0031",
+      "name": "Nidoqueen",
+      "box": "Box 2",
+      "slot": 1,
+      "caught": true
+    },
+    {
+      "id": "0032",
+      "name": "Nidoran\u2642",
+      "box": "Box 2",
+      "slot": 2,
+      "caught": false
+    },
+    {
+      "id": "0033",
+      "name": "Nidorino",
+      "box": "Box 2",
+      "slot": 3,
+      "caught": false
+    },
+    {
+      "id": "0034",
+      "name": "Nidoking",
+      "box": "Box 2",
+      "slot": 4,
+      "caught": false
+    },
+    {
+      "id": "0035",
+      "name": "Clefairy",
+      "box": "Box 2",
+      "slot": 5,
+      "caught": true
+    },
+    {
+      "id": "0036",
+      "name": "Clefable",
+      "box": "Box 2",
+      "slot": 6,
+      "caught": true
+    },
+    {
+      "id": "0037",
+      "name": "Vulpix",
+      "box": "Box 2",
+      "slot": 7,
+      "caught": true
+    },
+    {
+      "id": "0038",
+      "name": "Ninetales",
+      "box": "Box 2",
+      "slot": 8,
+      "caught": true
+    },
+    {
+      "id": "0039",
+      "name": "Jigglypuff",
+      "box": "Box 2",
+      "slot": 9,
+      "caught": false
+    },
+    {
+      "id": "0040",
+      "name": "Wigglytuff",
+      "box": "Box 2",
+      "slot": 10,
+      "caught": false
+    },
+    {
+      "id": "0041",
+      "name": "Zubat",
+      "box": "Box 2",
+      "slot": 11,
+      "caught": true
+    },
+    {
+      "id": "0042",
+      "name": "Golbat",
+      "box": "Box 2",
+      "slot": 12,
+      "caught": true
+    },
+    {
+      "id": "0043",
+      "name": "Oddish",
+      "box": "Box 2",
+      "slot": 13,
+      "caught": true
+    },
+    {
+      "id": "0044",
+      "name": "Gloom",
+      "box": "Box 2",
+      "slot": 14,
+      "caught": true
+    },
+    {
+      "id": "0045",
+      "name": "Vileplume",
+      "box": "Box 2",
+      "slot": 15,
+      "caught": true
+    },
+    {
+      "id": "0046",
+      "name": "Paras",
+      "box": "Box 2",
+      "slot": 16,
+      "caught": false
+    },
+    {
+      "id": "0047",
+      "name": "Parasect",
+      "box": "Box 2",
+      "slot": 17,
+      "caught": false
+    },
+    {
+      "id": "0048",
+      "name": "Venonat",
+      "box": "Box 2",
+      "slot": 18,
+      "caught": false
+    },
+    {
+      "id": "0049",
+      "name": "Venomoth",
+      "box": "Box 2",
+      "slot": 19,
+      "caught": false
+    },
+    {
+      "id": "0050",
+      "name": "Diglett",
+      "box": "Box 2",
+      "slot": 20,
+      "caught": true
+    },
+    {
+      "id": "0051",
+      "name": "Dugtrio",
+      "box": "Box 2",
+      "slot": 21,
+      "caught": true
+    },
+    {
+      "id": "0052",
+      "name": "Meowth",
+      "box": "Box 2",
+      "slot": 22,
+      "caught": true
+    },
+    {
+      "id": "0053",
+      "name": "Persian",
+      "box": "Box 2",
+      "slot": 23,
+      "caught": true
+    },
+    {
+      "id": "0054",
+      "name": "Psyduck",
+      "box": "Box 2",
+      "slot": 24,
+      "caught": true
+    },
+    {
+      "id": "0055",
+      "name": "Golduck",
+      "box": "Box 2",
+      "slot": 25,
+      "caught": true
+    },
+    {
+      "id": "0056",
+      "name": "Mankey",
+      "box": "Box 2",
+      "slot": 26,
+      "caught": false
+    },
+    {
+      "id": "0057",
+      "name": "Primeape",
+      "box": "Box 2",
+      "slot": 27,
+      "caught": false
+    },
+    {
+      "id": "0058",
+      "name": "Growlithe",
+      "box": "Box 2",
+      "slot": 28,
+      "caught": true
+    },
+    {
+      "id": "0059",
+      "name": "Arcanine",
+      "box": "Box 2",
+      "slot": 29,
+      "caught": true
+    },
+    {
+      "id": "0060",
+      "name": "Poliwag",
+      "box": "Box 2",
+      "slot": 30,
+      "caught": false
+    },
+    {
+      "id": "0991",
+      "name": "Iron Bundle",
+      "box": "Box 34",
+      "slot": 1,
+      "caught": false
+    },
+    {
+      "id": "0992",
+      "name": "Iron Hands",
+      "box": "Box 34",
+      "slot": 2,
+      "caught": false
+    },
+    {
+      "id": "0993",
+      "name": "Iron Jugulis",
+      "box": "Box 34",
+      "slot": 3,
+      "caught": false
+    },
+    {
+      "id": "0994",
+      "name": "Iron Moth",
+      "box": "Box 34",
+      "slot": 4,
+      "caught": false
+    },
+    {
+      "id": "0995",
+      "name": "Iron Thorns",
+      "box": "Box 34",
+      "slot": 5,
+      "caught": false
+    },
+    {
+      "id": "0996",
+      "name": "Frigibax",
+      "box": "Box 34",
+      "slot": 6,
+      "caught": true
+    },
+    {
+      "id": "0997",
+      "name": "Arctibax",
+      "box": "Box 34",
+      "slot": 7,
+      "caught": true
+    },
+    {
+      "id": "0998",
+      "name": "Baxcalibur",
+      "box": "Box 34",
+      "slot": 8,
+      "caught": true
+    },
+    {
+      "id": "0999",
+      "name": "Gimmighoul",
+      "box": "Box 34",
+      "slot": 9,
+      "caught": true
+    },
+    {
+      "id": "1000",
+      "name": "Gholdengo",
+      "box": "Box 34",
+      "slot": 10,
+      "caught": true
+    },
+    {
+      "id": "1001",
+      "name": "Wo-Chien",
+      "box": "Box 34",
+      "slot": 11,
+      "caught": true
+    },
+    {
+      "id": "1002",
+      "name": "Chien-Pao",
+      "box": "Box 34",
+      "slot": 12,
+      "caught": true
+    },
+    {
+      "id": "1003",
+      "name": "Ting-Lu",
+      "box": "Box 34",
+      "slot": 13,
+      "caught": true
+    },
+    {
+      "id": "1004",
+      "name": "Chi-Yu",
+      "box": "Box 34",
+      "slot": 14,
+      "caught": true
+    },
+    {
+      "id": "1005",
+      "name": "Roaring Moon",
+      "box": "Box 34",
+      "slot": 15,
+      "caught": true
+    },
+    {
+      "id": "1006",
+      "name": "Iron Valiant",
+      "box": "Box 34",
+      "slot": 16,
+      "caught": false
+    },
+    {
+      "id": "1007",
+      "name": "Koraidon",
+      "box": "Box 34",
+      "slot": 17,
+      "caught": true
+    },
+    {
+      "id": "1008",
+      "name": "Miraidon",
+      "box": "Box 34",
+      "slot": 18,
+      "caught": false
+    },
+    {
+      "id": "1009",
+      "name": "Walking Wake",
+      "box": "Box 34",
+      "slot": 19,
+      "caught": false
+    },
+    {
+      "id": "1010",
+      "name": "Iron Leaves",
+      "box": "Box 34",
+      "slot": 20,
+      "caught": false
+    },
+    {
+      "id": "1011",
+      "name": "Dipplin",
+      "box": "Box 34",
+      "slot": 21,
+      "caught": true
+    },
+    {
+      "id": "1012",
+      "name": "Poltchageist",
+      "box": "Box 34",
+      "slot": 22,
+      "caught": true
+    },
+    {
+      "id": "1013",
+      "name": "Sinistcha",
+      "box": "Box 34",
+      "slot": 23,
+      "caught": false
+    },
+    {
+      "id": "1014",
+      "name": "Okidogi",
+      "box": "Box 34",
+      "slot": 24,
+      "caught": true
+    },
+    {
+      "id": "1015",
+      "name": "Munkidori",
+      "box": "Box 34",
+      "slot": 25,
+      "caught": false
+    },
+    {
+      "id": "1016",
+      "name": "Fezandipiti",
+      "box": "Box 34",
+      "slot": 26,
+      "caught": false
+    },
+    {
+      "id": "1017",
+      "name": "Ogerpon",
+      "box": "Box 34",
+      "slot": 27,
+      "caught": true
+    },
+    {
+      "id": "1018",
+      "name": "Archaludon",
+      "box": "Box 34",
+      "slot": 28,
+      "caught": false
+    },
+    {
+      "id": "1019",
+      "name": "Hydrapple",
+      "box": "Box 34",
+      "slot": 29,
+      "caught": true
+    },
+    {
+      "id": "1020",
+      "name": "Gouging Fire",
+      "box": "Box 34",
+      "slot": 30,
+      "caught": true
+    },
+    {
+      "id": "0019-alola",
+      "name": "Alolan Rattata",
+      "box": "Alt Box 1",
+      "slot": 1,
+      "caught": false
+    },
+    {
+      "id": "0026-alola",
+      "name": "Alolan Raichu",
+      "box": "Alt Box 1",
+      "slot": 2,
+      "caught": true
+    },
+    {
+      "id": "0027-alola",
+      "name": "Alolan Sandshrew",
+      "box": "Alt Box 1",
+      "slot": 3,
+      "caught": false
+    },
+    {
+      "id": "0037-alola",
+      "name": "Alolan Vulpix",
+      "box": "Alt Box 1",
+      "slot": 4,
+      "caught": true
+    },
+    {
+      "id": "0038-alola",
+      "name": "Alolan Ninetales",
+      "box": "Alt Box 1",
+      "slot": 5,
+      "caught": false
+    },
+    {
+      "id": "0050-alola",
+      "name": "Alolan Diglett",
+      "box": "Alt Box 1",
+      "slot": 6,
+      "caught": true
+    },
+    {
+      "id": "0052-alola",
+      "name": "Alolan Meowth",
+      "box": "Alt Box 1",
+      "slot": 7,
+      "caught": false
+    },
+    {
+      "id": "0088-alola",
+      "name": "Alolan Grimer",
+      "box": "Alt Box 1",
+      "slot": 8,
+      "caught": false
+    },
+    {
+      "id": "0103-alola",
+      "name": "Alolan Exeggutor",
+      "box": "Alt Box 1",
+      "slot": 9,
+      "caught": true
+    },
+    {
+      "id": "0105-alola",
+      "name": "Alolan Marowak",
+      "box": "Alt Box 1",
+      "slot": 10,
+      "caught": false
+    },
+    {
+      "id": "0052-galar",
+      "name": "Galarian Meowth",
+      "box": "Alt Box 1",
+      "slot": 11,
+      "caught": true
+    },
+    {
+      "id": "0077-galar",
+      "name": "Galarian Ponyta",
+      "box": "Alt Box 1",
+      "slot": 12,
+      "caught": false
+    },
+    {
+      "id": "0079-galar",
+      "name": "Galarian Slowpoke",
+      "box": "Alt Box 1",
+      "slot": 13,
+      "caught": true
+    },
+    {
+      "id": "0083-galar",
+      "name": "Galarian Farfetch\u2019d",
+      "box": "Alt Box 1",
+      "slot": 14,
+      "caught": true
+    },
+    {
+      "id": "0110-galar",
+      "name": "Galarian Weezing",
+      "box": "Alt Box 1",
+      "slot": 15,
+      "caught": false
+    },
+    {
+      "id": "0122-galar",
+      "name": "Galarian Mr. Mime",
+      "box": "Alt Box 1",
+      "slot": 16,
+      "caught": true
+    },
+    {
+      "id": "0144-galar",
+      "name": "Galarian Articuno",
+      "box": "Alt Box 1",
+      "slot": 17,
+      "caught": false
+    },
+    {
+      "id": "0263-galar",
+      "name": "Galarian Zigzagoon",
+      "box": "Alt Box 1",
+      "slot": 18,
+      "caught": true
+    },
+    {
+      "id": "0554-galar",
+      "name": "Galarian Darumaka",
+      "box": "Alt Box 1",
+      "slot": 19,
+      "caught": true
+    },
+    {
+      "id": "0618-galar",
+      "name": "Galarian Stunfisk",
+      "box": "Alt Box 1",
+      "slot": 20,
+      "caught": false
+    },
+    {
+      "id": "0058-hisui",
+      "name": "Hisuian Growlithe",
+      "box": "Alt Box 1",
+      "slot": 21,
+      "caught": true
+    },
+    {
+      "id": "0100-hisui",
+      "name": "Hisuian Voltorb",
+      "box": "Alt Box 1",
+      "slot": 22,
+      "caught": false
+    },
+    {
+      "id": "0570-hisui",
+      "name": "Hisuian Zorua",
+      "box": "Alt Box 1",
+      "slot": 23,
+      "caught": true
+    },
+    {
+      "id": "0571-hisui",
+      "name": "Hisuian Zoroark",
+      "box": "Alt Box 1",
+      "slot": 24,
+      "caught": false
+    },
+    {
+      "id": "0215-hisui",
+      "name": "Hisuian Sneasel",
+      "box": "Alt Box 1",
+      "slot": 25,
+      "caught": true
+    },
+    {
+      "id": "0128-paldea-blaze",
+      "name": "Paldean Tauros",
+      "box": "Alt Box 1",
+      "slot": 26,
+      "caught": true
+    },
+    {
+      "id": "0194-paldea",
+      "name": "Paldean Wooper",
+      "box": "Alt Box 1",
+      "slot": 27,
+      "caught": true
+    },
+    {
+      "id": "0479-heat",
+      "name": "Heat Rotom",
+      "box": "Alt Box 1",
+      "slot": 28,
+      "caught": true
+    },
+    {
+      "id": "0678-female",
+      "name": "Meowstic (Female)",
+      "box": "Alt Box 1",
+      "slot": 29,
+      "caught": true
+    },
+    {
+      "id": "0876-female",
+      "name": "Indeedee (Female)",
+      "box": "Alt Box 1",
+      "slot": 30,
+      "caught": false
+    }
+  ]
+}

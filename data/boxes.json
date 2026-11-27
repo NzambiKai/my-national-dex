@@ -1,0 +1,413 @@
+{
+  "columns": 6,
+  "slotsPerBox": 30,
+  "nationalDexCount": 1025,
+  "groups": [
+    {
+      "id": "standard",
+      "label": "National Dex"
+    },
+    {
+      "id": "alt",
+      "label": "Alt Forms / Variants"
+    }
+  ],
+  "boxes": [
+    {
+      "id": "standard-01",
+      "group": "standard",
+      "number": 1,
+      "title": "Kanto",
+      "rangeLabel": "#0001\u2013#0030",
+      "subtitle": "Bulbasaur \u2013 Nidorina",
+      "dexStart": 1,
+      "dexEnd": 30,
+      "catalogued": true
+    },
+    {
+      "id": "standard-02",
+      "group": "standard",
+      "number": 2,
+      "title": "Kanto",
+      "rangeLabel": "#0031\u2013#0060",
+      "subtitle": "Nidoqueen \u2013 Poliwag",
+      "dexStart": 31,
+      "dexEnd": 60,
+      "catalogued": true
+    },
+    {
+      "id": "standard-03",
+      "group": "standard",
+      "number": 3,
+      "title": "Kanto",
+      "rangeLabel": "#0061\u2013#0090",
+      "subtitle": "Poliwhirl \u2013 Shellder",
+      "dexStart": 61,
+      "dexEnd": 90,
+      "catalogued": false
+    },
+    {
+      "id": "standard-04",
+      "group": "standard",
+      "number": 4,
+      "title": "Kanto",
+      "rangeLabel": "#0091\u2013#0120",
+      "subtitle": "Cloyster \u2013 Staryu",
+      "dexStart": 91,
+      "dexEnd": 120,
+      "catalogued": false
+    },
+    {
+      "id": "standard-05",
+      "group": "standard",
+      "number": 5,
+      "title": "Kanto",
+      "rangeLabel": "#0121\u2013#0150",
+      "subtitle": "Starmie \u2013 Mewtwo",
+      "dexStart": 121,
+      "dexEnd": 150,
+      "catalogued": false
+    },
+    {
+      "id": "standard-06",
+      "group": "standard",
+      "number": 6,
+      "title": "Kanto \u00b7 Johto",
+      "rangeLabel": "#0151\u2013#0180",
+      "subtitle": "Mew \u2013 Flaaffy",
+      "dexStart": 151,
+      "dexEnd": 180,
+      "catalogued": false
+    },
+    {
+      "id": "standard-07",
+      "group": "standard",
+      "number": 7,
+      "title": "Johto",
+      "rangeLabel": "#0181\u2013#0210",
+      "subtitle": "Ampharos \u2013 Granbull",
+      "dexStart": 181,
+      "dexEnd": 210,
+      "catalogued": false
+    },
+    {
+      "id": "standard-08",
+      "group": "standard",
+      "number": 8,
+      "title": "Johto",
+      "rangeLabel": "#0211\u2013#0240",
+      "subtitle": "Qwilfish \u2013 Magby",
+      "dexStart": 211,
+      "dexEnd": 240,
+      "catalogued": false
+    },
+    {
+      "id": "standard-09",
+      "group": "standard",
+      "number": 9,
+      "title": "Johto \u00b7 Hoenn",
+      "rangeLabel": "#0241\u2013#0270",
+      "subtitle": "Miltank \u2013 Lotad",
+      "dexStart": 241,
+      "dexEnd": 270,
+      "catalogued": false
+    },
+    {
+      "id": "standard-10",
+      "group": "standard",
+      "number": 10,
+      "title": "Hoenn",
+      "rangeLabel": "#0271\u2013#0300",
+      "subtitle": "Lombre \u2013 Skitty",
+      "dexStart": 271,
+      "dexEnd": 300,
+      "catalogued": false
+    },
+    {
+      "id": "standard-11",
+      "group": "standard",
+      "number": 11,
+      "title": "Hoenn",
+      "rangeLabel": "#0301\u2013#0330",
+      "subtitle": "Delcatty \u2013 Flygon",
+      "dexStart": 301,
+      "dexEnd": 330,
+      "catalogued": false
+    },
+    {
+      "id": "standard-12",
+      "group": "standard",
+      "number": 12,
+      "title": "Hoenn",
+      "rangeLabel": "#0331\u2013#0360",
+      "subtitle": "Cacnea \u2013 Wynaut",
+      "dexStart": 331,
+      "dexEnd": 360,
+      "catalogued": false
+    },
+    {
+      "id": "standard-13",
+      "group": "standard",
+      "number": 13,
+      "title": "Hoenn \u00b7 Sinnoh",
+      "rangeLabel": "#0361\u2013#0390",
+      "subtitle": "Snorunt \u2013 Chimchar",
+      "dexStart": 361,
+      "dexEnd": 390,
+      "catalogued": false
+    },
+    {
+      "id": "standard-14",
+      "group": "standard",
+      "number": 14,
+      "title": "Sinnoh",
+      "rangeLabel": "#0391\u2013#0420",
+      "subtitle": "Monferno \u2013 Cherubi",
+      "dexStart": 391,
+      "dexEnd": 420,
+      "catalogued": false
+    },
+    {
+      "id": "standard-15",
+      "group": "standard",
+      "number": 15,
+      "title": "Sinnoh",
+      "rangeLabel": "#0421\u2013#0450",
+      "subtitle": "Cherrim \u2013 Hippowdon",
+      "dexStart": 421,
+      "dexEnd": 450,
+      "catalogued": false
+    },
+    {
+      "id": "standard-16",
+      "group": "standard",
+      "number": 16,
+      "title": "Sinnoh",
+      "rangeLabel": "#0451\u2013#0480",
+      "subtitle": "Skorupi \u2013 Uxie",
+      "dexStart": 451,
+      "dexEnd": 480,
+      "catalogued": false
+    },
+    {
+      "id": "standard-17",
+      "group": "standard",
+      "number": 17,
+      "title": "Sinnoh \u00b7 Unova",
+      "rangeLabel": "#0481\u2013#0510",
+      "subtitle": "Mesprit \u2013 Liepard",
+      "dexStart": 481,
+      "dexEnd": 510,
+      "catalogued": false
+    },
+    {
+      "id": "standard-18",
+      "group": "standard",
+      "number": 18,
+      "title": "Unova",
+      "rangeLabel": "#0511\u2013#0540",
+      "subtitle": "Pansage \u2013 Sewaddle",
+      "dexStart": 511,
+      "dexEnd": 540,
+      "catalogued": false
+    },
+    {
+      "id": "standard-19",
+      "group": "standard",
+      "number": 19,
+      "title": "Unova",
+      "rangeLabel": "#0541\u2013#0570",
+      "subtitle": "Swadloon \u2013 Zorua",
+      "dexStart": 541,
+      "dexEnd": 570,
+      "catalogued": false
+    },
+    {
+      "id": "standard-20",
+      "group": "standard",
+      "number": 20,
+      "title": "Unova",
+      "rangeLabel": "#0571\u2013#0600",
+      "subtitle": "Zoroark \u2013 Klang",
+      "dexStart": 571,
+      "dexEnd": 600,
+      "catalogued": false
+    },
+    {
+      "id": "standard-21",
+      "group": "standard",
+      "number": 21,
+      "title": "Unova",
+      "rangeLabel": "#0601\u2013#0630",
+      "subtitle": "Klinklang \u2013 Mandibuzz",
+      "dexStart": 601,
+      "dexEnd": 630,
+      "catalogued": false
+    },
+    {
+      "id": "standard-22",
+      "group": "standard",
+      "number": 22,
+      "title": "Unova \u00b7 Kalos",
+      "rangeLabel": "#0631\u2013#0660",
+      "subtitle": "Heatmor \u2013 Diggersby",
+      "dexStart": 631,
+      "dexEnd": 660,
+      "catalogued": false
+    },
+    {
+      "id": "standard-23",
+      "group": "standard",
+      "number": 23,
+      "title": "Kalos",
+      "rangeLabel": "#0661\u2013#0690",
+      "subtitle": "Fletchling \u2013 Skrelp",
+      "dexStart": 661,
+      "dexEnd": 690,
+      "catalogued": false
+    },
+    {
+      "id": "standard-24",
+      "group": "standard",
+      "number": 24,
+      "title": "Kalos",
+      "rangeLabel": "#0691\u2013#0720",
+      "subtitle": "Dragalge \u2013 Hoopa",
+      "dexStart": 691,
+      "dexEnd": 720,
+      "catalogued": false
+    },
+    {
+      "id": "standard-25",
+      "group": "standard",
+      "number": 25,
+      "title": "Kalos \u00b7 Alola",
+      "rangeLabel": "#0721\u2013#0750",
+      "subtitle": "Volcanion \u2013 Mudsdale",
+      "dexStart": 721,
+      "dexEnd": 750,
+      "catalogued": false
+    },
+    {
+      "id": "standard-26",
+      "group": "standard",
+      "number": 26,
+      "title": "Alola",
+      "rangeLabel": "#0751\u2013#0780",
+      "subtitle": "Dewpider \u2013 Drampa",
+      "dexStart": 751,
+      "dexEnd": 780,
+      "catalogued": false
+    },
+    {
+      "id": "standard-27",
+      "group": "standard",
+      "number": 27,
+      "title": "Alola \u00b7 Galar & Hisui",
+      "rangeLabel": "#0781\u2013#0810",
+      "subtitle": "Dhelmise \u2013 Grookey",
+      "dexStart": 781,
+      "dexEnd": 810,
+      "catalogued": false
+    },
+    {
+      "id": "standard-28",
+      "group": "standard",
+      "number": 28,
+      "title": "Galar & Hisui",
+      "rangeLabel": "#0811\u2013#0840",
+      "subtitle": "Thwackey \u2013 Applin",
+      "dexStart": 811,
+      "dexEnd": 840,
+      "catalogued": false
+    },
+    {
+      "id": "standard-29",
+      "group": "standard",
+      "number": 29,
+      "title": "Galar & Hisui",
+      "rangeLabel": "#0841\u2013#0870",
+      "subtitle": "Flapple \u2013 Falinks",
+      "dexStart": 841,
+      "dexEnd": 870,
+      "catalogued": false
+    },
+    {
+      "id": "standard-30",
+      "group": "standard",
+      "number": 30,
+      "title": "Galar & Hisui",
+      "rangeLabel": "#0871\u2013#0900",
+      "subtitle": "Pincurchin \u2013 Kleavor",
+      "dexStart": 871,
+      "dexEnd": 900,
+      "catalogued": false
+    },
+    {
+      "id": "standard-31",
+      "group": "standard",
+      "number": 31,
+      "title": "Galar & Hisui \u00b7 Paldea",
+      "rangeLabel": "#0901\u2013#0930",
+      "subtitle": "Ursaluna \u2013 Arboliva",
+      "dexStart": 901,
+      "dexEnd": 930,
+      "catalogued": false
+    },
+    {
+      "id": "standard-32",
+      "group": "standard",
+      "number": 32,
+      "title": "Paldea",
+      "rangeLabel": "#0931\u2013#0960",
+      "subtitle": "Squawkabilly \u2013 Wiglett",
+      "dexStart": 931,
+      "dexEnd": 960,
+      "catalogued": false
+    },
+    {
+      "id": "standard-33",
+      "group": "standard",
+      "number": 33,
+      "title": "Paldea",
+      "rangeLabel": "#0961\u2013#0990",
+      "subtitle": "Wugtrio \u2013 Iron Treads",
+      "dexStart": 961,
+      "dexEnd": 990,
+      "catalogued": false
+    },
+    {
+      "id": "standard-34",
+      "group": "standard",
+      "number": 34,
+      "title": "Paldea",
+      "rangeLabel": "#0991\u2013#1020",
+      "subtitle": "Iron Bundle \u2013 Gouging Fire",
+      "dexStart": 991,
+      "dexEnd": 1020,
+      "catalogued": true
+    },
+    {
+      "id": "standard-35",
+      "group": "standard",
+      "number": 35,
+      "title": "Paldea",
+      "rangeLabel": "#1021\u2013#1025",
+      "subtitle": "Raging Bolt \u2013 Pecharunt",
+      "dexStart": 1021,
+      "dexEnd": 1025,
+      "catalogued": false
+    },
+    {
+      "id": "alt-01",
+      "group": "alt",
+      "number": 1,
+      "title": "Regional Forms & Variants",
+      "rangeLabel": "Alola \u00b7 Galar \u00b7 Hisui \u00b7 Paldea",
+      "subtitle": "Rattata \u2013 Indeedee",
+      "dexStart": null,
+      "dexEnd": null,
+      "catalogued": true
+    }
+  ]
+}
