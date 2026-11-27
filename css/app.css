@@ -47,19 +47,16 @@ body {
 }
 
 .brand-mark {
+  display: block;
   width: 46px;
   height: 46px;
   flex: 0 0 auto;
-  border-radius: 14px;
-  background:
-    radial-gradient(circle at 30% 32%, #fff 0 2px, transparent 2.5px),
-    radial-gradient(circle at 50% 32%, #fff 0 2px, transparent 2.5px),
-    radial-gradient(circle at 70% 32%, #fff 0 2px, transparent 2.5px),
-    radial-gradient(circle at 30% 50%, #fff 0 2px, transparent 2.5px),
-    radial-gradient(circle at 50% 50%, #fff 0 2px, transparent 2.5px),
-    radial-gradient(circle at 70% 50%, #fff 0 2px, transparent 2.5px),
-    linear-gradient(160deg, #7ef0e4, #12b5a8 55%, #0f766e);
-  box-shadow: 0 8px 16px rgba(15, 158, 147, 0.28);
+  border-radius: 8px;
+  object-fit: cover;
+  background-color: #fcf8f2;
+  box-shadow:
+    0 0 0 1px rgba(68, 78, 89, 0.16),
+    0 6px 14px rgba(28, 43, 51, 0.12);
 }
 
 .brand h1 {
