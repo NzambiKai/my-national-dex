@@ -1,13 +1,36 @@
-import { readFile } from "node:fs/promises";
-import { access } from "node:fs/promises";
+/**
+ * Verify the Living Dex against the pokedexapp.net box order.
+ *
+ * Order source: https://pokedexapp.net/pokedex/ loads /js/dexDB.json and
+ * /js/printDex.js. printDex.js does not ship a box list. It appends cards in
+ * this order, 30 per box:
+ *   1. writeDex('nat') — National Dex #0001–#1025.
+ *   2. writeDex('alt') — Alolan, Galarian, Hisuian, then Paldean forms.
+ *      Each region starts a new box.
+ *   3. Gender-specific forms (Sneasel adds Hisuian Male and Hisuian Female).
+ *   4. Other alt forms, skipping Unown, Vivillon, and Alcremie.
+ *   5. Unown, Vivillon, then Alcremie (flavors × toppings).
+ * Shiny, Mega, and Gigantamax flags are not slots.
+ *
+ * scripts/lib/pokedexapp-order.mjs is that packing. This script rebuilds it
+ * from data/sources/pokedexapp-dexdb.js (the file scripts/sync-data.mjs saved
+ * from the live dexDB) and checks data/dex.json slot for slot. Pass --live to
+ * also download the current dexDB and require the snapshot to still match.
+ */
+
+import { access, readFile } from "node:fs/promises";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
-import { locationText, standardPlacement } from "../js/model/location.js";
-import { buildBoxSpaces, spaceIndexForBox } from "../js/model/spaces.js";
+import { entryId } from "./lib/entry-id.mjs";
+import { loadDexData } from "./lib/load-dex.mjs";
+import { flattenLayout, layoutFromDexData } from "./lib/pokedexapp-order.mjs";
 import { matchesView } from "../js/model/catalog.js";
+import { locationText, slotPosition, standardPlacement } from "../js/model/location.js";
 import { searchEntries } from "../js/model/search.js";
+import { buildBoxSpaces, spaceIndexForBox } from "../js/model/spaces.js";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
+const live = process.argv.includes("--live");
 const readJson = async (path) => JSON.parse(await readFile(join(root, path), "utf8"));
 
 const failures = [];
@@ -19,65 +42,66 @@ const dex = await readJson("data/dex.json");
 const boxes = await readJson("data/boxes.json");
 const games = await readJson("data/games.json");
 const collection = await readJson("data/collection.json");
+const snapshot = await readFile(join(root, "data/sources/pokedexapp-dexdb.js"), "utf8");
+const expected = flattenLayout(layoutFromDexData(loadDexData(snapshot)));
 
-const boxById = new Map(boxes.boxes.map((box) => [box.id, box]));
-const gameIds = new Set(games.games.map((game) => game.id));
-const caughtById = new Map(collection.entries.map((entry) => [entry.id, entry.caught]));
+expect(expected.length === dex.entries.length, `catalog has ${dex.entries.length} rows, pokedexapp layout has ${expected.length}`);
+expected.forEach((slot, index) => {
+  const entry = dex.entries[index];
+  if (!entry) return;
+  const id = entryId(slot);
+  expect(entry.id === id && entry.boxId === slot.boxId && entry.slot === slot.slot && entry.nationalDex === slot.nationalDex, `${id} drifted at index ${index}: got ${entry?.id} ${entry?.boxId} slot ${entry?.slot}`);
+});
+
+const standard = dex.entries.filter((entry) => entry.kind === "standard");
+const alt = dex.entries.filter((entry) => entry.kind !== "standard");
+const standardBoxes = boxes.boxes.filter((box) => box.group === "standard");
+const altBoxes = boxes.boxes.filter((box) => box.group === "alt");
+expect(standard.length === 1025, `expected 1025 standard Pokémon, got ${standard.length}`);
+expect(alt.length === 513, `expected 513 Alt Forms / Variants, got ${alt.length}`);
+expect(standardBoxes.length === 35 && altBoxes.length === 21 && boxes.boxes.length === 56, `expected 35 standard + 21 alt boxes, got ${standardBoxes.length}+${altBoxes.length}`);
+expect(boxes.boxes.every((box) => box.catalogued), "every box should be catalogued");
+expect(altBoxes[0]?.title === "Alolan Forms" && altBoxes.at(-1)?.title === "Alcremie Forms", "alt section order drifted");
 
 const spaces = buildBoxSpaces(boxes.boxes);
 expect(spaces.length === 2, `expected 2 Box Spaces, got ${spaces.length}`);
-expect(spaces[0].boxes.length === 30 && spaces[0].label === "0001 - 0900", `space 1 drifted: ${spaces[0].label}`);
-expect(spaces[0].boxes[0].id === "standard-01" && spaces[0].boxes.at(-1).id === "standard-30", "space 1 should be boxes 1–30");
-expect(
-  spaces[1].boxes.map((box) => box.id).join() === "standard-31,standard-32,standard-33,standard-34,standard-35,alt-01",
-  `space 2 drifted: ${spaces[1].boxes.map((box) => box.id).join()}`,
-);
-expect(spaces[1].label === "0901 - 1025 · Alt 1", `space 2 label drifted: ${spaces[1].label}`);
+expect(spaces[0].label === "0001 - 0900" && spaces[0].boxes.length === 30, `space 1 drifted: ${spaces[0].label}`);
+expect(spaces[1].label === "0901 - 1025 · Alt 1–21" && spaces[1].boxes.length === 26, `space 2 drifted: ${spaces[1].label}`);
+expect(spaces[1].boxes.filter((box) => box.group === "standard").length === 5, "space 2 should keep the last standard boxes ahead of Alt Forms");
+expect(spaces[1].boxes.filter((box) => box.group === "alt").length === 21, "space 2 should include every Alt Forms box");
 expect(spaceIndexForBox(spaces, "standard-01") === 0 && spaceIndexForBox(spaces, "alt-01") === 1, "box space lookup drifted");
-const extraAlt = [
-  ...boxes.boxes,
-  ...Array.from({ length: 30 }, (_, index) => ({
-    id: `alt-extra-${index + 2}`,
-    group: "alt",
-    number: index + 2,
-    dexStart: null,
-    dexEnd: null,
-  })),
-];
-const grown = buildBoxSpaces(extraAlt);
-expect(grown.length === 3, "more Alt Forms boxes should open another Box Space");
-expect(grown[1].boxes.filter((box) => box.group === "alt").length === 25, "space 2 should fill the remaining slots with Alt Forms");
-expect(grown[2].boxes.length === 6 && grown[2].boxes.every((box) => box.group === "alt"), "overflow Alt Forms should start the next Box Space");
 
-const sample = dex.entries.find((entry) => entry.id === "0006");
-expect(matchesView(sample, { filter: "all", gameId: "s" }) === sample.games.includes("s"), "game filter should follow Scarlet");
-expect(matchesView({ caught: false, games: ["s"] }, { filter: "missing", gameId: "s" }), "missing + game keeps catchable gaps");
-expect(!matchesView({ caught: true, games: ["s"] }, { filter: "missing", gameId: "s" }), "missing + game hides caught");
-expect(!matchesView({ caught: false, games: [] }, { filter: "missing", gameId: "s" }), "missing + game hides Pokémon that are not in that game");
-
-expect(boxes.boxes.filter((box) => box.group === "standard").length === 35, "expected 35 standard boxes");
-expect(boxes.boxes.filter((box) => box.catalogued).map((box) => box.id).join() === "standard-01,standard-02,standard-34,alt-01", "unexpected catalogued boxes");
-
-const slotKeys = new Set();
+const boxById = new Map(boxes.boxes.map((box) => [box.id, box]));
+const gameIds = new Set(games.games.map((game) => game.id));
+const seenSlots = new Set();
+const seenIds = new Set();
 for (const entry of dex.entries) {
-  const box = boxById.get(entry.boxId);
-  expect(box, `missing box ${entry.boxId}`);
-  expect(gameIds.size > 0 && entry.games.every((id) => gameIds.has(id)), `${entry.id} has an unknown game`);
-  expect(caughtById.has(entry.id), `collection missing ${entry.id}`);
+  expect(!seenIds.has(entry.id), `duplicate id ${entry.id}`);
+  seenIds.add(entry.id);
   const key = `${entry.boxId}:${entry.slot}`;
-  expect(!slotKeys.has(key), `duplicate slot ${key}`);
-  slotKeys.add(key);
+  expect(!seenSlots.has(key), `duplicate slot ${key}`);
+  seenSlots.add(key);
+  const position = slotPosition(entry.slot);
+  expect(entry.row === position.row && entry.column === position.column, `${entry.id} row/col drifted`);
+  expect(entry.games.every((id) => gameIds.has(id)), `${entry.id} has an unknown game`);
+  expect(entry.types.length > 0, `${entry.id} has no types`);
+  if (entry.games.length === 0) expect(entry.availabilityNote, `${entry.id} is uncatchable without a note`);
   if (entry.kind === "standard") {
     const place = standardPlacement(entry.nationalDex);
-    expect(place.boxNumber === box.number && place.slot === entry.slot, `${entry.id} placement drifted`);
+    const box = boxById.get(entry.boxId);
+    expect(place.boxNumber === box?.number && place.slot === entry.slot, `${entry.id} placement drifted`);
   }
 }
 
-expect(dex.entries.length === collection.entries.length, "collection and dex sizes differ");
+expect(Array.isArray(collection.caught), "collection.caught should be an array of ids");
+const caught = new Set();
+for (const id of collection.caught ?? []) {
+  expect(seenIds.has(id), `caught id ${id} is not in the dex`);
+  expect(!caught.has(id), `caught id ${id} is listed twice`);
+  caught.add(id);
+}
+
 expect(locationText({ group: "standard", number: 1 }, 4) === "Box 1 · Row 1, Col 4 (Slot 4)", "location text");
-expect(standardPlacement(6).row === 1 && standardPlacement(6).column === 6, "charizard slot");
-expect(standardPlacement(991).boxNumber === 34 && standardPlacement(991).slot === 1, "box 34 start");
-expect(standardPlacement(1020).slot === 30 && standardPlacement(1020).row === 5, "box 34 end");
 expect(standardPlacement(1025).boxNumber === 35 && standardPlacement(1025).slot === 5, "final box");
 
 const prepared = dex.entries.map((entry) => ({
@@ -85,15 +109,13 @@ const prepared = dex.entries.map((entry) => ({
   box: boxById.get(entry.boxId),
   locationText: locationText(boxById.get(entry.boxId), entry.slot),
 }));
-
-const charizard = searchEntries(prepared, "charizard")[0];
-expect(charizard?.id === "0006", "search charizard");
+expect(searchEntries(prepared, "charizard")[0]?.id === "0006", "search charizard");
 expect(searchEntries(prepared, "0006")[0]?.id === "0006", "search 0006");
 expect(searchEntries(prepared, "6")[0]?.id === "0006", "search 6");
-const vulpix = searchEntries(prepared, "alolan vulpix");
-expect(vulpix[0]?.id === "0037-alola", `alolan vulpix search got ${vulpix[0]?.id}`);
+expect(searchEntries(prepared, "alolan vulpix")[0]?.id === "0037-alola", "alolan vulpix search");
 expect(searchEntries(prepared, "19").some((entry) => entry.id === "0019"), "dex 19 includes Rattata");
 expect(searchEntries(prepared, "19").some((entry) => entry.id === "0019-alola"), "dex 19 includes Alolan Rattata");
+expect(searchEntries(prepared, "869").filter((entry) => entry.nationalDex === 869).length > 60, "dex 869 should return Alcremie forms");
 expect(searchEntries(prepared, "walking wake")[0]?.id === "1009", "walking wake search");
 expect(searchEntries(prepared, "blaze")[0]?.id === "0128-paldea-blaze", "blaze breed search");
 expect(searchEntries(prepared, "nidoran female")[0]?.id === "0029", "nidoran female search");
@@ -110,22 +132,44 @@ expect(byId.get("1010").games.length === 0, "Iron Leaves is not currently catcha
 expect(byId.get("0037-alola").games.includes("la"), "Alolan Vulpix is obtainable in Hisui");
 expect(byId.get("0077-galar").games.join() === "sh", "Galarian Ponyta is Shield only");
 
-const box1 = collection.entries.filter((entry) => entry.box === "Box 1");
-expect(box1.length === 30, "box 1 collection size");
-expect(box1.filter((entry) => entry.caught).length === 24, "box 1 caught count");
+const sample = byId.get("0006");
+expect(matchesView(sample, { filter: "all", gameId: "s" }) === sample.games.includes("s"), "game filter should follow Scarlet");
+expect(matchesView({ caught: false, games: ["s"] }, { filter: "missing", gameId: "s" }), "missing + game keeps catchable gaps");
+expect(!matchesView({ caught: true, games: ["s"] }, { filter: "missing", gameId: "s" }), "missing + game hides caught");
+expect(!matchesView({ caught: false, games: [] }, { filter: "missing", gameId: "s" }), "missing + game hides Pokémon that are not in that game");
+const box1 = dex.entries.filter((entry) => entry.boxId === "standard-01");
+expect(box1.filter((entry) => matchesView(entry, { filter: "all", gameId: "bd" })).every((entry) => entry.games.includes("bd")), "box filter stays inside the selected game");
 
 let missingSprites = 0;
+let badSprites = 0;
 for (const entry of dex.entries) {
+  const path = join(root, "assets/sprites", `${entry.spriteId}.png`);
   try {
-    await access(join(root, "assets/sprites", `${entry.spriteId}.png`));
+    await access(path);
+    const handle = await readFile(path);
+    if (handle.length < 400 || handle[0] !== 0x89 || handle[1] !== 0x50) badSprites += 1;
   } catch {
     missingSprites += 1;
   }
 }
 expect(missingSprites === 0, `${missingSprites} HOME sprites are missing`);
+expect(badSprites === 0, `${badSprites} sprite files are not PNGs`);
+
+if (live) {
+  const response = await fetch("https://pokedexapp.net/js/dexDB.json");
+  expect(response.ok, `live dexDB returned ${response.status}`);
+  if (response.ok) {
+    const body = await response.text();
+    const liveSlots = flattenLayout(layoutFromDexData(loadDexData(body)));
+    const same = liveSlots.length === expected.length && liveSlots.every((slot, index) => entryId(slot) === entryId(expected[index]) && slot.boxId === expected[index].boxId && slot.slot === expected[index].slot);
+    expect(same, "live pokedexapp.net dexDB order differs from data/sources/pokedexapp-dexdb.js — re-run node scripts/sync-data.mjs");
+  }
+}
 
 if (failures.length) {
   console.error(failures.join("\n"));
   process.exit(1);
 }
-console.log(`Catalog ok: ${dex.entries.length} Pokémon, ${boxes.boxes.length} boxes, sprites present.`);
+
+const fallbacks = dex.entries.filter((entry) => entry.spriteNote).length;
+console.log(`Catalog ok: ${dex.entries.length} Pokémon (${standard.length} standard, ${alt.length} alt), ${boxes.boxes.length} boxes, ${spaces.length} Box Spaces, ${fallbacks} sprite fallbacks${live ? ", live pokedexapp order matches" : ""}.`);

@@ -11,6 +11,7 @@ export function normalizeQuery(value) {
 }
 
 function haystack(entry) {
+  if (entry.searchText) return entry.searchText;
   return normalizeQuery(
     [
       entry.title,
@@ -33,7 +34,7 @@ function byDexThenSlot(a, b) {
   return a.nationalDex - b.nationalDex || a.slot - b.slot;
 }
 
-export function searchEntries(entries, rawQuery, limit = 8) {
+export function searchEntries(entries, rawQuery, limit = 12) {
   const query = normalizeQuery(rawQuery);
   if (!query) return [];
 
@@ -43,7 +44,7 @@ export function searchEntries(entries, rawQuery, limit = 8) {
     return entries
       .filter((entry) => entry.nationalDex === nationalDex)
       .sort(byDexThenSlot)
-      .slice(0, limit);
+      .slice(0, 80);
   }
 
   const parts = query.split(" ");
@@ -53,6 +54,7 @@ export function searchEntries(entries, rawQuery, limit = 8) {
     let score = 0;
     if (hay === query) score = 100;
     else if (hay.startsWith(query)) score = 80;
+    else if (hay.split(" ").includes(query)) score = 90;
     else if (hay.split(" ").some((word) => word.startsWith(query))) score = 70;
     else if (parts.every((part) => hay.includes(part))) score = 55;
     else if (hay.includes(query)) score = 40;
