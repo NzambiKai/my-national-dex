@@ -1,0 +1,5082 @@
+{
+  "note": "Local Pokémon HOME shiny sprites from PokeAPI/sprites (sprites/pokemon/other/home/shiny and shiny/female). kind \"dedicated\" is that sprite's own shiny file under assets/sprites/shiny/. kind \"species\" reuses the base species' shiny HOME file. kind \"normal\" reuses the bundled normal HOME sprite because PokeAPI has no shiny HOME art for that form or its species. The site reads only these local paths.",
+  "source": "https://github.com/PokeAPI/sprites/tree/master/sprites/pokemon/other/home/shiny",
+  "counts": {
+    "dedicated": 1239,
+    "species": 7,
+    "normal": 0,
+    "total": 1246
+  },
+  "fallbacks": [
+    {
+      "spriteId": "10094",
+      "entries": [
+        "0025-original-cap"
+      ],
+      "kind": "species",
+      "file": "assets/sprites/shiny/25.png",
+      "speciesSpriteId": "25",
+      "note": "No dedicated shiny HOME sprite in PokeAPI/sprites; using the base species shiny HOME sprite (#0025)."
+    },
+    {
+      "spriteId": "10095",
+      "entries": [
+        "0025-hoenn-cap"
+      ],
+      "kind": "species",
+      "file": "assets/sprites/shiny/25.png",
+      "speciesSpriteId": "25",
+      "note": "No dedicated shiny HOME sprite in PokeAPI/sprites; using the base species shiny HOME sprite (#0025)."
+    },
+    {
+      "spriteId": "10096",
+      "entries": [
+        "0025-sinnoh-cap"
+      ],
+      "kind": "species",
+      "file": "assets/sprites/shiny/25.png",
+      "speciesSpriteId": "25",
+      "note": "No dedicated shiny HOME sprite in PokeAPI/sprites; using the base species shiny HOME sprite (#0025)."
+    },
+    {
+      "spriteId": "10097",
+      "entries": [
+        "0025-unova-cap"
+      ],
+      "kind": "species",
+      "file": "assets/sprites/shiny/25.png",
+      "speciesSpriteId": "25",
+      "note": "No dedicated shiny HOME sprite in PokeAPI/sprites; using the base species shiny HOME sprite (#0025)."
+    },
+    {
+      "spriteId": "10098",
+      "entries": [
+        "0025-kalos-cap"
+      ],
+      "kind": "species",
+      "file": "assets/sprites/shiny/25.png",
+      "speciesSpriteId": "25",
+      "note": "No dedicated shiny HOME sprite in PokeAPI/sprites; using the base species shiny HOME sprite (#0025)."
+    },
+    {
+      "spriteId": "10099",
+      "entries": [
+        "0025-alolan-cap"
+      ],
+      "kind": "species",
+      "file": "assets/sprites/shiny/25.png",
+      "speciesSpriteId": "25",
+      "note": "No dedicated shiny HOME sprite in PokeAPI/sprites; using the base species shiny HOME sprite (#0025)."
+    },
+    {
+      "spriteId": "10160",
+      "entries": [
+        "0025-world-cap"
+      ],
+      "kind": "species",
+      "file": "assets/sprites/shiny/25.png",
+      "speciesSpriteId": "25",
+      "note": "No dedicated shiny HOME sprite in PokeAPI/sprites; using the base species shiny HOME sprite (#0025)."
+    }
+  ],
+  "bySpriteId": {
+    "1": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/1.png"
+    },
+    "2": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/2.png"
+    },
+    "3": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/3.png"
+    },
+    "4": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/4.png"
+    },
+    "5": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/5.png"
+    },
+    "6": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/6.png"
+    },
+    "7": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/7.png"
+    },
+    "8": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/8.png"
+    },
+    "9": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/9.png"
+    },
+    "10": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/10.png"
+    },
+    "11": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/11.png"
+    },
+    "12": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/12.png"
+    },
+    "13": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/13.png"
+    },
+    "14": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/14.png"
+    },
+    "15": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/15.png"
+    },
+    "16": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/16.png"
+    },
+    "17": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/17.png"
+    },
+    "18": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/18.png"
+    },
+    "19": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/19.png"
+    },
+    "20": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/20.png"
+    },
+    "21": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/21.png"
+    },
+    "22": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/22.png"
+    },
+    "23": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/23.png"
+    },
+    "24": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/24.png"
+    },
+    "25": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/25.png"
+    },
+    "26": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/26.png"
+    },
+    "27": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/27.png"
+    },
+    "28": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/28.png"
+    },
+    "29": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/29.png"
+    },
+    "30": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/30.png"
+    },
+    "31": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/31.png"
+    },
+    "32": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/32.png"
+    },
+    "33": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/33.png"
+    },
+    "34": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/34.png"
+    },
+    "35": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/35.png"
+    },
+    "36": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/36.png"
+    },
+    "37": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/37.png"
+    },
+    "38": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/38.png"
+    },
+    "39": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/39.png"
+    },
+    "40": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/40.png"
+    },
+    "41": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/41.png"
+    },
+    "42": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/42.png"
+    },
+    "43": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/43.png"
+    },
+    "44": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/44.png"
+    },
+    "45": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/45.png"
+    },
+    "46": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/46.png"
+    },
+    "47": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/47.png"
+    },
+    "48": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/48.png"
+    },
+    "49": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/49.png"
+    },
+    "50": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/50.png"
+    },
+    "51": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/51.png"
+    },
+    "52": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/52.png"
+    },
+    "53": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/53.png"
+    },
+    "54": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/54.png"
+    },
+    "55": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/55.png"
+    },
+    "56": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/56.png"
+    },
+    "57": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/57.png"
+    },
+    "58": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/58.png"
+    },
+    "59": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/59.png"
+    },
+    "60": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/60.png"
+    },
+    "61": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/61.png"
+    },
+    "62": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/62.png"
+    },
+    "63": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/63.png"
+    },
+    "64": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/64.png"
+    },
+    "65": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/65.png"
+    },
+    "66": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/66.png"
+    },
+    "67": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/67.png"
+    },
+    "68": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/68.png"
+    },
+    "69": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/69.png"
+    },
+    "70": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/70.png"
+    },
+    "71": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/71.png"
+    },
+    "72": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/72.png"
+    },
+    "73": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/73.png"
+    },
+    "74": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/74.png"
+    },
+    "75": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/75.png"
+    },
+    "76": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/76.png"
+    },
+    "77": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/77.png"
+    },
+    "78": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/78.png"
+    },
+    "79": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/79.png"
+    },
+    "80": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/80.png"
+    },
+    "81": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/81.png"
+    },
+    "82": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/82.png"
+    },
+    "83": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/83.png"
+    },
+    "84": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/84.png"
+    },
+    "85": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/85.png"
+    },
+    "86": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/86.png"
+    },
+    "87": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/87.png"
+    },
+    "88": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/88.png"
+    },
+    "89": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/89.png"
+    },
+    "90": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/90.png"
+    },
+    "91": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/91.png"
+    },
+    "92": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/92.png"
+    },
+    "93": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/93.png"
+    },
+    "94": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/94.png"
+    },
+    "95": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/95.png"
+    },
+    "96": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/96.png"
+    },
+    "97": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/97.png"
+    },
+    "98": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/98.png"
+    },
+    "99": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/99.png"
+    },
+    "100": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/100.png"
+    },
+    "101": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/101.png"
+    },
+    "102": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/102.png"
+    },
+    "103": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/103.png"
+    },
+    "104": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/104.png"
+    },
+    "105": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/105.png"
+    },
+    "106": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/106.png"
+    },
+    "107": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/107.png"
+    },
+    "108": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/108.png"
+    },
+    "109": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/109.png"
+    },
+    "110": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/110.png"
+    },
+    "111": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/111.png"
+    },
+    "112": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/112.png"
+    },
+    "113": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/113.png"
+    },
+    "114": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/114.png"
+    },
+    "115": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/115.png"
+    },
+    "116": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/116.png"
+    },
+    "117": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/117.png"
+    },
+    "118": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/118.png"
+    },
+    "119": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/119.png"
+    },
+    "120": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/120.png"
+    },
+    "121": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/121.png"
+    },
+    "122": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/122.png"
+    },
+    "123": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/123.png"
+    },
+    "124": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/124.png"
+    },
+    "125": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/125.png"
+    },
+    "126": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/126.png"
+    },
+    "127": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/127.png"
+    },
+    "128": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/128.png"
+    },
+    "129": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/129.png"
+    },
+    "130": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/130.png"
+    },
+    "131": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/131.png"
+    },
+    "132": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/132.png"
+    },
+    "133": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/133.png"
+    },
+    "134": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/134.png"
+    },
+    "135": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/135.png"
+    },
+    "136": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/136.png"
+    },
+    "137": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/137.png"
+    },
+    "138": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/138.png"
+    },
+    "139": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/139.png"
+    },
+    "140": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/140.png"
+    },
+    "141": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/141.png"
+    },
+    "142": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/142.png"
+    },
+    "143": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/143.png"
+    },
+    "144": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/144.png"
+    },
+    "145": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/145.png"
+    },
+    "146": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/146.png"
+    },
+    "147": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/147.png"
+    },
+    "148": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/148.png"
+    },
+    "149": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/149.png"
+    },
+    "150": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/150.png"
+    },
+    "151": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/151.png"
+    },
+    "152": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/152.png"
+    },
+    "153": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/153.png"
+    },
+    "154": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/154.png"
+    },
+    "155": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/155.png"
+    },
+    "156": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/156.png"
+    },
+    "157": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/157.png"
+    },
+    "158": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/158.png"
+    },
+    "159": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/159.png"
+    },
+    "160": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/160.png"
+    },
+    "161": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/161.png"
+    },
+    "162": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/162.png"
+    },
+    "163": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/163.png"
+    },
+    "164": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/164.png"
+    },
+    "165": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/165.png"
+    },
+    "166": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/166.png"
+    },
+    "167": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/167.png"
+    },
+    "168": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/168.png"
+    },
+    "169": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/169.png"
+    },
+    "170": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/170.png"
+    },
+    "171": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/171.png"
+    },
+    "172": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/172.png"
+    },
+    "173": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/173.png"
+    },
+    "174": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/174.png"
+    },
+    "175": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/175.png"
+    },
+    "176": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/176.png"
+    },
+    "177": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/177.png"
+    },
+    "178": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/178.png"
+    },
+    "179": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/179.png"
+    },
+    "180": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/180.png"
+    },
+    "181": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/181.png"
+    },
+    "182": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/182.png"
+    },
+    "183": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/183.png"
+    },
+    "184": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/184.png"
+    },
+    "185": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/185.png"
+    },
+    "186": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/186.png"
+    },
+    "187": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/187.png"
+    },
+    "188": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/188.png"
+    },
+    "189": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/189.png"
+    },
+    "190": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/190.png"
+    },
+    "191": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/191.png"
+    },
+    "192": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/192.png"
+    },
+    "193": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/193.png"
+    },
+    "194": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/194.png"
+    },
+    "195": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/195.png"
+    },
+    "196": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/196.png"
+    },
+    "197": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/197.png"
+    },
+    "198": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/198.png"
+    },
+    "199": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/199.png"
+    },
+    "200": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/200.png"
+    },
+    "201": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/201.png"
+    },
+    "202": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/202.png"
+    },
+    "203": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/203.png"
+    },
+    "204": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/204.png"
+    },
+    "205": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/205.png"
+    },
+    "206": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/206.png"
+    },
+    "207": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/207.png"
+    },
+    "208": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/208.png"
+    },
+    "209": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/209.png"
+    },
+    "210": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/210.png"
+    },
+    "211": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/211.png"
+    },
+    "212": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/212.png"
+    },
+    "213": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/213.png"
+    },
+    "214": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/214.png"
+    },
+    "215": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/215.png"
+    },
+    "216": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/216.png"
+    },
+    "217": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/217.png"
+    },
+    "218": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/218.png"
+    },
+    "219": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/219.png"
+    },
+    "220": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/220.png"
+    },
+    "221": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/221.png"
+    },
+    "222": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/222.png"
+    },
+    "223": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/223.png"
+    },
+    "224": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/224.png"
+    },
+    "225": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/225.png"
+    },
+    "226": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/226.png"
+    },
+    "227": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/227.png"
+    },
+    "228": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/228.png"
+    },
+    "229": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/229.png"
+    },
+    "230": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/230.png"
+    },
+    "231": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/231.png"
+    },
+    "232": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/232.png"
+    },
+    "233": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/233.png"
+    },
+    "234": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/234.png"
+    },
+    "235": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/235.png"
+    },
+    "236": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/236.png"
+    },
+    "237": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/237.png"
+    },
+    "238": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/238.png"
+    },
+    "239": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/239.png"
+    },
+    "240": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/240.png"
+    },
+    "241": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/241.png"
+    },
+    "242": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/242.png"
+    },
+    "243": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/243.png"
+    },
+    "244": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/244.png"
+    },
+    "245": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/245.png"
+    },
+    "246": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/246.png"
+    },
+    "247": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/247.png"
+    },
+    "248": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/248.png"
+    },
+    "249": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/249.png"
+    },
+    "250": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/250.png"
+    },
+    "251": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/251.png"
+    },
+    "252": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/252.png"
+    },
+    "253": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/253.png"
+    },
+    "254": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/254.png"
+    },
+    "255": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/255.png"
+    },
+    "256": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/256.png"
+    },
+    "257": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/257.png"
+    },
+    "258": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/258.png"
+    },
+    "259": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/259.png"
+    },
+    "260": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/260.png"
+    },
+    "261": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/261.png"
+    },
+    "262": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/262.png"
+    },
+    "263": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/263.png"
+    },
+    "264": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/264.png"
+    },
+    "265": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/265.png"
+    },
+    "266": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/266.png"
+    },
+    "267": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/267.png"
+    },
+    "268": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/268.png"
+    },
+    "269": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/269.png"
+    },
+    "270": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/270.png"
+    },
+    "271": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/271.png"
+    },
+    "272": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/272.png"
+    },
+    "273": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/273.png"
+    },
+    "274": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/274.png"
+    },
+    "275": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/275.png"
+    },
+    "276": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/276.png"
+    },
+    "277": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/277.png"
+    },
+    "278": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/278.png"
+    },
+    "279": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/279.png"
+    },
+    "280": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/280.png"
+    },
+    "281": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/281.png"
+    },
+    "282": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/282.png"
+    },
+    "283": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/283.png"
+    },
+    "284": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/284.png"
+    },
+    "285": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/285.png"
+    },
+    "286": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/286.png"
+    },
+    "287": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/287.png"
+    },
+    "288": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/288.png"
+    },
+    "289": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/289.png"
+    },
+    "290": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/290.png"
+    },
+    "291": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/291.png"
+    },
+    "292": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/292.png"
+    },
+    "293": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/293.png"
+    },
+    "294": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/294.png"
+    },
+    "295": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/295.png"
+    },
+    "296": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/296.png"
+    },
+    "297": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/297.png"
+    },
+    "298": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/298.png"
+    },
+    "299": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/299.png"
+    },
+    "300": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/300.png"
+    },
+    "301": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/301.png"
+    },
+    "302": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/302.png"
+    },
+    "303": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/303.png"
+    },
+    "304": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/304.png"
+    },
+    "305": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/305.png"
+    },
+    "306": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/306.png"
+    },
+    "307": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/307.png"
+    },
+    "308": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/308.png"
+    },
+    "309": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/309.png"
+    },
+    "310": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/310.png"
+    },
+    "311": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/311.png"
+    },
+    "312": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/312.png"
+    },
+    "313": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/313.png"
+    },
+    "314": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/314.png"
+    },
+    "315": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/315.png"
+    },
+    "316": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/316.png"
+    },
+    "317": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/317.png"
+    },
+    "318": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/318.png"
+    },
+    "319": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/319.png"
+    },
+    "320": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/320.png"
+    },
+    "321": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/321.png"
+    },
+    "322": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/322.png"
+    },
+    "323": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/323.png"
+    },
+    "324": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/324.png"
+    },
+    "325": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/325.png"
+    },
+    "326": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/326.png"
+    },
+    "327": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/327.png"
+    },
+    "328": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/328.png"
+    },
+    "329": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/329.png"
+    },
+    "330": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/330.png"
+    },
+    "331": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/331.png"
+    },
+    "332": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/332.png"
+    },
+    "333": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/333.png"
+    },
+    "334": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/334.png"
+    },
+    "335": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/335.png"
+    },
+    "336": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/336.png"
+    },
+    "337": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/337.png"
+    },
+    "338": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/338.png"
+    },
+    "339": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/339.png"
+    },
+    "340": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/340.png"
+    },
+    "341": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/341.png"
+    },
+    "342": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/342.png"
+    },
+    "343": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/343.png"
+    },
+    "344": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/344.png"
+    },
+    "345": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/345.png"
+    },
+    "346": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/346.png"
+    },
+    "347": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/347.png"
+    },
+    "348": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/348.png"
+    },
+    "349": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/349.png"
+    },
+    "350": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/350.png"
+    },
+    "351": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/351.png"
+    },
+    "352": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/352.png"
+    },
+    "353": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/353.png"
+    },
+    "354": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/354.png"
+    },
+    "355": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/355.png"
+    },
+    "356": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/356.png"
+    },
+    "357": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/357.png"
+    },
+    "358": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/358.png"
+    },
+    "359": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/359.png"
+    },
+    "360": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/360.png"
+    },
+    "361": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/361.png"
+    },
+    "362": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/362.png"
+    },
+    "363": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/363.png"
+    },
+    "364": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/364.png"
+    },
+    "365": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/365.png"
+    },
+    "366": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/366.png"
+    },
+    "367": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/367.png"
+    },
+    "368": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/368.png"
+    },
+    "369": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/369.png"
+    },
+    "370": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/370.png"
+    },
+    "371": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/371.png"
+    },
+    "372": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/372.png"
+    },
+    "373": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/373.png"
+    },
+    "374": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/374.png"
+    },
+    "375": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/375.png"
+    },
+    "376": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/376.png"
+    },
+    "377": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/377.png"
+    },
+    "378": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/378.png"
+    },
+    "379": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/379.png"
+    },
+    "380": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/380.png"
+    },
+    "381": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/381.png"
+    },
+    "382": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/382.png"
+    },
+    "383": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/383.png"
+    },
+    "384": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/384.png"
+    },
+    "385": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/385.png"
+    },
+    "386": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/386.png"
+    },
+    "387": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/387.png"
+    },
+    "388": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/388.png"
+    },
+    "389": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/389.png"
+    },
+    "390": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/390.png"
+    },
+    "391": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/391.png"
+    },
+    "392": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/392.png"
+    },
+    "393": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/393.png"
+    },
+    "394": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/394.png"
+    },
+    "395": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/395.png"
+    },
+    "396": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/396.png"
+    },
+    "397": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/397.png"
+    },
+    "398": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/398.png"
+    },
+    "399": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/399.png"
+    },
+    "400": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/400.png"
+    },
+    "401": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/401.png"
+    },
+    "402": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/402.png"
+    },
+    "403": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/403.png"
+    },
+    "404": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/404.png"
+    },
+    "405": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/405.png"
+    },
+    "406": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/406.png"
+    },
+    "407": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/407.png"
+    },
+    "408": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/408.png"
+    },
+    "409": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/409.png"
+    },
+    "410": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/410.png"
+    },
+    "411": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/411.png"
+    },
+    "412": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/412.png"
+    },
+    "413": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/413.png"
+    },
+    "414": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/414.png"
+    },
+    "415": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/415.png"
+    },
+    "416": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/416.png"
+    },
+    "417": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/417.png"
+    },
+    "418": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/418.png"
+    },
+    "419": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/419.png"
+    },
+    "420": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/420.png"
+    },
+    "421": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/421.png"
+    },
+    "422": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/422.png"
+    },
+    "423": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/423.png"
+    },
+    "424": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/424.png"
+    },
+    "425": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/425.png"
+    },
+    "426": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/426.png"
+    },
+    "427": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/427.png"
+    },
+    "428": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/428.png"
+    },
+    "429": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/429.png"
+    },
+    "430": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/430.png"
+    },
+    "431": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/431.png"
+    },
+    "432": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/432.png"
+    },
+    "433": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/433.png"
+    },
+    "434": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/434.png"
+    },
+    "435": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/435.png"
+    },
+    "436": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/436.png"
+    },
+    "437": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/437.png"
+    },
+    "438": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/438.png"
+    },
+    "439": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/439.png"
+    },
+    "440": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/440.png"
+    },
+    "441": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/441.png"
+    },
+    "442": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/442.png"
+    },
+    "443": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/443.png"
+    },
+    "444": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/444.png"
+    },
+    "445": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/445.png"
+    },
+    "446": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/446.png"
+    },
+    "447": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/447.png"
+    },
+    "448": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/448.png"
+    },
+    "449": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/449.png"
+    },
+    "450": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/450.png"
+    },
+    "451": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/451.png"
+    },
+    "452": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/452.png"
+    },
+    "453": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/453.png"
+    },
+    "454": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/454.png"
+    },
+    "455": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/455.png"
+    },
+    "456": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/456.png"
+    },
+    "457": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/457.png"
+    },
+    "458": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/458.png"
+    },
+    "459": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/459.png"
+    },
+    "460": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/460.png"
+    },
+    "461": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/461.png"
+    },
+    "462": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/462.png"
+    },
+    "463": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/463.png"
+    },
+    "464": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/464.png"
+    },
+    "465": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/465.png"
+    },
+    "466": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/466.png"
+    },
+    "467": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/467.png"
+    },
+    "468": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/468.png"
+    },
+    "469": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/469.png"
+    },
+    "470": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/470.png"
+    },
+    "471": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/471.png"
+    },
+    "472": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/472.png"
+    },
+    "473": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/473.png"
+    },
+    "474": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/474.png"
+    },
+    "475": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/475.png"
+    },
+    "476": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/476.png"
+    },
+    "477": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/477.png"
+    },
+    "478": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/478.png"
+    },
+    "479": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/479.png"
+    },
+    "480": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/480.png"
+    },
+    "481": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/481.png"
+    },
+    "482": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/482.png"
+    },
+    "483": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/483.png"
+    },
+    "484": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/484.png"
+    },
+    "485": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/485.png"
+    },
+    "486": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/486.png"
+    },
+    "487": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/487.png"
+    },
+    "488": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/488.png"
+    },
+    "489": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/489.png"
+    },
+    "490": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/490.png"
+    },
+    "491": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/491.png"
+    },
+    "492": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/492.png"
+    },
+    "493": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/493.png"
+    },
+    "494": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/494.png"
+    },
+    "495": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/495.png"
+    },
+    "496": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/496.png"
+    },
+    "497": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/497.png"
+    },
+    "498": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/498.png"
+    },
+    "499": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/499.png"
+    },
+    "500": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/500.png"
+    },
+    "501": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/501.png"
+    },
+    "502": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/502.png"
+    },
+    "503": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/503.png"
+    },
+    "504": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/504.png"
+    },
+    "505": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/505.png"
+    },
+    "506": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/506.png"
+    },
+    "507": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/507.png"
+    },
+    "508": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/508.png"
+    },
+    "509": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/509.png"
+    },
+    "510": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/510.png"
+    },
+    "511": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/511.png"
+    },
+    "512": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/512.png"
+    },
+    "513": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/513.png"
+    },
+    "514": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/514.png"
+    },
+    "515": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/515.png"
+    },
+    "516": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/516.png"
+    },
+    "517": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/517.png"
+    },
+    "518": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/518.png"
+    },
+    "519": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/519.png"
+    },
+    "520": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/520.png"
+    },
+    "521": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/521.png"
+    },
+    "522": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/522.png"
+    },
+    "523": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/523.png"
+    },
+    "524": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/524.png"
+    },
+    "525": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/525.png"
+    },
+    "526": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/526.png"
+    },
+    "527": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/527.png"
+    },
+    "528": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/528.png"
+    },
+    "529": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/529.png"
+    },
+    "530": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/530.png"
+    },
+    "531": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/531.png"
+    },
+    "532": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/532.png"
+    },
+    "533": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/533.png"
+    },
+    "534": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/534.png"
+    },
+    "535": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/535.png"
+    },
+    "536": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/536.png"
+    },
+    "537": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/537.png"
+    },
+    "538": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/538.png"
+    },
+    "539": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/539.png"
+    },
+    "540": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/540.png"
+    },
+    "541": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/541.png"
+    },
+    "542": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/542.png"
+    },
+    "543": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/543.png"
+    },
+    "544": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/544.png"
+    },
+    "545": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/545.png"
+    },
+    "546": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/546.png"
+    },
+    "547": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/547.png"
+    },
+    "548": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/548.png"
+    },
+    "549": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/549.png"
+    },
+    "550": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/550.png"
+    },
+    "551": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/551.png"
+    },
+    "552": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/552.png"
+    },
+    "553": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/553.png"
+    },
+    "554": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/554.png"
+    },
+    "555": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/555.png"
+    },
+    "556": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/556.png"
+    },
+    "557": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/557.png"
+    },
+    "558": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/558.png"
+    },
+    "559": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/559.png"
+    },
+    "560": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/560.png"
+    },
+    "561": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/561.png"
+    },
+    "562": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/562.png"
+    },
+    "563": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/563.png"
+    },
+    "564": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/564.png"
+    },
+    "565": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/565.png"
+    },
+    "566": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/566.png"
+    },
+    "567": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/567.png"
+    },
+    "568": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/568.png"
+    },
+    "569": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/569.png"
+    },
+    "570": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/570.png"
+    },
+    "571": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/571.png"
+    },
+    "572": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/572.png"
+    },
+    "573": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/573.png"
+    },
+    "574": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/574.png"
+    },
+    "575": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/575.png"
+    },
+    "576": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/576.png"
+    },
+    "577": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/577.png"
+    },
+    "578": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/578.png"
+    },
+    "579": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/579.png"
+    },
+    "580": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/580.png"
+    },
+    "581": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/581.png"
+    },
+    "582": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/582.png"
+    },
+    "583": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/583.png"
+    },
+    "584": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/584.png"
+    },
+    "585": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/585.png"
+    },
+    "586": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/586.png"
+    },
+    "587": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/587.png"
+    },
+    "588": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/588.png"
+    },
+    "589": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/589.png"
+    },
+    "590": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/590.png"
+    },
+    "591": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/591.png"
+    },
+    "592": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/592.png"
+    },
+    "593": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/593.png"
+    },
+    "594": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/594.png"
+    },
+    "595": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/595.png"
+    },
+    "596": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/596.png"
+    },
+    "597": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/597.png"
+    },
+    "598": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/598.png"
+    },
+    "599": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/599.png"
+    },
+    "600": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/600.png"
+    },
+    "601": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/601.png"
+    },
+    "602": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/602.png"
+    },
+    "603": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/603.png"
+    },
+    "604": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/604.png"
+    },
+    "605": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/605.png"
+    },
+    "606": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/606.png"
+    },
+    "607": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/607.png"
+    },
+    "608": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/608.png"
+    },
+    "609": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/609.png"
+    },
+    "610": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/610.png"
+    },
+    "611": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/611.png"
+    },
+    "612": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/612.png"
+    },
+    "613": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/613.png"
+    },
+    "614": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/614.png"
+    },
+    "615": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/615.png"
+    },
+    "616": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/616.png"
+    },
+    "617": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/617.png"
+    },
+    "618": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/618.png"
+    },
+    "619": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/619.png"
+    },
+    "620": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/620.png"
+    },
+    "621": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/621.png"
+    },
+    "622": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/622.png"
+    },
+    "623": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/623.png"
+    },
+    "624": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/624.png"
+    },
+    "625": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/625.png"
+    },
+    "626": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/626.png"
+    },
+    "627": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/627.png"
+    },
+    "628": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/628.png"
+    },
+    "629": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/629.png"
+    },
+    "630": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/630.png"
+    },
+    "631": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/631.png"
+    },
+    "632": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/632.png"
+    },
+    "633": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/633.png"
+    },
+    "634": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/634.png"
+    },
+    "635": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/635.png"
+    },
+    "636": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/636.png"
+    },
+    "637": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/637.png"
+    },
+    "638": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/638.png"
+    },
+    "639": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/639.png"
+    },
+    "640": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/640.png"
+    },
+    "641": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/641.png"
+    },
+    "642": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/642.png"
+    },
+    "643": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/643.png"
+    },
+    "644": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/644.png"
+    },
+    "645": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/645.png"
+    },
+    "646": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/646.png"
+    },
+    "647": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/647.png"
+    },
+    "648": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/648.png"
+    },
+    "649": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/649.png"
+    },
+    "650": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/650.png"
+    },
+    "651": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/651.png"
+    },
+    "652": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/652.png"
+    },
+    "653": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/653.png"
+    },
+    "654": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/654.png"
+    },
+    "655": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/655.png"
+    },
+    "656": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/656.png"
+    },
+    "657": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/657.png"
+    },
+    "658": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/658.png"
+    },
+    "659": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/659.png"
+    },
+    "660": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/660.png"
+    },
+    "661": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/661.png"
+    },
+    "662": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/662.png"
+    },
+    "663": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/663.png"
+    },
+    "664": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/664.png"
+    },
+    "665": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/665.png"
+    },
+    "666": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/666.png"
+    },
+    "667": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/667.png"
+    },
+    "668": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/668.png"
+    },
+    "669": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/669.png"
+    },
+    "670": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/670.png"
+    },
+    "671": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/671.png"
+    },
+    "672": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/672.png"
+    },
+    "673": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/673.png"
+    },
+    "674": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/674.png"
+    },
+    "675": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/675.png"
+    },
+    "676": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/676.png"
+    },
+    "677": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/677.png"
+    },
+    "678": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/678.png"
+    },
+    "679": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/679.png"
+    },
+    "680": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/680.png"
+    },
+    "681": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/681.png"
+    },
+    "682": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/682.png"
+    },
+    "683": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/683.png"
+    },
+    "684": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/684.png"
+    },
+    "685": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/685.png"
+    },
+    "686": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/686.png"
+    },
+    "687": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/687.png"
+    },
+    "688": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/688.png"
+    },
+    "689": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/689.png"
+    },
+    "690": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/690.png"
+    },
+    "691": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/691.png"
+    },
+    "692": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/692.png"
+    },
+    "693": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/693.png"
+    },
+    "694": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/694.png"
+    },
+    "695": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/695.png"
+    },
+    "696": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/696.png"
+    },
+    "697": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/697.png"
+    },
+    "698": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/698.png"
+    },
+    "699": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/699.png"
+    },
+    "700": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/700.png"
+    },
+    "701": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/701.png"
+    },
+    "702": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/702.png"
+    },
+    "703": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/703.png"
+    },
+    "704": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/704.png"
+    },
+    "705": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/705.png"
+    },
+    "706": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/706.png"
+    },
+    "707": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/707.png"
+    },
+    "708": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/708.png"
+    },
+    "709": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/709.png"
+    },
+    "710": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/710.png"
+    },
+    "711": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/711.png"
+    },
+    "712": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/712.png"
+    },
+    "713": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/713.png"
+    },
+    "714": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/714.png"
+    },
+    "715": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/715.png"
+    },
+    "716": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/716.png"
+    },
+    "717": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/717.png"
+    },
+    "718": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/718.png"
+    },
+    "719": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/719.png"
+    },
+    "720": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/720.png"
+    },
+    "721": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/721.png"
+    },
+    "722": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/722.png"
+    },
+    "723": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/723.png"
+    },
+    "724": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/724.png"
+    },
+    "725": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/725.png"
+    },
+    "726": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/726.png"
+    },
+    "727": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/727.png"
+    },
+    "728": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/728.png"
+    },
+    "729": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/729.png"
+    },
+    "730": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/730.png"
+    },
+    "731": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/731.png"
+    },
+    "732": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/732.png"
+    },
+    "733": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/733.png"
+    },
+    "734": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/734.png"
+    },
+    "735": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/735.png"
+    },
+    "736": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/736.png"
+    },
+    "737": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/737.png"
+    },
+    "738": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/738.png"
+    },
+    "739": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/739.png"
+    },
+    "740": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/740.png"
+    },
+    "741": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/741.png"
+    },
+    "742": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/742.png"
+    },
+    "743": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/743.png"
+    },
+    "744": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/744.png"
+    },
+    "745": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/745.png"
+    },
+    "746": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/746.png"
+    },
+    "747": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/747.png"
+    },
+    "748": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/748.png"
+    },
+    "749": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/749.png"
+    },
+    "750": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/750.png"
+    },
+    "751": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/751.png"
+    },
+    "752": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/752.png"
+    },
+    "753": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/753.png"
+    },
+    "754": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/754.png"
+    },
+    "755": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/755.png"
+    },
+    "756": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/756.png"
+    },
+    "757": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/757.png"
+    },
+    "758": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/758.png"
+    },
+    "759": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/759.png"
+    },
+    "760": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/760.png"
+    },
+    "761": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/761.png"
+    },
+    "762": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/762.png"
+    },
+    "763": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/763.png"
+    },
+    "764": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/764.png"
+    },
+    "765": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/765.png"
+    },
+    "766": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/766.png"
+    },
+    "767": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/767.png"
+    },
+    "768": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/768.png"
+    },
+    "769": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/769.png"
+    },
+    "770": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/770.png"
+    },
+    "771": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/771.png"
+    },
+    "772": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/772.png"
+    },
+    "773": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/773.png"
+    },
+    "774": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/774.png"
+    },
+    "775": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/775.png"
+    },
+    "776": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/776.png"
+    },
+    "777": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/777.png"
+    },
+    "778": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/778.png"
+    },
+    "779": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/779.png"
+    },
+    "780": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/780.png"
+    },
+    "781": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/781.png"
+    },
+    "782": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/782.png"
+    },
+    "783": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/783.png"
+    },
+    "784": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/784.png"
+    },
+    "785": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/785.png"
+    },
+    "786": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/786.png"
+    },
+    "787": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/787.png"
+    },
+    "788": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/788.png"
+    },
+    "789": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/789.png"
+    },
+    "790": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/790.png"
+    },
+    "791": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/791.png"
+    },
+    "792": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/792.png"
+    },
+    "793": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/793.png"
+    },
+    "794": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/794.png"
+    },
+    "795": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/795.png"
+    },
+    "796": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/796.png"
+    },
+    "797": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/797.png"
+    },
+    "798": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/798.png"
+    },
+    "799": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/799.png"
+    },
+    "800": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/800.png"
+    },
+    "801": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/801.png"
+    },
+    "802": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/802.png"
+    },
+    "803": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/803.png"
+    },
+    "804": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/804.png"
+    },
+    "805": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/805.png"
+    },
+    "806": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/806.png"
+    },
+    "807": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/807.png"
+    },
+    "808": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/808.png"
+    },
+    "809": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/809.png"
+    },
+    "810": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/810.png"
+    },
+    "811": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/811.png"
+    },
+    "812": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/812.png"
+    },
+    "813": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/813.png"
+    },
+    "814": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/814.png"
+    },
+    "815": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/815.png"
+    },
+    "816": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/816.png"
+    },
+    "817": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/817.png"
+    },
+    "818": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/818.png"
+    },
+    "819": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/819.png"
+    },
+    "820": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/820.png"
+    },
+    "821": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/821.png"
+    },
+    "822": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/822.png"
+    },
+    "823": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/823.png"
+    },
+    "824": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/824.png"
+    },
+    "825": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/825.png"
+    },
+    "826": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/826.png"
+    },
+    "827": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/827.png"
+    },
+    "828": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/828.png"
+    },
+    "829": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/829.png"
+    },
+    "830": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/830.png"
+    },
+    "831": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/831.png"
+    },
+    "832": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/832.png"
+    },
+    "833": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/833.png"
+    },
+    "834": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/834.png"
+    },
+    "835": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/835.png"
+    },
+    "836": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/836.png"
+    },
+    "837": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/837.png"
+    },
+    "838": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/838.png"
+    },
+    "839": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/839.png"
+    },
+    "840": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/840.png"
+    },
+    "841": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/841.png"
+    },
+    "842": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/842.png"
+    },
+    "843": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/843.png"
+    },
+    "844": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/844.png"
+    },
+    "845": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/845.png"
+    },
+    "846": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/846.png"
+    },
+    "847": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/847.png"
+    },
+    "848": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/848.png"
+    },
+    "849": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/849.png"
+    },
+    "850": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/850.png"
+    },
+    "851": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/851.png"
+    },
+    "852": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/852.png"
+    },
+    "853": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/853.png"
+    },
+    "854": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/854.png"
+    },
+    "855": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/855.png"
+    },
+    "856": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/856.png"
+    },
+    "857": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/857.png"
+    },
+    "858": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/858.png"
+    },
+    "859": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/859.png"
+    },
+    "860": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/860.png"
+    },
+    "861": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/861.png"
+    },
+    "862": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/862.png"
+    },
+    "863": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/863.png"
+    },
+    "864": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/864.png"
+    },
+    "865": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/865.png"
+    },
+    "866": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/866.png"
+    },
+    "867": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/867.png"
+    },
+    "868": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/868.png"
+    },
+    "869": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/869.png"
+    },
+    "870": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/870.png"
+    },
+    "871": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/871.png"
+    },
+    "872": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/872.png"
+    },
+    "873": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/873.png"
+    },
+    "874": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/874.png"
+    },
+    "875": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/875.png"
+    },
+    "876": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/876.png"
+    },
+    "877": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/877.png"
+    },
+    "878": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/878.png"
+    },
+    "879": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/879.png"
+    },
+    "880": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/880.png"
+    },
+    "881": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/881.png"
+    },
+    "882": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/882.png"
+    },
+    "883": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/883.png"
+    },
+    "884": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/884.png"
+    },
+    "885": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/885.png"
+    },
+    "886": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/886.png"
+    },
+    "887": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/887.png"
+    },
+    "888": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/888.png"
+    },
+    "889": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/889.png"
+    },
+    "890": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/890.png"
+    },
+    "891": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/891.png"
+    },
+    "892": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/892.png"
+    },
+    "893": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/893.png"
+    },
+    "894": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/894.png"
+    },
+    "895": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/895.png"
+    },
+    "896": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/896.png"
+    },
+    "897": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/897.png"
+    },
+    "898": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/898.png"
+    },
+    "899": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/899.png"
+    },
+    "900": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/900.png"
+    },
+    "901": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/901.png"
+    },
+    "902": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/902.png"
+    },
+    "903": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/903.png"
+    },
+    "904": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/904.png"
+    },
+    "905": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/905.png"
+    },
+    "906": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/906.png"
+    },
+    "907": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/907.png"
+    },
+    "908": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/908.png"
+    },
+    "909": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/909.png"
+    },
+    "910": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/910.png"
+    },
+    "911": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/911.png"
+    },
+    "912": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/912.png"
+    },
+    "913": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/913.png"
+    },
+    "914": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/914.png"
+    },
+    "915": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/915.png"
+    },
+    "916": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/916.png"
+    },
+    "917": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/917.png"
+    },
+    "918": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/918.png"
+    },
+    "919": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/919.png"
+    },
+    "920": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/920.png"
+    },
+    "921": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/921.png"
+    },
+    "922": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/922.png"
+    },
+    "923": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/923.png"
+    },
+    "924": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/924.png"
+    },
+    "925": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/925.png"
+    },
+    "926": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/926.png"
+    },
+    "927": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/927.png"
+    },
+    "928": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/928.png"
+    },
+    "929": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/929.png"
+    },
+    "930": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/930.png"
+    },
+    "931": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/931.png"
+    },
+    "932": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/932.png"
+    },
+    "933": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/933.png"
+    },
+    "934": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/934.png"
+    },
+    "935": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/935.png"
+    },
+    "936": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/936.png"
+    },
+    "937": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/937.png"
+    },
+    "938": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/938.png"
+    },
+    "939": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/939.png"
+    },
+    "940": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/940.png"
+    },
+    "941": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/941.png"
+    },
+    "942": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/942.png"
+    },
+    "943": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/943.png"
+    },
+    "944": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/944.png"
+    },
+    "945": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/945.png"
+    },
+    "946": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/946.png"
+    },
+    "947": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/947.png"
+    },
+    "948": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/948.png"
+    },
+    "949": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/949.png"
+    },
+    "950": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/950.png"
+    },
+    "951": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/951.png"
+    },
+    "952": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/952.png"
+    },
+    "953": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/953.png"
+    },
+    "954": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/954.png"
+    },
+    "955": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/955.png"
+    },
+    "956": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/956.png"
+    },
+    "957": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/957.png"
+    },
+    "958": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/958.png"
+    },
+    "959": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/959.png"
+    },
+    "960": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/960.png"
+    },
+    "961": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/961.png"
+    },
+    "962": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/962.png"
+    },
+    "963": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/963.png"
+    },
+    "964": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/964.png"
+    },
+    "965": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/965.png"
+    },
+    "966": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/966.png"
+    },
+    "967": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/967.png"
+    },
+    "968": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/968.png"
+    },
+    "969": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/969.png"
+    },
+    "970": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/970.png"
+    },
+    "971": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/971.png"
+    },
+    "972": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/972.png"
+    },
+    "973": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/973.png"
+    },
+    "974": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/974.png"
+    },
+    "975": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/975.png"
+    },
+    "976": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/976.png"
+    },
+    "977": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/977.png"
+    },
+    "978": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/978.png"
+    },
+    "979": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/979.png"
+    },
+    "980": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/980.png"
+    },
+    "981": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/981.png"
+    },
+    "982": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/982.png"
+    },
+    "983": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/983.png"
+    },
+    "984": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/984.png"
+    },
+    "985": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/985.png"
+    },
+    "986": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/986.png"
+    },
+    "987": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/987.png"
+    },
+    "988": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/988.png"
+    },
+    "989": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/989.png"
+    },
+    "990": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/990.png"
+    },
+    "991": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/991.png"
+    },
+    "992": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/992.png"
+    },
+    "993": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/993.png"
+    },
+    "994": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/994.png"
+    },
+    "995": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/995.png"
+    },
+    "996": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/996.png"
+    },
+    "997": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/997.png"
+    },
+    "998": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/998.png"
+    },
+    "999": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/999.png"
+    },
+    "1000": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/1000.png"
+    },
+    "1001": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/1001.png"
+    },
+    "1002": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/1002.png"
+    },
+    "1003": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/1003.png"
+    },
+    "1004": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/1004.png"
+    },
+    "1005": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/1005.png"
+    },
+    "1006": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/1006.png"
+    },
+    "1007": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/1007.png"
+    },
+    "1008": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/1008.png"
+    },
+    "1009": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/1009.png"
+    },
+    "1010": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/1010.png"
+    },
+    "1011": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/1011.png"
+    },
+    "1012": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/1012.png"
+    },
+    "1013": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/1013.png"
+    },
+    "1014": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/1014.png"
+    },
+    "1015": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/1015.png"
+    },
+    "1016": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/1016.png"
+    },
+    "1017": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/1017.png"
+    },
+    "1018": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/1018.png"
+    },
+    "1019": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/1019.png"
+    },
+    "1020": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/1020.png"
+    },
+    "1021": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/1021.png"
+    },
+    "1022": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/1022.png"
+    },
+    "1023": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/1023.png"
+    },
+    "1024": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/1024.png"
+    },
+    "1025": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/1025.png"
+    },
+    "10001": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/10001.png"
+    },
+    "10002": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/10002.png"
+    },
+    "10003": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/10003.png"
+    },
+    "10004": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/10004.png"
+    },
+    "10005": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/10005.png"
+    },
+    "10006": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/10006.png"
+    },
+    "10008": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/10008.png"
+    },
+    "10009": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/10009.png"
+    },
+    "10010": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/10010.png"
+    },
+    "10011": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/10011.png"
+    },
+    "10012": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/10012.png"
+    },
+    "10016": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/10016.png"
+    },
+    "10019": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/10019.png"
+    },
+    "10020": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/10020.png"
+    },
+    "10021": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/10021.png"
+    },
+    "10024": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/10024.png"
+    },
+    "10025": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/10025.png"
+    },
+    "10027": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/10027.png"
+    },
+    "10028": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/10028.png"
+    },
+    "10029": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/10029.png"
+    },
+    "10030": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/10030.png"
+    },
+    "10031": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/10031.png"
+    },
+    "10032": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/10032.png"
+    },
+    "10086": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/10086.png"
+    },
+    "10091": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/10091.png"
+    },
+    "10092": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/10092.png"
+    },
+    "10094": {
+      "kind": "species",
+      "file": "assets/sprites/shiny/25.png",
+      "speciesSpriteId": "25",
+      "note": "No dedicated shiny HOME sprite in PokeAPI/sprites; using the base species shiny HOME sprite (#0025)."
+    },
+    "10095": {
+      "kind": "species",
+      "file": "assets/sprites/shiny/25.png",
+      "speciesSpriteId": "25",
+      "note": "No dedicated shiny HOME sprite in PokeAPI/sprites; using the base species shiny HOME sprite (#0025)."
+    },
+    "10096": {
+      "kind": "species",
+      "file": "assets/sprites/shiny/25.png",
+      "speciesSpriteId": "25",
+      "note": "No dedicated shiny HOME sprite in PokeAPI/sprites; using the base species shiny HOME sprite (#0025)."
+    },
+    "10097": {
+      "kind": "species",
+      "file": "assets/sprites/shiny/25.png",
+      "speciesSpriteId": "25",
+      "note": "No dedicated shiny HOME sprite in PokeAPI/sprites; using the base species shiny HOME sprite (#0025)."
+    },
+    "10098": {
+      "kind": "species",
+      "file": "assets/sprites/shiny/25.png",
+      "speciesSpriteId": "25",
+      "note": "No dedicated shiny HOME sprite in PokeAPI/sprites; using the base species shiny HOME sprite (#0025)."
+    },
+    "10099": {
+      "kind": "species",
+      "file": "assets/sprites/shiny/25.png",
+      "speciesSpriteId": "25",
+      "note": "No dedicated shiny HOME sprite in PokeAPI/sprites; using the base species shiny HOME sprite (#0025)."
+    },
+    "10100": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/10100.png"
+    },
+    "10101": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/10101.png"
+    },
+    "10102": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/10102.png"
+    },
+    "10103": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/10103.png"
+    },
+    "10104": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/10104.png"
+    },
+    "10105": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/10105.png"
+    },
+    "10106": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/10106.png"
+    },
+    "10107": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/10107.png"
+    },
+    "10108": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/10108.png"
+    },
+    "10109": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/10109.png"
+    },
+    "10110": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/10110.png"
+    },
+    "10111": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/10111.png"
+    },
+    "10112": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/10112.png"
+    },
+    "10113": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/10113.png"
+    },
+    "10114": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/10114.png"
+    },
+    "10115": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/10115.png"
+    },
+    "10117": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/10117.png"
+    },
+    "10123": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/10123.png"
+    },
+    "10124": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/10124.png"
+    },
+    "10125": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/10125.png"
+    },
+    "10126": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/10126.png"
+    },
+    "10136": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/10136.png"
+    },
+    "10137": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/10137.png"
+    },
+    "10138": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/10138.png"
+    },
+    "10139": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/10139.png"
+    },
+    "10140": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/10140.png"
+    },
+    "10141": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/10141.png"
+    },
+    "10142": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/10142.png"
+    },
+    "10147": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/10147.png"
+    },
+    "10148": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/10148.png"
+    },
+    "10151": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/10151.png"
+    },
+    "10152": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/10152.png"
+    },
+    "10160": {
+      "kind": "species",
+      "file": "assets/sprites/shiny/25.png",
+      "speciesSpriteId": "25",
+      "note": "No dedicated shiny HOME sprite in PokeAPI/sprites; using the base species shiny HOME sprite (#0025)."
+    },
+    "10161": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/10161.png"
+    },
+    "10162": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/10162.png"
+    },
+    "10163": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/10163.png"
+    },
+    "10164": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/10164.png"
+    },
+    "10165": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/10165.png"
+    },
+    "10166": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/10166.png"
+    },
+    "10167": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/10167.png"
+    },
+    "10168": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/10168.png"
+    },
+    "10169": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/10169.png"
+    },
+    "10170": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/10170.png"
+    },
+    "10171": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/10171.png"
+    },
+    "10172": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/10172.png"
+    },
+    "10173": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/10173.png"
+    },
+    "10174": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/10174.png"
+    },
+    "10175": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/10175.png"
+    },
+    "10176": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/10176.png"
+    },
+    "10177": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/10177.png"
+    },
+    "10179": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/10179.png"
+    },
+    "10180": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/10180.png"
+    },
+    "10181": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/10181.png"
+    },
+    "10184": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/10184.png"
+    },
+    "10186": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/10186.png"
+    },
+    "10191": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/10191.png"
+    },
+    "10192": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/10192.png"
+    },
+    "10229": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/10229.png"
+    },
+    "10230": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/10230.png"
+    },
+    "10231": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/10231.png"
+    },
+    "10232": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/10232.png"
+    },
+    "10233": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/10233.png"
+    },
+    "10234": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/10234.png"
+    },
+    "10235": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/10235.png"
+    },
+    "10236": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/10236.png"
+    },
+    "10237": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/10237.png"
+    },
+    "10238": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/10238.png"
+    },
+    "10239": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/10239.png"
+    },
+    "10240": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/10240.png"
+    },
+    "10241": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/10241.png"
+    },
+    "10242": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/10242.png"
+    },
+    "10243": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/10243.png"
+    },
+    "10244": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/10244.png"
+    },
+    "10247": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/10247.png"
+    },
+    "10248": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/10248.png"
+    },
+    "10249": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/10249.png"
+    },
+    "10250": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/10250.png"
+    },
+    "10251": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/10251.png"
+    },
+    "10252": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/10252.png"
+    },
+    "10253": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/10253.png"
+    },
+    "10254": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/10254.png"
+    },
+    "10255": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/10255.png"
+    },
+    "10257": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/10257.png"
+    },
+    "10258": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/10258.png"
+    },
+    "10259": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/10259.png"
+    },
+    "10260": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/10260.png"
+    },
+    "10261": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/10261.png"
+    },
+    "10262": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/10262.png"
+    },
+    "10263": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/10263.png"
+    },
+    "10272": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/10272.png"
+    },
+    "3-f": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/3-f.png"
+    },
+    "12-f": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/12-f.png"
+    },
+    "19-f": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/19-f.png"
+    },
+    "20-f": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/20-f.png"
+    },
+    "25-f": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/25-f.png"
+    },
+    "26-f": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/26-f.png"
+    },
+    "41-f": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/41-f.png"
+    },
+    "42-f": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/42-f.png"
+    },
+    "44-f": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/44-f.png"
+    },
+    "45-f": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/45-f.png"
+    },
+    "64-f": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/64-f.png"
+    },
+    "65-f": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/65-f.png"
+    },
+    "84-f": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/84-f.png"
+    },
+    "85-f": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/85-f.png"
+    },
+    "97-f": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/97-f.png"
+    },
+    "111-f": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/111-f.png"
+    },
+    "112-f": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/112-f.png"
+    },
+    "118-f": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/118-f.png"
+    },
+    "119-f": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/119-f.png"
+    },
+    "123-f": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/123-f.png"
+    },
+    "129-f": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/129-f.png"
+    },
+    "130-f": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/130-f.png"
+    },
+    "133-f": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/133-f.png"
+    },
+    "154-f": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/154-f.png"
+    },
+    "165-f": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/165-f.png"
+    },
+    "166-f": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/166-f.png"
+    },
+    "178-f": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/178-f.png"
+    },
+    "185-f": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/185-f.png"
+    },
+    "186-f": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/186-f.png"
+    },
+    "190-f": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/190-f.png"
+    },
+    "194-f": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/194-f.png"
+    },
+    "195-f": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/195-f.png"
+    },
+    "198-f": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/198-f.png"
+    },
+    "202-f": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/202-f.png"
+    },
+    "203-f": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/203-f.png"
+    },
+    "207-f": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/207-f.png"
+    },
+    "208-f": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/208-f.png"
+    },
+    "212-f": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/212-f.png"
+    },
+    "214-f": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/214-f.png"
+    },
+    "215-f": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/215-f.png"
+    },
+    "217-f": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/217-f.png"
+    },
+    "221-f": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/221-f.png"
+    },
+    "224-f": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/224-f.png"
+    },
+    "229-f": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/229-f.png"
+    },
+    "232-f": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/232-f.png"
+    },
+    "255-f": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/255-f.png"
+    },
+    "256-f": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/256-f.png"
+    },
+    "257-f": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/257-f.png"
+    },
+    "267-f": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/267-f.png"
+    },
+    "269-f": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/269-f.png"
+    },
+    "272-f": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/272-f.png"
+    },
+    "274-f": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/274-f.png"
+    },
+    "275-f": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/275-f.png"
+    },
+    "307-f": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/307-f.png"
+    },
+    "308-f": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/308-f.png"
+    },
+    "315-f": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/315-f.png"
+    },
+    "316-f": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/316-f.png"
+    },
+    "317-f": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/317-f.png"
+    },
+    "322-f": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/322-f.png"
+    },
+    "323-f": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/323-f.png"
+    },
+    "332-f": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/332-f.png"
+    },
+    "350-f": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/350-f.png"
+    },
+    "369-f": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/369-f.png"
+    },
+    "396-f": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/396-f.png"
+    },
+    "397-f": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/397-f.png"
+    },
+    "398-f": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/398-f.png"
+    },
+    "399-f": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/399-f.png"
+    },
+    "400-f": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/400-f.png"
+    },
+    "401-f": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/401-f.png"
+    },
+    "402-f": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/402-f.png"
+    },
+    "403-f": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/403-f.png"
+    },
+    "404-f": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/404-f.png"
+    },
+    "405-f": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/405-f.png"
+    },
+    "407-f": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/407-f.png"
+    },
+    "415-f": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/415-f.png"
+    },
+    "417-f": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/417-f.png"
+    },
+    "418-f": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/418-f.png"
+    },
+    "419-f": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/419-f.png"
+    },
+    "424-f": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/424-f.png"
+    },
+    "443-f": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/443-f.png"
+    },
+    "444-f": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/444-f.png"
+    },
+    "445-f": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/445-f.png"
+    },
+    "449-f": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/449-f.png"
+    },
+    "450-f": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/450-f.png"
+    },
+    "453-f": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/453-f.png"
+    },
+    "454-f": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/454-f.png"
+    },
+    "456-f": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/456-f.png"
+    },
+    "457-f": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/457-f.png"
+    },
+    "459-f": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/459-f.png"
+    },
+    "460-f": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/460-f.png"
+    },
+    "461-f": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/461-f.png"
+    },
+    "464-f": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/464-f.png"
+    },
+    "465-f": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/465-f.png"
+    },
+    "473-f": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/473-f.png"
+    },
+    "521-f": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/521-f.png"
+    },
+    "592-f": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/592-f.png"
+    },
+    "593-f": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/593-f.png"
+    },
+    "668-f": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/668-f.png"
+    },
+    "10235-f": {
+      "kind": "dedicated",
+      "file": "assets/sprites/shiny/10235-f.png"
+    }
+  }
+}

@@ -29,10 +29,6 @@ export function escapeHtml(value) {
   }[char]));
 }
 
-export function spritePath(spriteId) {
-  return `assets/sprites/${spriteId}.png`;
-}
-
 export function typePill(type) {
   const ink = TYPE_INK[type] ?? "#ffffff";
   return `<span class="type-pill type-${escapeHtml(type)}" style="color:${ink}">${escapeHtml(type)}</span>`;

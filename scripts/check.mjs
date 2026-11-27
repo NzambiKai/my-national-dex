@@ -25,10 +25,11 @@ import { DEXDB_SNAPSHOT, readDexdbUrl } from "./lib/dexdb-source.mjs";
 import { entryId } from "./lib/entry-id.mjs";
 import { loadDexData } from "./lib/load-dex.mjs";
 import { flattenLayout, layoutFromDexData } from "./lib/box-order.mjs";
-import { matchesView } from "../js/model/catalog.js";
+import { caughtIn, matchesView } from "../js/model/catalog.js";
 import { locationText, slotPosition, standardPlacement } from "../js/model/location.js";
 import { searchEntries } from "../js/model/search.js";
-import { buildBoxSpaces, spaceIndexForBox } from "../js/model/spaces.js";
+import { shinySpriteRecord } from "../js/model/sprites.js";
+import { boxHeading, buildBoxSpaces, spaceIndexForBox, spaceLabel, spaceTileName } from "../js/model/spaces.js";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const live = process.argv.includes("--live");
@@ -94,15 +95,37 @@ for (const entry of dex.entries) {
   }
 }
 
-expect(Array.isArray(collection.caught), "collection.caught should be an array of ids");
-const caught = new Set();
-for (const id of collection.caught ?? []) {
-  expect(seenIds.has(id), `caught id ${id} is not in the dex`);
-  expect(!caught.has(id), `caught id ${id} is listed twice`);
-  caught.add(id);
+function expectIdList(name, ids, { ordered = false } = {}) {
+  expect(Array.isArray(ids), `${name} should be an array of ids`);
+  const seen = new Set();
+  let lastIndex = -1;
+  for (const id of ids ?? []) {
+    expect(seenIds.has(id), `${name} id ${id} is not in the dex`);
+    expect(!seen.has(id), `${name} id ${id} is listed twice`);
+    if (ordered) {
+      const index = dex.entries.findIndex((entry) => entry.id === id);
+      expect(index > lastIndex, `${name} id ${id} is out of dex box/slot order`);
+      lastIndex = index;
+    }
+    seen.add(id);
+  }
+  return seen;
 }
 
+expectIdList("caught", collection.caught);
+expectIdList("shinyCaught", collection.shinyCaught, { ordered: true });
+
 expect(locationText({ group: "standard", number: 1 }, 4) === "Box 1 · Row 1, Col 4 (Slot 4)", "location text");
+const box1 = boxes.boxes.find((box) => box.id === "standard-01");
+const alt1 = boxes.boxes.find((box) => box.id === "alt-01");
+expect(boxHeading(box1) === "Box 1 · 0001 - 0030", "normal box heading");
+expect(boxHeading(box1, "shiny") === "S 0001-0030", "shiny box heading");
+expect(boxHeading(alt1, "shiny") === "S Alt 1", "shiny alt box heading");
+expect(spaceTileName(box1, "shiny") === "S 0001-0030" && spaceTileName(alt1, "shiny") === "S Alt 1", "shiny Box Space tile labels");
+expect(locationText(box1, 23, "shiny") === "S 0001-0030 · Row 4, Col 5 (Slot 23)", "shiny location text");
+expect(locationText(alt1, 17, "shiny") === "S Alt 1 · Row 3, Col 5 (Slot 17)", "shiny alt location text");
+expect(spaceLabel(spaces[0], "shiny") === "S 0001-0900", `shiny space 1 label drifted: ${spaceLabel(spaces[0], "shiny")}`);
+expect(spaceLabel(spaces[1], "shiny") === "S 0901-1025 · S Alt 1–21", `shiny space 2 label drifted: ${spaceLabel(spaces[1], "shiny")}`);
 expect(standardPlacement(1025).boxNumber === 35 && standardPlacement(1025).slot === 5, "final box");
 
 const prepared = dex.entries.map((entry) => ({
@@ -138,8 +161,11 @@ expect(matchesView(sample, { filter: "all", gameId: "s" }) === sample.games.incl
 expect(matchesView({ caught: false, games: ["s"] }, { filter: "missing", gameId: "s" }), "missing + game keeps catchable gaps");
 expect(!matchesView({ caught: true, games: ["s"] }, { filter: "missing", gameId: "s" }), "missing + game hides caught");
 expect(!matchesView({ caught: false, games: [] }, { filter: "missing", gameId: "s" }), "missing + game hides Pokémon that are not in that game");
-const box1 = dex.entries.filter((entry) => entry.boxId === "standard-01");
-expect(box1.filter((entry) => matchesView(entry, { filter: "all", gameId: "bd" })).every((entry) => entry.games.includes("bd")), "box filter stays inside the selected game");
+expect(caughtIn({ caught: true, shinyCaught: false }, "normal") && !caughtIn({ caught: true, shinyCaught: false }, "shiny"), "shiny mode reads shinyCaught");
+expect(caughtIn({ caught: false, shinyCaught: true }, "shiny") && matchesView({ caught: false, shinyCaught: true, games: ["s"] }, { filter: "caught", mode: "shiny" }), "shiny caught filter keeps shiny catches");
+expect(!matchesView({ caught: true, shinyCaught: false, games: ["s"] }, { filter: "caught", mode: "shiny" }), "shiny caught filter ignores normal catches");
+const standardBox1 = dex.entries.filter((entry) => entry.boxId === "standard-01");
+expect(standardBox1.filter((entry) => matchesView(entry, { filter: "all", gameId: "bd" })).every((entry) => entry.games.includes("bd")), "box filter stays inside the selected game");
 
 let missingSprites = 0;
 let badSprites = 0;
@@ -155,6 +181,55 @@ for (const entry of dex.entries) {
 }
 expect(missingSprites === 0, `${missingSprites} HOME sprites are missing`);
 expect(badSprites === 0, `${badSprites} sprite files are not PNGs`);
+
+const shinyManifest = await readJson("data/shiny-sprites.json");
+const shinyBySprite = shinyManifest.bySpriteId ?? {};
+const spriteIds = [...new Set(dex.entries.map((entry) => String(entry.spriteId)))];
+expect(spriteIds.every((id) => shinyBySprite[id]), "every sprite id needs a shiny sprite record");
+expect(Object.keys(shinyBySprite).every((id) => spriteIds.includes(id)), "shiny sprite manifest has an unknown sprite id");
+
+const shinyKinds = { dedicated: 0, species: 0, normal: 0 };
+const checkedShinyFiles = new Set();
+for (const spriteId of spriteIds) {
+  const record = shinySpriteRecord(shinyManifest, spriteId);
+  const stored = shinyBySprite[spriteId];
+  expect(record.file === stored?.file && record.kind === stored?.kind, `shiny resolver drifted for ${spriteId}`);
+  expect(record.kind === "dedicated" || record.kind === "species" || record.kind === "normal", `${spriteId} has kind ${record.kind}`);
+  expect(typeof record.file === "string" && record.file.startsWith("assets/sprites/") && !record.file.includes(".."), `${spriteId} shiny path is not a local sprite`);
+  if (record.kind === "dedicated") {
+    expect(record.file === `assets/sprites/shiny/${spriteId}.png`, `${spriteId} dedicated shiny path drifted`);
+  } else if (record.kind === "species") {
+    expect(record.file === `assets/sprites/shiny/${record.speciesSpriteId}.png`, `${spriteId} species shiny path drifted`);
+    expect(record.note, `${spriteId} species fallback is missing a note`);
+    const species = shinyBySprite[record.speciesSpriteId];
+    expect(species?.kind === "dedicated" && species.file === record.file, `${spriteId} species fallback does not point at a dedicated shiny file`);
+  } else {
+    expect(record.file === `assets/sprites/${spriteId}.png`, `${spriteId} normal shiny fallback path drifted`);
+    expect(record.note, `${spriteId} normal fallback is missing a note`);
+  }
+  shinyKinds[record.kind] += 1;
+  if (checkedShinyFiles.has(record.file)) continue;
+  checkedShinyFiles.add(record.file);
+  try {
+    const handle = await readFile(join(root, record.file));
+    expect(handle.length >= 400 && handle[0] === 0x89 && handle[1] === 0x50, `${record.file} is not a PNG`);
+  } catch (error) {
+    expect(false, error.code === "ENOENT" ? `missing shiny sprite file ${record.file}` : `${record.file} could not be read`);
+  }
+}
+
+const listedFallbacks = (shinyManifest.fallbacks ?? []).map((item) => String(item.spriteId));
+const computedFallbacks = spriteIds.filter((id) => shinyBySprite[id]?.kind !== "dedicated");
+expect(listedFallbacks.length === computedFallbacks.length && listedFallbacks.every((id) => computedFallbacks.includes(id)), "shiny fallbacks list drifted from bySpriteId");
+for (const item of shinyManifest.fallbacks ?? []) {
+  const stored = shinyBySprite[String(item.spriteId)];
+  expect(item.note && item.file === stored?.file && item.kind === stored?.kind, `fallback record drifted for ${item.spriteId}`);
+  expect(Array.isArray(item.entries) && item.entries.length > 0, `fallback ${item.spriteId} lists no entries`);
+  for (const id of item.entries ?? []) {
+    const entry = byId.get(id);
+    expect(entry && String(entry.spriteId) === String(item.spriteId), `fallback ${item.spriteId} lists ${id}`);
+  }
+}
 
 if (live) {
   const url = await readDexdbUrl(root);
@@ -177,4 +252,4 @@ if (failures.length) {
 }
 
 const fallbacks = dex.entries.filter((entry) => entry.spriteNote).length;
-console.log(`Catalog ok: ${dex.entries.length} Pokémon (${standard.length} standard, ${alt.length} alt), ${boxes.boxes.length} boxes, ${spaces.length} Box Spaces, ${fallbacks} sprite fallbacks${live ? ", live box order matches" : ""}.`);
+console.log(`Catalog ok: ${dex.entries.length} Pokémon (${standard.length} standard, ${alt.length} alt), ${boxes.boxes.length} boxes, ${spaces.length} Box Spaces, ${fallbacks} sprite fallbacks, ${collection.caught.length} caught, ${collection.shinyCaught.length} shiny caught, shiny sprites ${shinyKinds.dedicated} dedicated / ${shinyKinds.species} species fallback / ${shinyKinds.normal} normal fallback${live ? ", live box order matches" : ""}.`);

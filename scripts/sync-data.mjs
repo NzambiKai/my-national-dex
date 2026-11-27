@@ -11,6 +11,7 @@
  *
  * Sprites: https://github.com/PokeAPI/sprites sprites/pokemon/other/home
  * Downloads happen here, at build time. The site only reads assets/sprites.
+ * Shiny HOME art is bundled separately by scripts/sync-shiny-sprites.mjs.
  *
  *   node scripts/sync-data.mjs
  *   node scripts/sync-data.mjs --no-sprites
@@ -574,9 +575,17 @@ await writeFile(join(root, "data/boxes.json"), `${JSON.stringify({
   boxes,
 }, null, 2)}\n`);
 
+const collectionInstructions = "Caught Pokémon, by id from data/dex.json. \"caught\" is the Normal Living Dex. \"shinyCaught\" is the Shiny Living Dex and stays in box/slot order. Add an id when it is caught, for example \"0001\" or \"0037-alola\". Remove an id to mark it missing. The app treats every other Pokémon as missing in that mode.";
+let priorCollection = {};
+try {
+  priorCollection = JSON.parse(await readFile(join(root, "data/collection.json"), "utf8"));
+} catch {
+  priorCollection = {};
+}
 await writeFile(join(root, "data/collection.json"), `${JSON.stringify({
-  instructions: "Caught Pokémon, by id from data/dex.json. This list starts empty. Add an id when it is caught, for example \"0001\" or \"0037-alola\". Remove an id to mark it missing. The app treats every other Pokémon as missing.",
-  caught: [],
+  instructions: collectionInstructions,
+  caught: Array.isArray(priorCollection.caught) ? priorCollection.caught : [],
+  shinyCaught: Array.isArray(priorCollection.shinyCaught) ? priorCollection.shinyCaught : [],
 }, null, 2)}\n`);
 
 await writeFile(join(root, "data/sprite-fallbacks.json"), `${JSON.stringify({

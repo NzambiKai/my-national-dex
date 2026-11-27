@@ -1,3 +1,6 @@
+import { isShinyMode } from "./mode.js";
+import { shinyBoxName } from "./spaces.js";
+
 export const COLUMNS = 6;
 export const SLOTS_PER_BOX = 30;
 
@@ -20,9 +23,10 @@ export function boxLabel(box) {
   return box.group === "alt" ? `Alt Box ${box.number}` : `Box ${box.number}`;
 }
 
-export function locationText(box, slot) {
+export function locationText(box, slot, mode = "normal") {
   const { row, column } = slotPosition(slot);
-  return `${boxLabel(box)} · Row ${row}, Col ${column} (Slot ${slot})`;
+  const label = isShinyMode(mode) ? shinyBoxName(box) : boxLabel(box);
+  return `${label} · Row ${row}, Col ${column} (Slot ${slot})`;
 }
 
 export function formatDex(nationalDex) {

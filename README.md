@@ -2,7 +2,7 @@
 
 A static, Pokémon HOME–inspired tracker for the full National Living Dex. It is a plain site for GitHub Pages: Bootstrap 5.3.9 and Nunito come from a CDN, and every sprite and Pokédex record is stored in this repository. Nothing calls PokéAPI, or any other sprite host, while you browse.
 
-The address bar stays on the site URL. The last box, the selected Pokémon, the All / Caught / Missing filter, and the Switch game filter are saved in `localStorage`.
+The address bar stays on the site URL. The last box, the selected Pokémon, the All / Caught / Missing filter, the Switch game filter, and the Normal / Shiny mode are saved in `localStorage`.
 
 ## What is in the dex
 
@@ -19,15 +19,12 @@ Each row has its National Dex number, name, form label, types, Box / Row / Col /
 
 ## Caught list
 
-`data/collection.json` starts empty:
+`data/collection.json` holds two lists of ids from `data/dex.json`:
 
-```json
-{
-  "caught": []
-}
-```
+- `"caught"` is the Normal Living Dex.
+- `"shinyCaught"` is the Shiny Living Dex, kept in box/slot order.
 
-Add an id from `data/dex.json` when a Pokémon is caught, for example `"0001"` or `"0037-alola"`. Remove an id to mark it missing. Everything not listed is missing.
+Add an id when a Pokémon is caught, for example `"0001"` or `"0037-alola"`. Remove an id to mark it missing in that mode. Everything not listed is missing. A segmented Normal / Shiny control above the boxes switches which list the progress, filters, sprites, and box labels use. Shiny boxes use Pokémon HOME's `S ` labels, such as `S 0001-0030` and `S Alt 1`.
 
 ## Run it
 
@@ -39,13 +36,14 @@ The All / Caught / Missing filter combines with a Nintendo Switch game filter. M
 
 ## Layout
 
-- `data/dex.json` is every card. `data/boxes.json` is the box map. `data/games.json` is the ten Switch games. `data/collection.json` is the caught list.
+- `data/dex.json` is every card. `data/boxes.json` is the box map. `data/games.json` is the ten Switch games. `data/collection.json` is the Normal and Shiny caught lists.
 - `data/sources/dexdb.js` is the box-order snapshot the order check uses.
 - `data/sprite-fallbacks.json` lists forms that have no dedicated HOME file in PokeAPI/sprites and which local sprite is used instead.
-- `js/model/` loads that data and owns slot math, Box Spaces, and search. Search text is indexed once when the catalog loads.
-- `js/state/store.js` persists the box, the selected Pokémon, the status filter, and the game filter.
+- `data/shiny-sprites.json` maps each sprite id to a local shiny HOME file, or to a recorded fallback.
+- `js/model/` loads that data and owns slot math, Box Spaces, search, Living Dex mode, and sprite paths. Search text is indexed once when the catalog loads.
+- `js/state/store.js` persists the box, the selected Pokémon, the status filter, the game filter, and the Normal / Shiny mode.
 - `js/ui/box.js` is the Box Space bar, the box picker, and the 6×5 grid. Slot images use `loading="lazy"`.
-- `assets/sprites/` holds the Pokémon HOME PNGs. Female differences that are not their own Pokémon id are stored as `<id>-f.png`.
+- `assets/sprites/` holds the Pokémon HOME PNGs. Female differences that are not their own Pokémon id are stored as `<id>-f.png`. `assets/sprites/shiny/` holds the shiny HOME PNGs.
 
 ## Sprites and data
 
@@ -53,11 +51,14 @@ The All / Caught / Missing filter combines with a Nintendo Switch game filter. M
 
 `sprites/pokemon/other/home/<id>.png` and `sprites/pokemon/other/home/female/<id>.png`
 
+`scripts/sync-shiny-sprites.mjs` downloads the matching shiny files from `sprites/pokemon/other/home/shiny/` (and `shiny/female/`). A form with no shiny HOME file falls back to the base species' shiny HOME sprite, then to the normal local sprite. Those choices are recorded in `data/shiny-sprites.json`. Re-running either script keeps the ids already listed in `data/collection.json`.
+
 ```bash
 node scripts/sync-data.mjs
+node scripts/sync-shiny-sprites.mjs
 node scripts/check.mjs
 ```
 
-Pass `--force` to replace files that are already on disk. Pass `--no-sprites` to rewrite the JSON without downloading. The site never requests those URLs itself. With `DEXDB_URL` unset, sync keeps the committed box-order snapshot and still rebuilds the catalog from it. `node scripts/check.mjs --live` compares that snapshot with the original box-order reference only when the address is configured.
+Pass `--force` to replace files that are already on disk. Pass `--no-sprites` to `sync-data.mjs` to rewrite the JSON without downloading. The site never requests those URLs itself. With `DEXDB_URL` unset, sync keeps the committed box-order snapshot and still rebuilds the catalog from it. `node scripts/check.mjs --live` compares that snapshot with the original box-order reference only when the address is configured.
 
-`node scripts/check.mjs` checks the box order, placement, search, the Switch-game cases, collection ids, and that every sprite file exists and is a PNG.
+`node scripts/check.mjs` checks the box order, placement, search, the Switch-game cases, both caught lists, and that every normal and shiny sprite file exists and is a PNG.
