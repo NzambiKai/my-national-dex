@@ -53,10 +53,10 @@ body {
   flex: 0 0 auto;
   border-radius: 8px;
   object-fit: cover;
-  background-color: #fcf8f2;
+  background-color: #edfdf8;
   box-shadow:
-    0 0 0 1px rgba(68, 78, 89, 0.16),
-    0 6px 14px rgba(28, 43, 51, 0.12);
+    0 0 0 1px rgba(20, 184, 166, 0.42),
+    0 6px 14px rgba(15, 118, 110, 0.14);
 }
 
 .brand h1 {
