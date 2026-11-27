@@ -1,0 +1,2876 @@
+{
+  "note": "Mockup catalog. Standard boxes follow National Dex order, 30 slots per box. Alt forms use their own boxes. spriteId is the Pok\u00e9mon HOME filename in assets/sprites. games lists Switch main-series titles where this exact form is obtainable in-game (wild, gift, or evolution), not by trading from the other version.",
+  "entries": [
+    {
+      "id": "0001",
+      "nationalDex": 1,
+      "name": "Bulbasaur",
+      "title": "Bulbasaur",
+      "formName": null,
+      "formDetail": null,
+      "kind": "standard",
+      "types": [
+        "grass",
+        "poison"
+      ],
+      "spriteId": 1,
+      "boxId": "standard-01",
+      "slot": 1,
+      "games": [
+        "lgp",
+        "lge",
+        "sw",
+        "sh",
+        "bd",
+        "sp",
+        "s",
+        "v",
+        "za"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "0002",
+      "nationalDex": 2,
+      "name": "Ivysaur",
+      "title": "Ivysaur",
+      "formName": null,
+      "formDetail": null,
+      "kind": "standard",
+      "types": [
+        "grass",
+        "poison"
+      ],
+      "spriteId": 2,
+      "boxId": "standard-01",
+      "slot": 2,
+      "games": [
+        "lgp",
+        "lge",
+        "sw",
+        "sh",
+        "bd",
+        "sp",
+        "s",
+        "v",
+        "za"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "0003",
+      "nationalDex": 3,
+      "name": "Venusaur",
+      "title": "Venusaur",
+      "formName": null,
+      "formDetail": null,
+      "kind": "standard",
+      "types": [
+        "grass",
+        "poison"
+      ],
+      "spriteId": 3,
+      "boxId": "standard-01",
+      "slot": 3,
+      "games": [
+        "lgp",
+        "lge",
+        "sw",
+        "sh",
+        "bd",
+        "sp",
+        "s",
+        "v",
+        "za"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "0004",
+      "nationalDex": 4,
+      "name": "Charmander",
+      "title": "Charmander",
+      "formName": null,
+      "formDetail": null,
+      "kind": "standard",
+      "types": [
+        "fire"
+      ],
+      "spriteId": 4,
+      "boxId": "standard-01",
+      "slot": 4,
+      "games": [
+        "lgp",
+        "lge",
+        "sw",
+        "sh",
+        "bd",
+        "sp",
+        "s",
+        "v",
+        "za"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "0005",
+      "nationalDex": 5,
+      "name": "Charmeleon",
+      "title": "Charmeleon",
+      "formName": null,
+      "formDetail": null,
+      "kind": "standard",
+      "types": [
+        "fire"
+      ],
+      "spriteId": 5,
+      "boxId": "standard-01",
+      "slot": 5,
+      "games": [
+        "lgp",
+        "lge",
+        "sw",
+        "sh",
+        "bd",
+        "sp",
+        "s",
+        "v",
+        "za"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "0006",
+      "nationalDex": 6,
+      "name": "Charizard",
+      "title": "Charizard",
+      "formName": null,
+      "formDetail": null,
+      "kind": "standard",
+      "types": [
+        "fire",
+        "flying"
+      ],
+      "spriteId": 6,
+      "boxId": "standard-01",
+      "slot": 6,
+      "games": [
+        "lgp",
+        "lge",
+        "sw",
+        "sh",
+        "bd",
+        "sp",
+        "s",
+        "v",
+        "za"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "0007",
+      "nationalDex": 7,
+      "name": "Squirtle",
+      "title": "Squirtle",
+      "formName": null,
+      "formDetail": null,
+      "kind": "standard",
+      "types": [
+        "water"
+      ],
+      "spriteId": 7,
+      "boxId": "standard-01",
+      "slot": 7,
+      "games": [
+        "lgp",
+        "lge",
+        "sw",
+        "sh",
+        "bd",
+        "sp",
+        "s",
+        "v",
+        "za"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "0008",
+      "nationalDex": 8,
+      "name": "Wartortle",
+      "title": "Wartortle",
+      "formName": null,
+      "formDetail": null,
+      "kind": "standard",
+      "types": [
+        "water"
+      ],
+      "spriteId": 8,
+      "boxId": "standard-01",
+      "slot": 8,
+      "games": [
+        "lgp",
+        "lge",
+        "sw",
+        "sh",
+        "bd",
+        "sp",
+        "s",
+        "v",
+        "za"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "0009",
+      "nationalDex": 9,
+      "name": "Blastoise",
+      "title": "Blastoise",
+      "formName": null,
+      "formDetail": null,
+      "kind": "standard",
+      "types": [
+        "water"
+      ],
+      "spriteId": 9,
+      "boxId": "standard-01",
+      "slot": 9,
+      "games": [
+        "lgp",
+        "lge",
+        "sw",
+        "sh",
+        "bd",
+        "sp",
+        "s",
+        "v",
+        "za"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "0010",
+      "nationalDex": 10,
+      "name": "Caterpie",
+      "title": "Caterpie",
+      "formName": null,
+      "formDetail": null,
+      "kind": "standard",
+      "types": [
+        "bug"
+      ],
+      "spriteId": 10,
+      "boxId": "standard-01",
+      "slot": 10,
+      "games": [
+        "lgp",
+        "lge",
+        "sw",
+        "sh",
+        "bd"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "0011",
+      "nationalDex": 11,
+      "name": "Metapod",
+      "title": "Metapod",
+      "formName": null,
+      "formDetail": null,
+      "kind": "standard",
+      "types": [
+        "bug"
+      ],
+      "spriteId": 11,
+      "boxId": "standard-01",
+      "slot": 11,
+      "games": [
+        "lgp",
+        "lge",
+        "sw",
+        "sh",
+        "bd"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "0012",
+      "nationalDex": 12,
+      "name": "Butterfree",
+      "title": "Butterfree",
+      "formName": null,
+      "formDetail": null,
+      "kind": "standard",
+      "types": [
+        "bug",
+        "flying"
+      ],
+      "spriteId": 12,
+      "boxId": "standard-01",
+      "slot": 12,
+      "games": [
+        "lgp",
+        "lge",
+        "sw",
+        "sh",
+        "bd"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "0013",
+      "nationalDex": 13,
+      "name": "Weedle",
+      "title": "Weedle",
+      "formName": null,
+      "formDetail": null,
+      "kind": "standard",
+      "types": [
+        "bug",
+        "poison"
+      ],
+      "spriteId": 13,
+      "boxId": "standard-01",
+      "slot": 13,
+      "games": [
+        "lgp",
+        "lge",
+        "sp",
+        "za"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "0014",
+      "nationalDex": 14,
+      "name": "Kakuna",
+      "title": "Kakuna",
+      "formName": null,
+      "formDetail": null,
+      "kind": "standard",
+      "types": [
+        "bug",
+        "poison"
+      ],
+      "spriteId": 14,
+      "boxId": "standard-01",
+      "slot": 14,
+      "games": [
+        "lgp",
+        "lge",
+        "sp",
+        "za"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "0015",
+      "nationalDex": 15,
+      "name": "Beedrill",
+      "title": "Beedrill",
+      "formName": null,
+      "formDetail": null,
+      "kind": "standard",
+      "types": [
+        "bug",
+        "poison"
+      ],
+      "spriteId": 15,
+      "boxId": "standard-01",
+      "slot": 15,
+      "games": [
+        "lgp",
+        "lge",
+        "sp",
+        "za"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "0016",
+      "nationalDex": 16,
+      "name": "Pidgey",
+      "title": "Pidgey",
+      "formName": null,
+      "formDetail": null,
+      "kind": "standard",
+      "types": [
+        "normal",
+        "flying"
+      ],
+      "spriteId": 16,
+      "boxId": "standard-01",
+      "slot": 16,
+      "games": [
+        "lgp",
+        "lge",
+        "bd",
+        "sp",
+        "za"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "0017",
+      "nationalDex": 17,
+      "name": "Pidgeotto",
+      "title": "Pidgeotto",
+      "formName": null,
+      "formDetail": null,
+      "kind": "standard",
+      "types": [
+        "normal",
+        "flying"
+      ],
+      "spriteId": 17,
+      "boxId": "standard-01",
+      "slot": 17,
+      "games": [
+        "lgp",
+        "lge",
+        "bd",
+        "sp",
+        "za"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "0018",
+      "nationalDex": 18,
+      "name": "Pidgeot",
+      "title": "Pidgeot",
+      "formName": null,
+      "formDetail": null,
+      "kind": "standard",
+      "types": [
+        "normal",
+        "flying"
+      ],
+      "spriteId": 18,
+      "boxId": "standard-01",
+      "slot": 18,
+      "games": [
+        "lgp",
+        "lge",
+        "bd",
+        "sp",
+        "za"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "0019",
+      "nationalDex": 19,
+      "name": "Rattata",
+      "title": "Rattata",
+      "formName": null,
+      "formDetail": null,
+      "kind": "standard",
+      "types": [
+        "normal"
+      ],
+      "spriteId": 19,
+      "boxId": "standard-01",
+      "slot": 19,
+      "games": [
+        "lgp",
+        "lge",
+        "bd",
+        "sp"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "0020",
+      "nationalDex": 20,
+      "name": "Raticate",
+      "title": "Raticate",
+      "formName": null,
+      "formDetail": null,
+      "kind": "standard",
+      "types": [
+        "normal"
+      ],
+      "spriteId": 20,
+      "boxId": "standard-01",
+      "slot": 20,
+      "games": [
+        "lgp",
+        "lge",
+        "bd",
+        "sp"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "0021",
+      "nationalDex": 21,
+      "name": "Spearow",
+      "title": "Spearow",
+      "formName": null,
+      "formDetail": null,
+      "kind": "standard",
+      "types": [
+        "normal",
+        "flying"
+      ],
+      "spriteId": 21,
+      "boxId": "standard-01",
+      "slot": 21,
+      "games": [
+        "lgp",
+        "lge",
+        "bd",
+        "sp"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "0022",
+      "nationalDex": 22,
+      "name": "Fearow",
+      "title": "Fearow",
+      "formName": null,
+      "formDetail": null,
+      "kind": "standard",
+      "types": [
+        "normal",
+        "flying"
+      ],
+      "spriteId": 22,
+      "boxId": "standard-01",
+      "slot": 22,
+      "games": [
+        "lgp",
+        "lge",
+        "bd",
+        "sp"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "0023",
+      "nationalDex": 23,
+      "name": "Ekans",
+      "title": "Ekans",
+      "formName": null,
+      "formDetail": null,
+      "kind": "standard",
+      "types": [
+        "poison"
+      ],
+      "spriteId": 23,
+      "boxId": "standard-01",
+      "slot": 23,
+      "games": [
+        "lge",
+        "bd",
+        "s",
+        "v",
+        "za"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "0024",
+      "nationalDex": 24,
+      "name": "Arbok",
+      "title": "Arbok",
+      "formName": null,
+      "formDetail": null,
+      "kind": "standard",
+      "types": [
+        "poison"
+      ],
+      "spriteId": 24,
+      "boxId": "standard-01",
+      "slot": 24,
+      "games": [
+        "lge",
+        "bd",
+        "s",
+        "v",
+        "za"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "0025",
+      "nationalDex": 25,
+      "name": "Pikachu",
+      "title": "Pikachu",
+      "formName": null,
+      "formDetail": null,
+      "kind": "standard",
+      "types": [
+        "electric"
+      ],
+      "spriteId": 25,
+      "boxId": "standard-01",
+      "slot": 25,
+      "games": [
+        "lgp",
+        "lge",
+        "sw",
+        "sh",
+        "bd",
+        "sp",
+        "la",
+        "s",
+        "v",
+        "za"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "0026",
+      "nationalDex": 26,
+      "name": "Raichu",
+      "title": "Raichu",
+      "formName": null,
+      "formDetail": null,
+      "kind": "standard",
+      "types": [
+        "electric"
+      ],
+      "spriteId": 26,
+      "boxId": "standard-01",
+      "slot": 26,
+      "games": [
+        "lgp",
+        "lge",
+        "sw",
+        "sh",
+        "bd",
+        "sp",
+        "la",
+        "s",
+        "v",
+        "za"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "0027",
+      "nationalDex": 27,
+      "name": "Sandshrew",
+      "title": "Sandshrew",
+      "formName": null,
+      "formDetail": null,
+      "kind": "standard",
+      "types": [
+        "ground"
+      ],
+      "spriteId": 27,
+      "boxId": "standard-01",
+      "slot": 27,
+      "games": [
+        "lgp",
+        "sw",
+        "sh",
+        "sp",
+        "s",
+        "v"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "0028",
+      "nationalDex": 28,
+      "name": "Sandslash",
+      "title": "Sandslash",
+      "formName": null,
+      "formDetail": null,
+      "kind": "standard",
+      "types": [
+        "ground"
+      ],
+      "spriteId": 28,
+      "boxId": "standard-01",
+      "slot": 28,
+      "games": [
+        "lgp",
+        "sw",
+        "sh",
+        "sp",
+        "s",
+        "v"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "0029",
+      "nationalDex": 29,
+      "name": "Nidoran\u2640",
+      "title": "Nidoran\u2640",
+      "formName": null,
+      "formDetail": null,
+      "kind": "standard",
+      "types": [
+        "poison"
+      ],
+      "spriteId": 29,
+      "boxId": "standard-01",
+      "slot": 29,
+      "games": [
+        "lgp",
+        "lge",
+        "sw",
+        "sh",
+        "bd",
+        "sp"
+      ],
+      "aliases": [
+        "nidoran female",
+        "nidoran f",
+        "nidoran-f"
+      ]
+    },
+    {
+      "id": "0030",
+      "nationalDex": 30,
+      "name": "Nidorina",
+      "title": "Nidorina",
+      "formName": null,
+      "formDetail": null,
+      "kind": "standard",
+      "types": [
+        "poison"
+      ],
+      "spriteId": 30,
+      "boxId": "standard-01",
+      "slot": 30,
+      "games": [
+        "lgp",
+        "lge",
+        "sw",
+        "sh",
+        "bd",
+        "sp"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "0031",
+      "nationalDex": 31,
+      "name": "Nidoqueen",
+      "title": "Nidoqueen",
+      "formName": null,
+      "formDetail": null,
+      "kind": "standard",
+      "types": [
+        "poison",
+        "ground"
+      ],
+      "spriteId": 31,
+      "boxId": "standard-02",
+      "slot": 1,
+      "games": [
+        "lgp",
+        "lge",
+        "sw",
+        "sh",
+        "bd",
+        "sp"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "0032",
+      "nationalDex": 32,
+      "name": "Nidoran\u2642",
+      "title": "Nidoran\u2642",
+      "formName": null,
+      "formDetail": null,
+      "kind": "standard",
+      "types": [
+        "poison"
+      ],
+      "spriteId": 32,
+      "boxId": "standard-02",
+      "slot": 2,
+      "games": [
+        "lgp",
+        "lge",
+        "sw",
+        "sh",
+        "bd",
+        "sp"
+      ],
+      "aliases": [
+        "nidoran male",
+        "nidoran m",
+        "nidoran-m"
+      ]
+    },
+    {
+      "id": "0033",
+      "nationalDex": 33,
+      "name": "Nidorino",
+      "title": "Nidorino",
+      "formName": null,
+      "formDetail": null,
+      "kind": "standard",
+      "types": [
+        "poison"
+      ],
+      "spriteId": 33,
+      "boxId": "standard-02",
+      "slot": 3,
+      "games": [
+        "lgp",
+        "lge",
+        "sw",
+        "sh",
+        "bd",
+        "sp"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "0034",
+      "nationalDex": 34,
+      "name": "Nidoking",
+      "title": "Nidoking",
+      "formName": null,
+      "formDetail": null,
+      "kind": "standard",
+      "types": [
+        "poison",
+        "ground"
+      ],
+      "spriteId": 34,
+      "boxId": "standard-02",
+      "slot": 4,
+      "games": [
+        "lgp",
+        "lge",
+        "sw",
+        "sh",
+        "bd",
+        "sp"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "0035",
+      "nationalDex": 35,
+      "name": "Clefairy",
+      "title": "Clefairy",
+      "formName": null,
+      "formDetail": null,
+      "kind": "standard",
+      "types": [
+        "fairy"
+      ],
+      "spriteId": 35,
+      "boxId": "standard-02",
+      "slot": 5,
+      "games": [
+        "lgp",
+        "lge",
+        "sw",
+        "sh",
+        "bd",
+        "sp",
+        "la",
+        "s",
+        "v",
+        "za"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "0036",
+      "nationalDex": 36,
+      "name": "Clefable",
+      "title": "Clefable",
+      "formName": null,
+      "formDetail": null,
+      "kind": "standard",
+      "types": [
+        "fairy"
+      ],
+      "spriteId": 36,
+      "boxId": "standard-02",
+      "slot": 6,
+      "games": [
+        "lgp",
+        "lge",
+        "sw",
+        "sh",
+        "bd",
+        "sp",
+        "la",
+        "s",
+        "v",
+        "za"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "0037",
+      "nationalDex": 37,
+      "name": "Vulpix",
+      "title": "Vulpix",
+      "formName": null,
+      "formDetail": null,
+      "kind": "standard",
+      "types": [
+        "fire"
+      ],
+      "spriteId": 37,
+      "boxId": "standard-02",
+      "slot": 7,
+      "games": [
+        "lge",
+        "sw",
+        "sh",
+        "sp",
+        "la",
+        "s",
+        "v"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "0038",
+      "nationalDex": 38,
+      "name": "Ninetales",
+      "title": "Ninetales",
+      "formName": null,
+      "formDetail": null,
+      "kind": "standard",
+      "types": [
+        "fire"
+      ],
+      "spriteId": 38,
+      "boxId": "standard-02",
+      "slot": 8,
+      "games": [
+        "lge",
+        "sw",
+        "sh",
+        "sp",
+        "la",
+        "s",
+        "v"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "0039",
+      "nationalDex": 39,
+      "name": "Jigglypuff",
+      "title": "Jigglypuff",
+      "formName": null,
+      "formDetail": null,
+      "kind": "standard",
+      "types": [
+        "normal",
+        "fairy"
+      ],
+      "spriteId": 39,
+      "boxId": "standard-02",
+      "slot": 9,
+      "games": [
+        "lgp",
+        "lge",
+        "sw",
+        "sh",
+        "bd",
+        "sp",
+        "s",
+        "v",
+        "za"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "0040",
+      "nationalDex": 40,
+      "name": "Wigglytuff",
+      "title": "Wigglytuff",
+      "formName": null,
+      "formDetail": null,
+      "kind": "standard",
+      "types": [
+        "normal",
+        "fairy"
+      ],
+      "spriteId": 40,
+      "boxId": "standard-02",
+      "slot": 10,
+      "games": [
+        "lgp",
+        "lge",
+        "sw",
+        "sh",
+        "bd",
+        "sp",
+        "s",
+        "v",
+        "za"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "0041",
+      "nationalDex": 41,
+      "name": "Zubat",
+      "title": "Zubat",
+      "formName": null,
+      "formDetail": null,
+      "kind": "standard",
+      "types": [
+        "poison",
+        "flying"
+      ],
+      "spriteId": 41,
+      "boxId": "standard-02",
+      "slot": 11,
+      "games": [
+        "lgp",
+        "lge",
+        "sw",
+        "sh",
+        "bd",
+        "sp",
+        "la",
+        "za"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "0042",
+      "nationalDex": 42,
+      "name": "Golbat",
+      "title": "Golbat",
+      "formName": null,
+      "formDetail": null,
+      "kind": "standard",
+      "types": [
+        "poison",
+        "flying"
+      ],
+      "spriteId": 42,
+      "boxId": "standard-02",
+      "slot": 12,
+      "games": [
+        "lgp",
+        "lge",
+        "sw",
+        "sh",
+        "bd",
+        "sp",
+        "la",
+        "za"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "0043",
+      "nationalDex": 43,
+      "name": "Oddish",
+      "title": "Oddish",
+      "formName": null,
+      "formDetail": null,
+      "kind": "standard",
+      "types": [
+        "grass",
+        "poison"
+      ],
+      "spriteId": 43,
+      "boxId": "standard-02",
+      "slot": 13,
+      "games": [
+        "lgp",
+        "sw",
+        "sh",
+        "bd",
+        "sp",
+        "s",
+        "v"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "0044",
+      "nationalDex": 44,
+      "name": "Gloom",
+      "title": "Gloom",
+      "formName": null,
+      "formDetail": null,
+      "kind": "standard",
+      "types": [
+        "grass",
+        "poison"
+      ],
+      "spriteId": 44,
+      "boxId": "standard-02",
+      "slot": 14,
+      "games": [
+        "lgp",
+        "sw",
+        "sh",
+        "bd",
+        "sp",
+        "s",
+        "v"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "0045",
+      "nationalDex": 45,
+      "name": "Vileplume",
+      "title": "Vileplume",
+      "formName": null,
+      "formDetail": null,
+      "kind": "standard",
+      "types": [
+        "grass",
+        "poison"
+      ],
+      "spriteId": 45,
+      "boxId": "standard-02",
+      "slot": 15,
+      "games": [
+        "lgp",
+        "sw",
+        "sh",
+        "bd",
+        "sp",
+        "s",
+        "v"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "0046",
+      "nationalDex": 46,
+      "name": "Paras",
+      "title": "Paras",
+      "formName": null,
+      "formDetail": null,
+      "kind": "standard",
+      "types": [
+        "bug",
+        "grass"
+      ],
+      "spriteId": 46,
+      "boxId": "standard-02",
+      "slot": 16,
+      "games": [
+        "lgp",
+        "lge",
+        "bd",
+        "sp",
+        "la"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "0047",
+      "nationalDex": 47,
+      "name": "Parasect",
+      "title": "Parasect",
+      "formName": null,
+      "formDetail": null,
+      "kind": "standard",
+      "types": [
+        "bug",
+        "grass"
+      ],
+      "spriteId": 47,
+      "boxId": "standard-02",
+      "slot": 17,
+      "games": [
+        "lgp",
+        "lge",
+        "bd",
+        "sp",
+        "la"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "0048",
+      "nationalDex": 48,
+      "name": "Venonat",
+      "title": "Venonat",
+      "formName": null,
+      "formDetail": null,
+      "kind": "standard",
+      "types": [
+        "bug",
+        "poison"
+      ],
+      "spriteId": 48,
+      "boxId": "standard-02",
+      "slot": 18,
+      "games": [
+        "lgp",
+        "lge",
+        "bd",
+        "sp",
+        "s",
+        "v"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "0049",
+      "nationalDex": 49,
+      "name": "Venomoth",
+      "title": "Venomoth",
+      "formName": null,
+      "formDetail": null,
+      "kind": "standard",
+      "types": [
+        "bug",
+        "poison"
+      ],
+      "spriteId": 49,
+      "boxId": "standard-02",
+      "slot": 19,
+      "games": [
+        "lgp",
+        "lge",
+        "bd",
+        "sp",
+        "s",
+        "v"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "0050",
+      "nationalDex": 50,
+      "name": "Diglett",
+      "title": "Diglett",
+      "formName": null,
+      "formDetail": null,
+      "kind": "standard",
+      "types": [
+        "ground"
+      ],
+      "spriteId": 50,
+      "boxId": "standard-02",
+      "slot": 20,
+      "games": [
+        "lgp",
+        "lge",
+        "sw",
+        "sh",
+        "bd",
+        "sp",
+        "s",
+        "v"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "0051",
+      "nationalDex": 51,
+      "name": "Dugtrio",
+      "title": "Dugtrio",
+      "formName": null,
+      "formDetail": null,
+      "kind": "standard",
+      "types": [
+        "ground"
+      ],
+      "spriteId": 51,
+      "boxId": "standard-02",
+      "slot": 21,
+      "games": [
+        "lgp",
+        "lge",
+        "sw",
+        "sh",
+        "bd",
+        "sp",
+        "s",
+        "v"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "0052",
+      "nationalDex": 52,
+      "name": "Meowth",
+      "title": "Meowth",
+      "formName": null,
+      "formDetail": null,
+      "kind": "standard",
+      "types": [
+        "normal"
+      ],
+      "spriteId": 52,
+      "boxId": "standard-02",
+      "slot": 22,
+      "games": [
+        "lge",
+        "sw",
+        "sh",
+        "bd",
+        "sp",
+        "s",
+        "v",
+        "za"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "0053",
+      "nationalDex": 53,
+      "name": "Persian",
+      "title": "Persian",
+      "formName": null,
+      "formDetail": null,
+      "kind": "standard",
+      "types": [
+        "normal"
+      ],
+      "spriteId": 53,
+      "boxId": "standard-02",
+      "slot": 23,
+      "games": [
+        "lge",
+        "sw",
+        "sh",
+        "bd",
+        "sp",
+        "s",
+        "v",
+        "za"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "0054",
+      "nationalDex": 54,
+      "name": "Psyduck",
+      "title": "Psyduck",
+      "formName": null,
+      "formDetail": null,
+      "kind": "standard",
+      "types": [
+        "water"
+      ],
+      "spriteId": 54,
+      "boxId": "standard-02",
+      "slot": 24,
+      "games": [
+        "lgp",
+        "lge",
+        "sw",
+        "sh",
+        "bd",
+        "sp",
+        "la",
+        "s",
+        "v"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "0055",
+      "nationalDex": 55,
+      "name": "Golduck",
+      "title": "Golduck",
+      "formName": null,
+      "formDetail": null,
+      "kind": "standard",
+      "types": [
+        "water"
+      ],
+      "spriteId": 55,
+      "boxId": "standard-02",
+      "slot": 25,
+      "games": [
+        "lgp",
+        "lge",
+        "sw",
+        "sh",
+        "bd",
+        "sp",
+        "la",
+        "s",
+        "v"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "0056",
+      "nationalDex": 56,
+      "name": "Mankey",
+      "title": "Mankey",
+      "formName": null,
+      "formDetail": null,
+      "kind": "standard",
+      "types": [
+        "fighting"
+      ],
+      "spriteId": 56,
+      "boxId": "standard-02",
+      "slot": 26,
+      "games": [
+        "lgp",
+        "bd",
+        "sp",
+        "s",
+        "v",
+        "za"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "0057",
+      "nationalDex": 57,
+      "name": "Primeape",
+      "title": "Primeape",
+      "formName": null,
+      "formDetail": null,
+      "kind": "standard",
+      "types": [
+        "fighting"
+      ],
+      "spriteId": 57,
+      "boxId": "standard-02",
+      "slot": 27,
+      "games": [
+        "lgp",
+        "bd",
+        "sp",
+        "s",
+        "v",
+        "za"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "0058",
+      "nationalDex": 58,
+      "name": "Growlithe",
+      "title": "Growlithe",
+      "formName": null,
+      "formDetail": null,
+      "kind": "standard",
+      "types": [
+        "fire"
+      ],
+      "spriteId": 58,
+      "boxId": "standard-02",
+      "slot": 28,
+      "games": [
+        "lgp",
+        "sw",
+        "sh",
+        "bd",
+        "s",
+        "v"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "0059",
+      "nationalDex": 59,
+      "name": "Arcanine",
+      "title": "Arcanine",
+      "formName": null,
+      "formDetail": null,
+      "kind": "standard",
+      "types": [
+        "fire"
+      ],
+      "spriteId": 59,
+      "boxId": "standard-02",
+      "slot": 29,
+      "games": [
+        "lgp",
+        "sw",
+        "sh",
+        "bd",
+        "s",
+        "v"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "0060",
+      "nationalDex": 60,
+      "name": "Poliwag",
+      "title": "Poliwag",
+      "formName": null,
+      "formDetail": null,
+      "kind": "standard",
+      "types": [
+        "water"
+      ],
+      "spriteId": 60,
+      "boxId": "standard-02",
+      "slot": 30,
+      "games": [
+        "lgp",
+        "lge",
+        "sw",
+        "sh",
+        "bd",
+        "sp",
+        "s",
+        "v"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "0991",
+      "nationalDex": 991,
+      "name": "Iron Bundle",
+      "title": "Iron Bundle",
+      "formName": null,
+      "formDetail": null,
+      "kind": "standard",
+      "types": [
+        "ice",
+        "water"
+      ],
+      "spriteId": 991,
+      "boxId": "standard-34",
+      "slot": 1,
+      "games": [
+        "v"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "0992",
+      "nationalDex": 992,
+      "name": "Iron Hands",
+      "title": "Iron Hands",
+      "formName": null,
+      "formDetail": null,
+      "kind": "standard",
+      "types": [
+        "fighting",
+        "electric"
+      ],
+      "spriteId": 992,
+      "boxId": "standard-34",
+      "slot": 2,
+      "games": [
+        "v"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "0993",
+      "nationalDex": 993,
+      "name": "Iron Jugulis",
+      "title": "Iron Jugulis",
+      "formName": null,
+      "formDetail": null,
+      "kind": "standard",
+      "types": [
+        "dark",
+        "flying"
+      ],
+      "spriteId": 993,
+      "boxId": "standard-34",
+      "slot": 3,
+      "games": [
+        "v"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "0994",
+      "nationalDex": 994,
+      "name": "Iron Moth",
+      "title": "Iron Moth",
+      "formName": null,
+      "formDetail": null,
+      "kind": "standard",
+      "types": [
+        "fire",
+        "poison"
+      ],
+      "spriteId": 994,
+      "boxId": "standard-34",
+      "slot": 4,
+      "games": [
+        "v"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "0995",
+      "nationalDex": 995,
+      "name": "Iron Thorns",
+      "title": "Iron Thorns",
+      "formName": null,
+      "formDetail": null,
+      "kind": "standard",
+      "types": [
+        "rock",
+        "electric"
+      ],
+      "spriteId": 995,
+      "boxId": "standard-34",
+      "slot": 5,
+      "games": [
+        "v"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "0996",
+      "nationalDex": 996,
+      "name": "Frigibax",
+      "title": "Frigibax",
+      "formName": null,
+      "formDetail": null,
+      "kind": "standard",
+      "types": [
+        "dragon",
+        "ice"
+      ],
+      "spriteId": 996,
+      "boxId": "standard-34",
+      "slot": 6,
+      "games": [
+        "s",
+        "v",
+        "za"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "0997",
+      "nationalDex": 997,
+      "name": "Arctibax",
+      "title": "Arctibax",
+      "formName": null,
+      "formDetail": null,
+      "kind": "standard",
+      "types": [
+        "dragon",
+        "ice"
+      ],
+      "spriteId": 997,
+      "boxId": "standard-34",
+      "slot": 7,
+      "games": [
+        "s",
+        "v",
+        "za"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "0998",
+      "nationalDex": 998,
+      "name": "Baxcalibur",
+      "title": "Baxcalibur",
+      "formName": null,
+      "formDetail": null,
+      "kind": "standard",
+      "types": [
+        "dragon",
+        "ice"
+      ],
+      "spriteId": 998,
+      "boxId": "standard-34",
+      "slot": 8,
+      "games": [
+        "s",
+        "v",
+        "za"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "0999",
+      "nationalDex": 999,
+      "name": "Gimmighoul",
+      "title": "Gimmighoul",
+      "formName": null,
+      "formDetail": null,
+      "kind": "standard",
+      "types": [
+        "ghost"
+      ],
+      "spriteId": 999,
+      "boxId": "standard-34",
+      "slot": 9,
+      "games": [
+        "s",
+        "v",
+        "za"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "1000",
+      "nationalDex": 1000,
+      "name": "Gholdengo",
+      "title": "Gholdengo",
+      "formName": null,
+      "formDetail": null,
+      "kind": "standard",
+      "types": [
+        "steel",
+        "ghost"
+      ],
+      "spriteId": 1000,
+      "boxId": "standard-34",
+      "slot": 10,
+      "games": [
+        "s",
+        "v",
+        "za"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "1001",
+      "nationalDex": 1001,
+      "name": "Wo-Chien",
+      "title": "Wo-Chien",
+      "formName": null,
+      "formDetail": null,
+      "kind": "standard",
+      "types": [
+        "dark",
+        "grass"
+      ],
+      "spriteId": 1001,
+      "boxId": "standard-34",
+      "slot": 11,
+      "games": [
+        "s",
+        "v"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "1002",
+      "nationalDex": 1002,
+      "name": "Chien-Pao",
+      "title": "Chien-Pao",
+      "formName": null,
+      "formDetail": null,
+      "kind": "standard",
+      "types": [
+        "dark",
+        "ice"
+      ],
+      "spriteId": 1002,
+      "boxId": "standard-34",
+      "slot": 12,
+      "games": [
+        "s",
+        "v"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "1003",
+      "nationalDex": 1003,
+      "name": "Ting-Lu",
+      "title": "Ting-Lu",
+      "formName": null,
+      "formDetail": null,
+      "kind": "standard",
+      "types": [
+        "dark",
+        "ground"
+      ],
+      "spriteId": 1003,
+      "boxId": "standard-34",
+      "slot": 13,
+      "games": [
+        "s",
+        "v"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "1004",
+      "nationalDex": 1004,
+      "name": "Chi-Yu",
+      "title": "Chi-Yu",
+      "formName": null,
+      "formDetail": null,
+      "kind": "standard",
+      "types": [
+        "dark",
+        "fire"
+      ],
+      "spriteId": 1004,
+      "boxId": "standard-34",
+      "slot": 14,
+      "games": [
+        "s",
+        "v"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "1005",
+      "nationalDex": 1005,
+      "name": "Roaring Moon",
+      "title": "Roaring Moon",
+      "formName": null,
+      "formDetail": null,
+      "kind": "standard",
+      "types": [
+        "dragon",
+        "dark"
+      ],
+      "spriteId": 1005,
+      "boxId": "standard-34",
+      "slot": 15,
+      "games": [
+        "s"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "1006",
+      "nationalDex": 1006,
+      "name": "Iron Valiant",
+      "title": "Iron Valiant",
+      "formName": null,
+      "formDetail": null,
+      "kind": "standard",
+      "types": [
+        "fairy",
+        "fighting"
+      ],
+      "spriteId": 1006,
+      "boxId": "standard-34",
+      "slot": 16,
+      "games": [
+        "v"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "1007",
+      "nationalDex": 1007,
+      "name": "Koraidon",
+      "title": "Koraidon",
+      "formName": null,
+      "formDetail": null,
+      "kind": "standard",
+      "types": [
+        "fighting",
+        "dragon"
+      ],
+      "spriteId": 1007,
+      "boxId": "standard-34",
+      "slot": 17,
+      "games": [
+        "s"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "1008",
+      "nationalDex": 1008,
+      "name": "Miraidon",
+      "title": "Miraidon",
+      "formName": null,
+      "formDetail": null,
+      "kind": "standard",
+      "types": [
+        "electric",
+        "dragon"
+      ],
+      "spriteId": 1008,
+      "boxId": "standard-34",
+      "slot": 18,
+      "games": [
+        "v"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "1009",
+      "nationalDex": 1009,
+      "name": "Walking Wake",
+      "title": "Walking Wake",
+      "formName": null,
+      "formDetail": null,
+      "kind": "standard",
+      "types": [
+        "water",
+        "dragon"
+      ],
+      "spriteId": 1009,
+      "boxId": "standard-34",
+      "slot": 19,
+      "games": [],
+      "aliases": [],
+      "availabilityNote": "Walking Wake is not in the permanent Paldea, Kitakami, or Blueberry Pok\u00e9dex. It can only be caught during a limited Pok\u00e9 Portal Tera Raid event in Scarlet, and no event is active."
+    },
+    {
+      "id": "1010",
+      "nationalDex": 1010,
+      "name": "Iron Leaves",
+      "title": "Iron Leaves",
+      "formName": null,
+      "formDetail": null,
+      "kind": "standard",
+      "types": [
+        "grass",
+        "psychic"
+      ],
+      "spriteId": 1010,
+      "boxId": "standard-34",
+      "slot": 20,
+      "games": [],
+      "aliases": [],
+      "availabilityNote": "Iron Leaves is not in the permanent Paldea, Kitakami, or Blueberry Pok\u00e9dex. It can only be caught during a limited Pok\u00e9 Portal Tera Raid event in Violet, and no event is active."
+    },
+    {
+      "id": "1011",
+      "nationalDex": 1011,
+      "name": "Dipplin",
+      "title": "Dipplin",
+      "formName": null,
+      "formDetail": null,
+      "kind": "standard",
+      "types": [
+        "grass",
+        "dragon"
+      ],
+      "spriteId": 1011,
+      "boxId": "standard-34",
+      "slot": 21,
+      "games": [
+        "s",
+        "v"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "1012",
+      "nationalDex": 1012,
+      "name": "Poltchageist",
+      "title": "Poltchageist",
+      "formName": null,
+      "formDetail": null,
+      "kind": "standard",
+      "types": [
+        "grass",
+        "ghost"
+      ],
+      "spriteId": 1012,
+      "boxId": "standard-34",
+      "slot": 22,
+      "games": [
+        "s",
+        "v"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "1013",
+      "nationalDex": 1013,
+      "name": "Sinistcha",
+      "title": "Sinistcha",
+      "formName": null,
+      "formDetail": null,
+      "kind": "standard",
+      "types": [
+        "grass",
+        "ghost"
+      ],
+      "spriteId": 1013,
+      "boxId": "standard-34",
+      "slot": 23,
+      "games": [
+        "s",
+        "v"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "1014",
+      "nationalDex": 1014,
+      "name": "Okidogi",
+      "title": "Okidogi",
+      "formName": null,
+      "formDetail": null,
+      "kind": "standard",
+      "types": [
+        "poison",
+        "fighting"
+      ],
+      "spriteId": 1014,
+      "boxId": "standard-34",
+      "slot": 24,
+      "games": [
+        "s",
+        "v"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "1015",
+      "nationalDex": 1015,
+      "name": "Munkidori",
+      "title": "Munkidori",
+      "formName": null,
+      "formDetail": null,
+      "kind": "standard",
+      "types": [
+        "poison",
+        "psychic"
+      ],
+      "spriteId": 1015,
+      "boxId": "standard-34",
+      "slot": 25,
+      "games": [
+        "s",
+        "v"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "1016",
+      "nationalDex": 1016,
+      "name": "Fezandipiti",
+      "title": "Fezandipiti",
+      "formName": null,
+      "formDetail": null,
+      "kind": "standard",
+      "types": [
+        "poison",
+        "fairy"
+      ],
+      "spriteId": 1016,
+      "boxId": "standard-34",
+      "slot": 26,
+      "games": [
+        "s",
+        "v"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "1017",
+      "nationalDex": 1017,
+      "name": "Ogerpon",
+      "title": "Ogerpon",
+      "formName": null,
+      "formDetail": null,
+      "kind": "standard",
+      "types": [
+        "grass"
+      ],
+      "spriteId": 1017,
+      "boxId": "standard-34",
+      "slot": 27,
+      "games": [
+        "s",
+        "v"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "1018",
+      "nationalDex": 1018,
+      "name": "Archaludon",
+      "title": "Archaludon",
+      "formName": null,
+      "formDetail": null,
+      "kind": "standard",
+      "types": [
+        "steel",
+        "dragon"
+      ],
+      "spriteId": 1018,
+      "boxId": "standard-34",
+      "slot": 28,
+      "games": [
+        "s",
+        "v"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "1019",
+      "nationalDex": 1019,
+      "name": "Hydrapple",
+      "title": "Hydrapple",
+      "formName": null,
+      "formDetail": null,
+      "kind": "standard",
+      "types": [
+        "grass",
+        "dragon"
+      ],
+      "spriteId": 1019,
+      "boxId": "standard-34",
+      "slot": 29,
+      "games": [
+        "s",
+        "v"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "1020",
+      "nationalDex": 1020,
+      "name": "Gouging Fire",
+      "title": "Gouging Fire",
+      "formName": null,
+      "formDetail": null,
+      "kind": "standard",
+      "types": [
+        "fire",
+        "dragon"
+      ],
+      "spriteId": 1020,
+      "boxId": "standard-34",
+      "slot": 30,
+      "games": [
+        "s"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "0019-alola",
+      "nationalDex": 19,
+      "name": "Rattata",
+      "title": "Alolan Rattata",
+      "formName": "Alolan",
+      "formDetail": "Alolan Form",
+      "kind": "regional",
+      "types": [
+        "dark",
+        "normal"
+      ],
+      "spriteId": 10091,
+      "boxId": "alt-01",
+      "slot": 1,
+      "games": [
+        "lgp",
+        "lge"
+      ],
+      "aliases": [
+        "alolan rattata"
+      ]
+    },
+    {
+      "id": "0026-alola",
+      "nationalDex": 26,
+      "name": "Raichu",
+      "title": "Alolan Raichu",
+      "formName": "Alolan",
+      "formDetail": "Alolan Form",
+      "kind": "regional",
+      "types": [
+        "electric",
+        "psychic"
+      ],
+      "spriteId": 10100,
+      "boxId": "alt-01",
+      "slot": 2,
+      "games": [
+        "lgp",
+        "lge",
+        "sw",
+        "sh",
+        "za"
+      ],
+      "aliases": [
+        "alolan raichu"
+      ]
+    },
+    {
+      "id": "0027-alola",
+      "nationalDex": 27,
+      "name": "Sandshrew",
+      "title": "Alolan Sandshrew",
+      "formName": "Alolan",
+      "formDetail": "Alolan Form",
+      "kind": "regional",
+      "types": [
+        "ice",
+        "steel"
+      ],
+      "spriteId": 10101,
+      "boxId": "alt-01",
+      "slot": 3,
+      "games": [
+        "lgp",
+        "sw",
+        "sh",
+        "v"
+      ],
+      "aliases": [
+        "alolan sandshrew"
+      ]
+    },
+    {
+      "id": "0037-alola",
+      "nationalDex": 37,
+      "name": "Vulpix",
+      "title": "Alolan Vulpix",
+      "formName": "Alolan",
+      "formDetail": "Alolan Form",
+      "kind": "regional",
+      "types": [
+        "ice"
+      ],
+      "spriteId": 10103,
+      "boxId": "alt-01",
+      "slot": 4,
+      "games": [
+        "lge",
+        "sw",
+        "sh",
+        "la",
+        "s"
+      ],
+      "aliases": [
+        "alolan vulpix"
+      ]
+    },
+    {
+      "id": "0038-alola",
+      "nationalDex": 38,
+      "name": "Ninetales",
+      "title": "Alolan Ninetales",
+      "formName": "Alolan",
+      "formDetail": "Alolan Form",
+      "kind": "regional",
+      "types": [
+        "ice",
+        "fairy"
+      ],
+      "spriteId": 10104,
+      "boxId": "alt-01",
+      "slot": 5,
+      "games": [
+        "lge",
+        "sw",
+        "sh",
+        "la",
+        "s"
+      ],
+      "aliases": [
+        "alolan ninetales"
+      ]
+    },
+    {
+      "id": "0050-alola",
+      "nationalDex": 50,
+      "name": "Diglett",
+      "title": "Alolan Diglett",
+      "formName": "Alolan",
+      "formDetail": "Alolan Form",
+      "kind": "regional",
+      "types": [
+        "ground",
+        "steel"
+      ],
+      "spriteId": 10105,
+      "boxId": "alt-01",
+      "slot": 6,
+      "games": [
+        "lgp",
+        "lge",
+        "sw",
+        "sh",
+        "s",
+        "v"
+      ],
+      "aliases": [
+        "alolan diglett"
+      ]
+    },
+    {
+      "id": "0052-alola",
+      "nationalDex": 52,
+      "name": "Meowth",
+      "title": "Alolan Meowth",
+      "formName": "Alolan",
+      "formDetail": "Alolan Form",
+      "kind": "regional",
+      "types": [
+        "dark"
+      ],
+      "spriteId": 10107,
+      "boxId": "alt-01",
+      "slot": 7,
+      "games": [
+        "lge",
+        "sw",
+        "sh",
+        "s",
+        "v",
+        "za"
+      ],
+      "aliases": [
+        "alolan meowth"
+      ]
+    },
+    {
+      "id": "0088-alola",
+      "nationalDex": 88,
+      "name": "Grimer",
+      "title": "Alolan Grimer",
+      "formName": "Alolan",
+      "formDetail": "Alolan Form",
+      "kind": "regional",
+      "types": [
+        "poison",
+        "dark"
+      ],
+      "spriteId": 10112,
+      "boxId": "alt-01",
+      "slot": 8,
+      "games": [
+        "lgp",
+        "s",
+        "v"
+      ],
+      "aliases": [
+        "alolan grimer"
+      ]
+    },
+    {
+      "id": "0103-alola",
+      "nationalDex": 103,
+      "name": "Exeggutor",
+      "title": "Alolan Exeggutor",
+      "formName": "Alolan",
+      "formDetail": "Alolan Form",
+      "kind": "regional",
+      "types": [
+        "grass",
+        "dragon"
+      ],
+      "spriteId": 10114,
+      "boxId": "alt-01",
+      "slot": 9,
+      "games": [
+        "lgp",
+        "lge",
+        "sw",
+        "sh",
+        "s",
+        "v"
+      ],
+      "aliases": [
+        "alolan exeggutor",
+        "alolan exeggcutor"
+      ]
+    },
+    {
+      "id": "0105-alola",
+      "nationalDex": 105,
+      "name": "Marowak",
+      "title": "Alolan Marowak",
+      "formName": "Alolan",
+      "formDetail": "Alolan Form",
+      "kind": "regional",
+      "types": [
+        "fire",
+        "ghost"
+      ],
+      "spriteId": 10115,
+      "boxId": "alt-01",
+      "slot": 10,
+      "games": [
+        "lgp",
+        "lge",
+        "sw",
+        "sh",
+        "za"
+      ],
+      "aliases": [
+        "alolan marowak"
+      ]
+    },
+    {
+      "id": "0052-galar",
+      "nationalDex": 52,
+      "name": "Meowth",
+      "title": "Galarian Meowth",
+      "formName": "Galarian",
+      "formDetail": "Galarian Form",
+      "kind": "regional",
+      "types": [
+        "steel"
+      ],
+      "spriteId": 10161,
+      "boxId": "alt-01",
+      "slot": 11,
+      "games": [
+        "sw",
+        "sh"
+      ],
+      "aliases": [
+        "galarian meowth"
+      ]
+    },
+    {
+      "id": "0077-galar",
+      "nationalDex": 77,
+      "name": "Ponyta",
+      "title": "Galarian Ponyta",
+      "formName": "Galarian",
+      "formDetail": "Galarian Form",
+      "kind": "regional",
+      "types": [
+        "psychic"
+      ],
+      "spriteId": 10162,
+      "boxId": "alt-01",
+      "slot": 12,
+      "games": [
+        "sh"
+      ],
+      "aliases": [
+        "galarian ponyta"
+      ]
+    },
+    {
+      "id": "0079-galar",
+      "nationalDex": 79,
+      "name": "Slowpoke",
+      "title": "Galarian Slowpoke",
+      "formName": "Galarian",
+      "formDetail": "Galarian Form",
+      "kind": "regional",
+      "types": [
+        "psychic"
+      ],
+      "spriteId": 10164,
+      "boxId": "alt-01",
+      "slot": 13,
+      "games": [
+        "sw",
+        "sh"
+      ],
+      "aliases": [
+        "galarian slowpoke"
+      ]
+    },
+    {
+      "id": "0083-galar",
+      "nationalDex": 83,
+      "name": "Farfetch\u2019d",
+      "title": "Galarian Farfetch\u2019d",
+      "formName": "Galarian",
+      "formDetail": "Galarian Form",
+      "kind": "regional",
+      "types": [
+        "fighting"
+      ],
+      "spriteId": 10166,
+      "boxId": "alt-01",
+      "slot": 14,
+      "games": [
+        "sw"
+      ],
+      "aliases": [
+        "galarian farfetchd",
+        "farfetchd galar"
+      ]
+    },
+    {
+      "id": "0110-galar",
+      "nationalDex": 110,
+      "name": "Weezing",
+      "title": "Galarian Weezing",
+      "formName": "Galarian",
+      "formDetail": "Galarian Form",
+      "kind": "regional",
+      "types": [
+        "poison",
+        "fairy"
+      ],
+      "spriteId": 10167,
+      "boxId": "alt-01",
+      "slot": 15,
+      "games": [
+        "sw",
+        "sh"
+      ],
+      "aliases": [
+        "galarian weezing"
+      ]
+    },
+    {
+      "id": "0122-galar",
+      "nationalDex": 122,
+      "name": "Mr. Mime",
+      "title": "Galarian Mr. Mime",
+      "formName": "Galarian",
+      "formDetail": "Galarian Form",
+      "kind": "regional",
+      "types": [
+        "ice",
+        "psychic"
+      ],
+      "spriteId": 10168,
+      "boxId": "alt-01",
+      "slot": 16,
+      "games": [
+        "sw",
+        "sh"
+      ],
+      "aliases": [
+        "galarian mr mime",
+        "mr mime galar"
+      ]
+    },
+    {
+      "id": "0144-galar",
+      "nationalDex": 144,
+      "name": "Articuno",
+      "title": "Galarian Articuno",
+      "formName": "Galarian",
+      "formDetail": "Galarian Form",
+      "kind": "regional",
+      "types": [
+        "psychic",
+        "flying"
+      ],
+      "spriteId": 10169,
+      "boxId": "alt-01",
+      "slot": 17,
+      "games": [
+        "sw",
+        "sh"
+      ],
+      "aliases": [
+        "galarian articuno"
+      ]
+    },
+    {
+      "id": "0263-galar",
+      "nationalDex": 263,
+      "name": "Zigzagoon",
+      "title": "Galarian Zigzagoon",
+      "formName": "Galarian",
+      "formDetail": "Galarian Form",
+      "kind": "regional",
+      "types": [
+        "dark",
+        "normal"
+      ],
+      "spriteId": 10174,
+      "boxId": "alt-01",
+      "slot": 18,
+      "games": [
+        "sw",
+        "sh"
+      ],
+      "aliases": [
+        "galarian zigzagoon"
+      ]
+    },
+    {
+      "id": "0554-galar",
+      "nationalDex": 554,
+      "name": "Darumaka",
+      "title": "Galarian Darumaka",
+      "formName": "Galarian",
+      "formDetail": "Galarian Form",
+      "kind": "regional",
+      "types": [
+        "ice"
+      ],
+      "spriteId": 10176,
+      "boxId": "alt-01",
+      "slot": 19,
+      "games": [
+        "sw"
+      ],
+      "aliases": [
+        "galarian darumaka"
+      ]
+    },
+    {
+      "id": "0618-galar",
+      "nationalDex": 618,
+      "name": "Stunfisk",
+      "title": "Galarian Stunfisk",
+      "formName": "Galarian",
+      "formDetail": "Galarian Form",
+      "kind": "regional",
+      "types": [
+        "ground",
+        "steel"
+      ],
+      "spriteId": 10180,
+      "boxId": "alt-01",
+      "slot": 20,
+      "games": [
+        "sw",
+        "sh"
+      ],
+      "aliases": [
+        "galarian stunfisk"
+      ]
+    },
+    {
+      "id": "0058-hisui",
+      "nationalDex": 58,
+      "name": "Growlithe",
+      "title": "Hisuian Growlithe",
+      "formName": "Hisuian",
+      "formDetail": "Hisuian Form",
+      "kind": "regional",
+      "types": [
+        "fire",
+        "rock"
+      ],
+      "spriteId": 10229,
+      "boxId": "alt-01",
+      "slot": 21,
+      "games": [
+        "la",
+        "s",
+        "v"
+      ],
+      "aliases": [
+        "hisuian growlithe"
+      ]
+    },
+    {
+      "id": "0100-hisui",
+      "nationalDex": 100,
+      "name": "Voltorb",
+      "title": "Hisuian Voltorb",
+      "formName": "Hisuian",
+      "formDetail": "Hisuian Form",
+      "kind": "regional",
+      "types": [
+        "electric",
+        "grass"
+      ],
+      "spriteId": 10231,
+      "boxId": "alt-01",
+      "slot": 22,
+      "games": [
+        "la",
+        "s",
+        "v"
+      ],
+      "aliases": [
+        "hisuian voltorb"
+      ]
+    },
+    {
+      "id": "0570-hisui",
+      "nationalDex": 570,
+      "name": "Zorua",
+      "title": "Hisuian Zorua",
+      "formName": "Hisuian",
+      "formDetail": "Hisuian Form",
+      "kind": "regional",
+      "types": [
+        "normal",
+        "ghost"
+      ],
+      "spriteId": 10238,
+      "boxId": "alt-01",
+      "slot": 23,
+      "games": [
+        "la",
+        "s",
+        "v"
+      ],
+      "aliases": [
+        "hisuian zorua"
+      ]
+    },
+    {
+      "id": "0571-hisui",
+      "nationalDex": 571,
+      "name": "Zoroark",
+      "title": "Hisuian Zoroark",
+      "formName": "Hisuian",
+      "formDetail": "Hisuian Form",
+      "kind": "regional",
+      "types": [
+        "normal",
+        "ghost"
+      ],
+      "spriteId": 10239,
+      "boxId": "alt-01",
+      "slot": 24,
+      "games": [
+        "la",
+        "s",
+        "v"
+      ],
+      "aliases": [
+        "hisuian zoroark"
+      ]
+    },
+    {
+      "id": "0215-hisui",
+      "nationalDex": 215,
+      "name": "Sneasel",
+      "title": "Hisuian Sneasel",
+      "formName": "Hisuian",
+      "formDetail": "Hisuian Form",
+      "kind": "regional",
+      "types": [
+        "fighting",
+        "poison"
+      ],
+      "spriteId": 10235,
+      "boxId": "alt-01",
+      "slot": 25,
+      "games": [
+        "la",
+        "s",
+        "v"
+      ],
+      "aliases": [
+        "hisuian sneasel"
+      ]
+    },
+    {
+      "id": "0128-paldea-blaze",
+      "nationalDex": 128,
+      "name": "Tauros",
+      "title": "Paldean Tauros",
+      "formName": "Paldean",
+      "formDetail": "Blaze Breed",
+      "kind": "regional",
+      "types": [
+        "fighting",
+        "fire"
+      ],
+      "spriteId": 10251,
+      "boxId": "alt-01",
+      "slot": 26,
+      "games": [
+        "s"
+      ],
+      "aliases": [
+        "paldean tauros",
+        "blaze breed",
+        "tauros blaze"
+      ]
+    },
+    {
+      "id": "0194-paldea",
+      "nationalDex": 194,
+      "name": "Wooper",
+      "title": "Paldean Wooper",
+      "formName": "Paldean",
+      "formDetail": "Paldean Form",
+      "kind": "regional",
+      "types": [
+        "poison",
+        "ground"
+      ],
+      "spriteId": 10253,
+      "boxId": "alt-01",
+      "slot": 27,
+      "games": [
+        "s",
+        "v"
+      ],
+      "aliases": [
+        "paldean wooper"
+      ]
+    },
+    {
+      "id": "0479-heat",
+      "nationalDex": 479,
+      "name": "Rotom",
+      "title": "Heat Rotom",
+      "formName": "Heat",
+      "formDetail": "Heat Form",
+      "kind": "variant",
+      "types": [
+        "electric",
+        "fire"
+      ],
+      "spriteId": 10008,
+      "boxId": "alt-01",
+      "slot": 28,
+      "games": [
+        "sw",
+        "sh",
+        "bd",
+        "sp",
+        "la",
+        "s",
+        "v"
+      ],
+      "aliases": [
+        "heat rotom",
+        "rotom heat"
+      ]
+    },
+    {
+      "id": "0678-female",
+      "nationalDex": 678,
+      "name": "Meowstic",
+      "title": "Meowstic (Female)",
+      "formName": "Female",
+      "formDetail": "Female",
+      "kind": "gender",
+      "types": [
+        "psychic"
+      ],
+      "spriteId": 10025,
+      "boxId": "alt-01",
+      "slot": 29,
+      "games": [
+        "sw",
+        "sh",
+        "s",
+        "v",
+        "za"
+      ],
+      "aliases": [
+        "meowstic female",
+        "female meowstic"
+      ]
+    },
+    {
+      "id": "0876-female",
+      "nationalDex": 876,
+      "name": "Indeedee",
+      "title": "Indeedee (Female)",
+      "formName": "Female",
+      "formDetail": "Female",
+      "kind": "gender",
+      "types": [
+        "psychic",
+        "normal"
+      ],
+      "spriteId": 10186,
+      "boxId": "alt-01",
+      "slot": 30,
+      "games": [
+        "sh",
+        "s",
+        "v",
+        "za"
+      ],
+      "aliases": [
+        "indeedee female",
+        "female indeedee"
+      ]
+    }
+  ]
+}
