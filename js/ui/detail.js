@@ -47,7 +47,7 @@ export function renderDetail(entry, activeGame = null) {
       <div class="detail-empty">
         <p class="eyebrow">Pokémon detail</p>
         <h2>No Pokémon in this box yet</h2>
-        <p>Sprites for this box are not loaded yet. Jump to a region that already has artwork, or search by name or Dex number.</p>
+        <p>Sprites for this box are not loaded yet. Open a Box Space that already has artwork, or search by name or Dex number.</p>
       </div>
     `;
   }

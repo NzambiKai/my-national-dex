@@ -1,5 +1,5 @@
 import { locationText, slotPosition } from "./location.js";
-import { buildRegions } from "./regions.js";
+import { buildBoxSpaces } from "./spaces.js";
 
 async function fetchJson(path) {
   const response = await fetch(path);
@@ -41,7 +41,7 @@ export async function loadCatalog() {
     entries,
     boxes: boxFile.boxes,
     groups: boxFile.groups,
-    regions: buildRegions(boxFile),
+    spaces: buildBoxSpaces(boxFile.boxes),
     games,
     columns: boxFile.columns,
     slotsPerBox: boxFile.slotsPerBox,

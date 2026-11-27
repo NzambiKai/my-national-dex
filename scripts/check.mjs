@@ -3,7 +3,7 @@ import { access } from "node:fs/promises";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { locationText, standardPlacement } from "../js/model/location.js";
-import { buildRegions } from "../js/model/regions.js";
+import { buildBoxSpaces, spaceIndexForBox } from "../js/model/spaces.js";
 import { matchesView } from "../js/model/catalog.js";
 import { searchEntries } from "../js/model/search.js";
 
@@ -24,17 +24,30 @@ const boxById = new Map(boxes.boxes.map((box) => [box.id, box]));
 const gameIds = new Set(games.games.map((game) => game.id));
 const caughtById = new Map(collection.entries.map((entry) => [entry.id, entry.caught]));
 
-const regions = buildRegions(boxes);
+const spaces = buildBoxSpaces(boxes.boxes);
+expect(spaces.length === 2, `expected 2 Box Spaces, got ${spaces.length}`);
+expect(spaces[0].boxes.length === 30 && spaces[0].label === "0001 - 0900", `space 1 drifted: ${spaces[0].label}`);
+expect(spaces[0].boxes[0].id === "standard-01" && spaces[0].boxes.at(-1).id === "standard-30", "space 1 should be boxes 1–30");
 expect(
-  regions.map((region) => region.label).join("|") === "Kanto|Johto|Hoenn|Sinnoh|Unova|Kalos|Alola|Galar|Hisui / Paldea|Alt Forms",
-  "region jump tabs drifted",
+  spaces[1].boxes.map((box) => box.id).join() === "standard-31,standard-32,standard-33,standard-34,standard-35,alt-01",
+  `space 2 drifted: ${spaces[1].boxes.map((box) => box.id).join()}`,
 );
-for (const box of boxes.boxes) {
-  expect(regions.some((region) => region.boxes.some((item) => item.id === box.id)), `${box.id} is missing from region jump`);
-}
-expect(regions.find((region) => region.id === "kanto").boxes[0].id === "standard-01", "Kanto should open on Box 1");
-expect(regions.find((region) => region.id === "hisui-paldea").boxes.at(-1).id === "standard-35", "Hisui / Paldea should reach Box 35");
-expect(regions.find((region) => region.id === "alt").boxes[0].id === "alt-01", "Alt Forms should open Alt Box 1");
+expect(spaces[1].label === "0901 - 1025 · Alt 1", `space 2 label drifted: ${spaces[1].label}`);
+expect(spaceIndexForBox(spaces, "standard-01") === 0 && spaceIndexForBox(spaces, "alt-01") === 1, "box space lookup drifted");
+const extraAlt = [
+  ...boxes.boxes,
+  ...Array.from({ length: 30 }, (_, index) => ({
+    id: `alt-extra-${index + 2}`,
+    group: "alt",
+    number: index + 2,
+    dexStart: null,
+    dexEnd: null,
+  })),
+];
+const grown = buildBoxSpaces(extraAlt);
+expect(grown.length === 3, "more Alt Forms boxes should open another Box Space");
+expect(grown[1].boxes.filter((box) => box.group === "alt").length === 25, "space 2 should fill the remaining slots with Alt Forms");
+expect(grown[2].boxes.length === 6 && grown[2].boxes.every((box) => box.group === "alt"), "overflow Alt Forms should start the next Box Space");
 
 const sample = dex.entries.find((entry) => entry.id === "0006");
 expect(matchesView(sample, { filter: "all", gameId: "s" }) === sample.games.includes("s"), "game filter should follow Scarlet");

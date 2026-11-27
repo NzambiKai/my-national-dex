@@ -1,5 +1,6 @@
 import { boxProgress, matchesView } from "../model/catalog.js";
-import { boxLabel, formatDex } from "../model/location.js";
+import { formatDex } from "../model/location.js";
+import { boxHeading, homeRange } from "../model/spaces.js";
 import { escapeHtml, spritePath } from "./html.js";
 
 function chevron(direction) {
@@ -7,64 +8,68 @@ function chevron(direction) {
   return `<svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><polyline points="${points}" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></polyline></svg>`;
 }
 
-function chipLabel(box, progress) {
-  const name = box.group === "alt" ? `Alt Box ${box.number}` : `Box ${box.number}`;
-  if (!progress) return `${name}, ${box.title}, ${box.rangeLabel}`;
-  return `${name}, ${box.title}, ${progress.caught} of ${progress.total} caught`;
+function caret(open) {
+  const points = open ? "6 14 12 8 18 14" : "6 10 12 16 18 10";
+  return `<svg class="space-caret" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><polyline points="${points}" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"></polyline></svg>`;
 }
 
-function regionCaption(region) {
-  if (!region.boxes.length) return region.label;
-  if (region.boxes[0].group === "alt") return "Alt Forms / Variants";
-  const numbers = region.boxes.map((box) => box.number);
-  const span = numbers[0] === numbers[numbers.length - 1] ? `Box ${numbers[0]}` : `Boxes ${numbers[0]}–${numbers[numbers.length - 1]}`;
-  return `${region.label} · ${span}`;
-}
-
-export function renderStrip(root, catalog, currentBoxId, regionId) {
-  const currentRegion =
-    catalog.regions.find((region) => region.id === regionId) ??
-    catalog.regions.find((region) => region.boxes.some((box) => box.id === currentBoxId)) ??
-    catalog.regions[0];
-  const tabs = catalog.regions
-    .map((region) => {
-      const current = region.id === currentRegion?.id;
-      return `<button type="button" class="region-tab${current ? " is-current" : ""}" role="tab" data-region-id="${escapeHtml(region.id)}" aria-selected="${current ? "true" : "false"}">${escapeHtml(region.label)}</button>`;
-    })
-    .join("");
-  const chips = (currentRegion?.boxes ?? [])
-    .map((box) => {
-      const progress = boxProgress(catalog.entries, box.id);
-      const current = box.id === currentBoxId;
-      const width = progress ? Math.round((progress.caught / progress.total) * 100) : 0;
-      const meta = progress ? `${progress.caught}/${progress.total}` : "—";
-      const number = box.group === "alt" ? `A${box.number}` : box.number;
-      return `
-        <button type="button" class="strip-chip${current ? " is-current" : ""}${progress ? "" : " is-pending"}" data-box-id="${escapeHtml(box.id)}" aria-current="${current ? "true" : "false"}" aria-label="${escapeHtml(chipLabel(box, progress))}">
-          <span class="strip-num">${number}</span>
-          <span class="strip-bar"><span style="width:${width}%"></span></span>
-          <span class="strip-meta">${meta}</span>
-        </button>
-      `;
-    })
-    .join("");
-
-  root.innerHTML = `
-    <div class="card strip-card">
-      <div class="card-body">
-        <div class="region-scroll" role="tablist" aria-label="Jump to a region">${tabs}</div>
-        <p class="picker-caption">${escapeHtml(regionCaption(currentRegion))}</p>
-        <div class="box-picker" role="group" aria-label="${escapeHtml(currentRegion?.label ?? "Boxes")}">${chips}</div>
-      </div>
-    </div>
+function spaceTile(box, entries, currentBoxId) {
+  const progress = boxProgress(entries, box.id);
+  const current = box.id === currentBoxId;
+  const width = progress ? Math.round((progress.caught / progress.total) * 100) : 0;
+  const range = homeRange(box);
+  const count = progress ? `${progress.caught}/${progress.total}` : "";
+  const tip = count ? `${range} · ${count}` : range;
+  const name = box.group === "alt" ? `Alt ${box.number}` : String(box.number);
+  const kind = box.group === "alt" ? "is-alt" : "";
+  const aria = box.group === "alt" ? `Alt box ${box.number}, ${tip}` : `Box ${box.number}, ${tip}`;
+  return `
+    <button type="button" class="space-tile${current ? " is-current" : ""}${progress ? "" : " is-pending"} ${kind}" data-box-id="${escapeHtml(box.id)}" title="${escapeHtml(tip)}" aria-current="${current ? "true" : "false"}" aria-label="${escapeHtml(aria)}">
+      <span class="space-tile-num">${escapeHtml(name)}</span>
+      <span class="space-tile-bar" aria-hidden="true"><span style="width:${width}%"></span></span>
+    </button>
   `;
 }
 
-export function scrollCurrentChip(root) {
-  const scroller = root.querySelector(".region-scroll");
-  const tab = scroller?.querySelector(".region-tab.is-current");
-  if (!tab || !scroller) return;
-  scroller.scrollLeft = tab.offsetLeft - scroller.clientWidth / 2 + tab.offsetWidth / 2;
+function spaceRuns(space, entries, currentBoxId) {
+  const runs = [];
+  for (const box of space.boxes) {
+    const group = box.group === "standard" ? "standard" : "alt";
+    const last = runs[runs.length - 1];
+    if (!last || last.group !== group) runs.push({ group, boxes: [box] });
+    else last.boxes.push(box);
+  }
+  return runs
+    .map((run) => {
+      const label = run.group === "alt" ? `<p class="space-alt-label">Alt Forms</p>` : "";
+      const tiles = run.boxes.map((box) => spaceTile(box, entries, currentBoxId)).join("");
+      return `${label}<div class="space-grid" role="group" aria-label="${run.group === "alt" ? "Alt Forms boxes" : "National Dex boxes"}">${tiles}</div>`;
+    })
+    .join("");
+}
+
+export function renderStrip(root, catalog, { boxId, spaceIndex, open }) {
+  const space = catalog.spaces[spaceIndex] ?? catalog.spaces[0];
+  const atStart = spaceIndex <= 0;
+  const atEnd = spaceIndex >= catalog.spaces.length - 1;
+  const popover = open
+    ? `<div class="space-popover" id="space-popover" role="dialog" aria-label="Box Space ${space.number} of ${space.total}">${spaceRuns(space, catalog.entries, boxId)}</div>`
+    : "";
+
+  root.innerHTML = `
+    <div class="space-bar-wrap">
+      <div class="space-bar">
+        <button type="button" class="box-nav space-nav" data-action="space-prev" aria-label="Previous Box Space" ${atStart ? "disabled" : ""}>${chevron("left")}</button>
+        <button type="button" class="space-toggle" data-action="toggle-spaces" aria-expanded="${open ? "true" : "false"}" aria-controls="space-popover">
+          <span class="space-kicker">Box Space ${space.number}/${space.total}</span>
+          <span class="space-summary">${escapeHtml(space.label)}</span>
+          ${caret(open)}
+        </button>
+        <button type="button" class="box-nav space-nav" data-action="space-next" aria-label="Next Box Space" ${atEnd ? "disabled" : ""}>${chevron("right")}</button>
+      </div>
+      ${popover}
+    </div>
+  `;
 }
 
 function slotButton(entry, { selected, highlighted, filtered }) {
@@ -104,9 +109,8 @@ export function renderBox(root, { box, entries, filter, gameId = "", selectedId,
     <div class="box-header">
       <button type="button" class="box-nav" data-action="prev" aria-label="Previous box">${chevron("left")}</button>
       <div class="box-heading">
-        <p class="eyebrow mb-1">${escapeHtml(boxLabel(box))} · ${escapeHtml(box.title)}</p>
         <div class="box-title-line">
-          <h2 class="box-title">${escapeHtml(box.rangeLabel)}</h2>
+          <h2 class="box-title">${escapeHtml(boxHeading(box))}</h2>
           <div class="box-count" aria-label="${entries.length ? `${progress} caught in this box` : "Sprites not loaded yet"}">
             <strong>${escapeHtml(progress)}</strong>
             <span>${entries.length ? "caught" : "pending"}</span>
@@ -126,7 +130,7 @@ export function renderBox(root, { box, entries, filter, gameId = "", selectedId,
           <div class="pending">
             <p class="eyebrow">Catalog pending</p>
             <h3>This box is reserved on the Living Dex map</h3>
-            <p>${escapeHtml(box.subtitle)} is reserved in ${escapeHtml(boxLabel(box))}. Sprites for this range are not loaded yet.</p>
+            <p>${escapeHtml(box.subtitle)} is reserved in ${escapeHtml(boxHeading(box))}. Sprites for this range are not loaded yet.</p>
           </div>
         </div>
       </section>

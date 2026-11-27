@@ -12,18 +12,6 @@
       "label": "Alt Forms / Variants"
     }
   ],
-  "regions": [
-    { "id": "kanto", "label": "Kanto", "from": 1, "to": 6 },
-    { "id": "johto", "label": "Johto", "from": 6, "to": 9 },
-    { "id": "hoenn", "label": "Hoenn", "from": 9, "to": 13 },
-    { "id": "sinnoh", "label": "Sinnoh", "from": 13, "to": 17 },
-    { "id": "unova", "label": "Unova", "from": 17, "to": 22 },
-    { "id": "kalos", "label": "Kalos", "from": 22, "to": 25 },
-    { "id": "alola", "label": "Alola", "from": 25, "to": 27 },
-    { "id": "galar", "label": "Galar", "from": 27, "to": 30 },
-    { "id": "hisui-paldea", "label": "Hisui / Paldea", "from": 30, "to": 35 },
-    { "id": "alt", "label": "Alt Forms", "group": "alt" }
-  ],
   "boxes": [
     {
       "id": "standard-01",

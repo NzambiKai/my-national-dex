@@ -1,8 +1,8 @@
 import { entriesInBox, loadCatalog } from "./model/catalog.js";
-import { regionContaining } from "./model/regions.js";
+import { spaceIndexForBox } from "./model/spaces.js";
 import { searchEntries } from "./model/search.js";
 import { loadPreferences, savePreferences } from "./state/store.js";
-import { renderBox, renderStrip, scrollCurrentChip } from "./ui/box.js";
+import { renderBox, renderStrip } from "./ui/box.js";
 import { renderDetail } from "./ui/detail.js";
 import { renderFilters, renderProgress } from "./ui/progress.js";
 import { renderSearchResults } from "./ui/search.js";
@@ -33,14 +33,14 @@ function remember() {
   savePreferences({
     boxId: state.boxId,
     selectedId: state.selectedId,
-    regionId: state.regionId,
     filter: state.filter,
     gameId: state.gameId,
   });
 }
 
-function syncRegion(preferredId) {
-  state.regionId = regionContaining(catalog.regions, currentBox(), preferredId ?? state.regionId)?.id ?? state.regionId;
+function viewedSpaceIndex() {
+  if (Number.isInteger(state.spaceCursor)) return state.spaceCursor;
+  return spaceIndexForBox(catalog.spaces, state.boxId);
 }
 
 function closeSearch() {
@@ -51,7 +51,8 @@ function closeSearch() {
   renderSearchResults($("#search-results"), state);
 }
 
-function paint({ scrollSlot = false, scrollChip = false } = {}) {
+function paint({ scrollSlot = false } = {}) {
+  const restoreAction = document.activeElement?.dataset?.action;
   const box = currentBox();
   const entries = entriesInBox(catalog.entries, box.id);
   renderProgress($("#progress-root"), catalog, state.gameId);
@@ -62,7 +63,11 @@ function paint({ scrollSlot = false, scrollChip = false } = {}) {
     boxEntries: entries,
     enabled: box.catalogued,
   });
-  renderStrip($("#strip-root"), catalog, state.boxId, state.regionId);
+  renderStrip($("#strip-root"), catalog, {
+    boxId: state.boxId,
+    spaceIndex: viewedSpaceIndex(),
+    open: state.spaceOpen,
+  });
   renderBox($("#box-root"), {
     box,
     entries,
@@ -78,14 +83,16 @@ function paint({ scrollSlot = false, scrollChip = false } = {}) {
   const selected = selectedEntry();
   $("#detail-offcanvas-title").textContent = selected ? selected.title : "Pokémon";
 
-  if (scrollChip) scrollCurrentChip($("#strip-root"));
+  if (restoreAction && ["space-prev", "space-next", "toggle-spaces"].includes(restoreAction)) {
+    $("#strip-root").querySelector(`[data-action="${restoreAction}"]`)?.focus();
+  }
   if (scrollSlot && state.highlightId) {
     const slot = document.querySelector(`[data-mon-id="${CSS.escape(state.highlightId)}"]`);
     slot?.scrollIntoView({ block: "center", behavior: "smooth" });
   }
 }
 
-function goToBox(boxId, { regionId } = {}) {
+function goToBox(boxId) {
   const box = catalog.boxes.find((item) => item.id === boxId);
   if (!box) return;
   const entries = entriesInBox(catalog.entries, boxId);
@@ -93,9 +100,10 @@ function goToBox(boxId, { regionId } = {}) {
   state.boxId = boxId;
   state.highlightId = null;
   state.selectedId = keepSelection ? state.selectedId : (entries[0]?.id ?? null);
-  syncRegion(regionId);
+  state.spaceOpen = false;
+  state.spaceCursor = null;
   remember();
-  paint({ scrollChip: true });
+  paint();
 }
 
 function stepBox(delta) {
@@ -104,16 +112,18 @@ function stepBox(delta) {
   goToBox(ids[(index + delta + ids.length) % ids.length]);
 }
 
-function goToRegion(regionId) {
-  const region = catalog.regions.find((item) => item.id === regionId);
-  if (!region || region.boxes.length === 0) return;
-  if (region.boxes.some((box) => box.id === state.boxId)) {
-    state.regionId = regionId;
-    remember();
-    paint({ scrollChip: true });
-    return;
-  }
-  goToBox(region.boxes[0].id, { regionId });
+function stepSpace(delta) {
+  const next = viewedSpaceIndex() + delta;
+  if (next < 0 || next >= catalog.spaces.length) return;
+  state.spaceCursor = next;
+  state.spaceOpen = true;
+  paint();
+}
+
+function toggleSpaces() {
+  state.spaceOpen = !state.spaceOpen;
+  if (!state.spaceOpen) state.spaceCursor = null;
+  paint();
 }
 
 function selectEntry(entry, { pulse = false, jump = false } = {}) {
@@ -121,10 +131,11 @@ function selectEntry(entry, { pulse = false, jump = false } = {}) {
   state.boxId = entry.boxId;
   if (jump) state.filter = "all";
   state.highlightId = pulse ? entry.id : state.highlightId;
-  syncRegion();
+  state.spaceOpen = false;
+  state.spaceCursor = null;
   remember();
   closeSearch();
-  paint({ scrollSlot: pulse, scrollChip: jump });
+  paint({ scrollSlot: pulse });
   if (!isDesktop()) {
     window.bootstrap.Offcanvas.getOrCreateInstance($("#detail-offcanvas")).show();
   } else {
@@ -198,6 +209,11 @@ function bind() {
       $("#search-results").hidden = true;
       $("#search-input").setAttribute("aria-expanded", "false");
     }
+    if (state.spaceOpen && !event.composedPath().includes($("#strip-root"))) {
+      state.spaceOpen = false;
+      state.spaceCursor = null;
+      paint();
+    }
   });
 
   $("#filter-root").addEventListener("click", (event) => {
@@ -212,9 +228,16 @@ function bind() {
   });
 
   $("#strip-root").addEventListener("click", (event) => {
-    const regionButton = event.target.closest("[data-region-id]");
-    if (regionButton) {
-      goToRegion(regionButton.dataset.regionId);
+    if (event.target.closest("[data-action='space-prev']")) {
+      stepSpace(-1);
+      return;
+    }
+    if (event.target.closest("[data-action='space-next']")) {
+      stepSpace(1);
+      return;
+    }
+    if (event.target.closest("[data-action='toggle-spaces']")) {
+      toggleSpaces();
       return;
     }
     const button = event.target.closest("[data-box-id]");
@@ -249,6 +272,12 @@ function bind() {
     if (event.key === "/" && !typing) {
       event.preventDefault();
       input.focus();
+      return;
+    }
+    if (event.key === "Escape" && state.spaceOpen) {
+      state.spaceOpen = false;
+      state.spaceCursor = null;
+      paint();
       return;
     }
     if (typing || event.altKey || event.metaKey || event.ctrlKey) return;
@@ -292,19 +321,19 @@ async function start() {
   state = {
     boxId: view.boxId,
     selectedId: view.selectedId,
-    regionId: prefs.regionId ?? "",
     filter: ["all", "caught", "missing"].includes(prefs.filter) ? prefs.filter : "all",
     gameId: catalog.games.some((game) => game.id === prefs.gameId) ? prefs.gameId : "",
+    spaceOpen: false,
+    spaceCursor: null,
     highlightId: null,
     query: "",
     results: [],
     activeIndex: 0,
   };
-  syncRegion(prefs.regionId);
   remember();
 
   bind();
-  paint({ scrollChip: true });
+  paint();
 }
 
 start();
