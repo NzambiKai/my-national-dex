@@ -1,0 +1,882 @@
+{
+  "note": "Slots whose pokedexapp form has no dedicated Pokémon HOME sprite in PokeAPI/sprites. The app still loads the local file named by spriteId.",
+  "count": 146,
+  "fallbacks": [
+    {
+      "id": "0128-paldea",
+      "name": "Paldean Tauros",
+      "spriteId": 10250,
+      "note": "pokedexapp's single Paldean Tauros card has no separate HOME sprite; using Combat Breed."
+    },
+    {
+      "id": "0412-sandy",
+      "name": "Burmy (Sandy Cloak)",
+      "spriteId": 412,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using burmy."
+    },
+    {
+      "id": "0412-trash",
+      "name": "Burmy (Trash Cloak)",
+      "spriteId": 412,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using burmy."
+    },
+    {
+      "id": "0422-east",
+      "name": "Shellos (East Sea)",
+      "spriteId": 422,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using shellos."
+    },
+    {
+      "id": "0423-east",
+      "name": "Gastrodon (East Sea)",
+      "spriteId": 423,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using gastrodon."
+    },
+    {
+      "id": "0585-summer",
+      "name": "Summer Deerling",
+      "spriteId": 585,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using deerling."
+    },
+    {
+      "id": "0585-autumn",
+      "name": "Autumn Deerling",
+      "spriteId": 585,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using deerling."
+    },
+    {
+      "id": "0585-winter",
+      "name": "Winter Deerling",
+      "spriteId": 585,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using deerling."
+    },
+    {
+      "id": "0586-summer",
+      "name": "Summer Sawsbuck",
+      "spriteId": 586,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using sawsbuck."
+    },
+    {
+      "id": "0586-autumn",
+      "name": "Autumn Sawsbuck",
+      "spriteId": 586,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using sawsbuck."
+    },
+    {
+      "id": "0586-winter",
+      "name": "Winter Sawsbuck",
+      "spriteId": 586,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using sawsbuck."
+    },
+    {
+      "id": "0669-yellow",
+      "name": "Yellow Flabébé",
+      "spriteId": 669,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using flabebe."
+    },
+    {
+      "id": "0669-orange",
+      "name": "Orange Flabébé",
+      "spriteId": 669,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using flabebe."
+    },
+    {
+      "id": "0669-blue",
+      "name": "Blue Flabébé",
+      "spriteId": 669,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using flabebe."
+    },
+    {
+      "id": "0669-white",
+      "name": "White Flabébé",
+      "spriteId": 669,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using flabebe."
+    },
+    {
+      "id": "0670-yellow",
+      "name": "Yellow Floette",
+      "spriteId": 670,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using floette."
+    },
+    {
+      "id": "0670-orange",
+      "name": "Orange Floette",
+      "spriteId": 670,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using floette."
+    },
+    {
+      "id": "0670-blue",
+      "name": "Blue Floette",
+      "spriteId": 670,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using floette."
+    },
+    {
+      "id": "0670-white",
+      "name": "White Floette",
+      "spriteId": 670,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using floette."
+    },
+    {
+      "id": "0671-yellow",
+      "name": "Yellow Florges",
+      "spriteId": 671,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using florges."
+    },
+    {
+      "id": "0671-orange",
+      "name": "Orange Florges",
+      "spriteId": 671,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using florges."
+    },
+    {
+      "id": "0671-blue",
+      "name": "Blue Florges",
+      "spriteId": 671,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using florges."
+    },
+    {
+      "id": "0671-white",
+      "name": "White Florges",
+      "spriteId": 671,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using florges."
+    },
+    {
+      "id": "0676-heart",
+      "name": "Furfrou (Heart Trim)",
+      "spriteId": 676,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using furfrou."
+    },
+    {
+      "id": "0676-star",
+      "name": "Furfrou (Star Trim)",
+      "spriteId": 676,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using furfrou."
+    },
+    {
+      "id": "0676-diamond",
+      "name": "Furfrou (Diamond Trim)",
+      "spriteId": 676,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using furfrou."
+    },
+    {
+      "id": "0676-debutante",
+      "name": "Furfrou (Debutante Trim)",
+      "spriteId": 676,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using furfrou."
+    },
+    {
+      "id": "0676-matron",
+      "name": "Furfrou (Matron Trim)",
+      "spriteId": 676,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using furfrou."
+    },
+    {
+      "id": "0676-dandy",
+      "name": "Furfrou (Dandy Trim)",
+      "spriteId": 676,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using furfrou."
+    },
+    {
+      "id": "0676-la-reine",
+      "name": "Furfrou (La Reine Trim)",
+      "spriteId": 676,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using furfrou."
+    },
+    {
+      "id": "0676-kabuki",
+      "name": "Furfrou (Kabuki Trim)",
+      "spriteId": 676,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using furfrou."
+    },
+    {
+      "id": "0676-pharaoh",
+      "name": "Furfrou (Pharaoh Trim)",
+      "spriteId": 676,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using furfrou."
+    },
+    {
+      "id": "0854-phony",
+      "name": "Phony Sinistea",
+      "spriteId": 854,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using sinistea."
+    },
+    {
+      "id": "0854-antique",
+      "name": "Antique Sinistea",
+      "spriteId": 854,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using sinistea."
+    },
+    {
+      "id": "0855-phony",
+      "name": "Phony Polteageist",
+      "spriteId": 855,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using polteageist."
+    },
+    {
+      "id": "0855-antique",
+      "name": "Antique Polteageist",
+      "spriteId": 855,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using polteageist."
+    },
+    {
+      "id": "1012-artisan-form",
+      "name": "Poltchageist (Artisan Form)",
+      "spriteId": 1012,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using poltchageist."
+    },
+    {
+      "id": "1013-masterpiece-form",
+      "name": "Sinistcha (Masterpiece Form)",
+      "spriteId": 1013,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using sinistcha."
+    },
+    {
+      "id": "0201-b",
+      "name": "Unown (B)",
+      "spriteId": 201,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using unown."
+    },
+    {
+      "id": "0201-c",
+      "name": "Unown (C)",
+      "spriteId": 201,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using unown."
+    },
+    {
+      "id": "0201-d",
+      "name": "Unown (D)",
+      "spriteId": 201,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using unown."
+    },
+    {
+      "id": "0201-e",
+      "name": "Unown (E)",
+      "spriteId": 201,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using unown."
+    },
+    {
+      "id": "0201-f",
+      "name": "Unown (F)",
+      "spriteId": 201,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using unown."
+    },
+    {
+      "id": "0201-g",
+      "name": "Unown (G)",
+      "spriteId": 201,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using unown."
+    },
+    {
+      "id": "0201-h",
+      "name": "Unown (H)",
+      "spriteId": 201,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using unown."
+    },
+    {
+      "id": "0201-i",
+      "name": "Unown (I)",
+      "spriteId": 201,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using unown."
+    },
+    {
+      "id": "0201-j",
+      "name": "Unown (J)",
+      "spriteId": 201,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using unown."
+    },
+    {
+      "id": "0201-k",
+      "name": "Unown (K)",
+      "spriteId": 201,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using unown."
+    },
+    {
+      "id": "0201-l",
+      "name": "Unown (L)",
+      "spriteId": 201,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using unown."
+    },
+    {
+      "id": "0201-m",
+      "name": "Unown (M)",
+      "spriteId": 201,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using unown."
+    },
+    {
+      "id": "0201-n",
+      "name": "Unown (N)",
+      "spriteId": 201,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using unown."
+    },
+    {
+      "id": "0201-o",
+      "name": "Unown (O)",
+      "spriteId": 201,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using unown."
+    },
+    {
+      "id": "0201-p",
+      "name": "Unown (P)",
+      "spriteId": 201,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using unown."
+    },
+    {
+      "id": "0201-q",
+      "name": "Unown (Q)",
+      "spriteId": 201,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using unown."
+    },
+    {
+      "id": "0201-r",
+      "name": "Unown (R)",
+      "spriteId": 201,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using unown."
+    },
+    {
+      "id": "0201-s",
+      "name": "Unown (S)",
+      "spriteId": 201,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using unown."
+    },
+    {
+      "id": "0201-t",
+      "name": "Unown (T)",
+      "spriteId": 201,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using unown."
+    },
+    {
+      "id": "0201-u",
+      "name": "Unown (U)",
+      "spriteId": 201,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using unown."
+    },
+    {
+      "id": "0201-v",
+      "name": "Unown (V)",
+      "spriteId": 201,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using unown."
+    },
+    {
+      "id": "0201-w",
+      "name": "Unown (W)",
+      "spriteId": 201,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using unown."
+    },
+    {
+      "id": "0201-x",
+      "name": "Unown (X)",
+      "spriteId": 201,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using unown."
+    },
+    {
+      "id": "0201-y",
+      "name": "Unown (Y)",
+      "spriteId": 201,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using unown."
+    },
+    {
+      "id": "0201-z",
+      "name": "Unown (Z)",
+      "spriteId": 201,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using unown."
+    },
+    {
+      "id": "0201-em",
+      "name": "Unown (!)",
+      "spriteId": 201,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using unown."
+    },
+    {
+      "id": "0201-qm",
+      "name": "Unown (?)",
+      "spriteId": 201,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using unown."
+    },
+    {
+      "id": "0666-icy-snow",
+      "name": "Vivillon (Icy Snow)",
+      "spriteId": 666,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using vivillon."
+    },
+    {
+      "id": "0666-polar",
+      "name": "Polar Vivillon",
+      "spriteId": 666,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using vivillon."
+    },
+    {
+      "id": "0666-tundra",
+      "name": "Tundra Vivillon",
+      "spriteId": 666,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using vivillon."
+    },
+    {
+      "id": "0666-continental",
+      "name": "Continental Vivillon",
+      "spriteId": 666,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using vivillon."
+    },
+    {
+      "id": "0666-garden",
+      "name": "Garden Vivillon",
+      "spriteId": 666,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using vivillon."
+    },
+    {
+      "id": "0666-elegant",
+      "name": "Elegant Vivillon",
+      "spriteId": 666,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using vivillon."
+    },
+    {
+      "id": "0666-modern",
+      "name": "Modern Vivillon",
+      "spriteId": 666,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using vivillon."
+    },
+    {
+      "id": "0666-marine",
+      "name": "Marine Vivillon",
+      "spriteId": 666,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using vivillon."
+    },
+    {
+      "id": "0666-archipelago",
+      "name": "Archipelago Vivillon",
+      "spriteId": 666,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using vivillon."
+    },
+    {
+      "id": "0666-high-plains",
+      "name": "Vivillon (High Plains)",
+      "spriteId": 666,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using vivillon."
+    },
+    {
+      "id": "0666-sandstorm",
+      "name": "Sandstorm Vivillon",
+      "spriteId": 666,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using vivillon."
+    },
+    {
+      "id": "0666-river",
+      "name": "River Vivillon",
+      "spriteId": 666,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using vivillon."
+    },
+    {
+      "id": "0666-monsoon",
+      "name": "Monsoon Vivillon",
+      "spriteId": 666,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using vivillon."
+    },
+    {
+      "id": "0666-savanna",
+      "name": "Savanna Vivillon",
+      "spriteId": 666,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using vivillon."
+    },
+    {
+      "id": "0666-sun",
+      "name": "Sun Vivillon",
+      "spriteId": 666,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using vivillon."
+    },
+    {
+      "id": "0666-ocean",
+      "name": "Ocean Vivillon",
+      "spriteId": 666,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using vivillon."
+    },
+    {
+      "id": "0666-jungle",
+      "name": "Jungle Vivillon",
+      "spriteId": 666,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using vivillon."
+    },
+    {
+      "id": "0666-fancy",
+      "name": "Fancy Vivillon",
+      "spriteId": 666,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using vivillon."
+    },
+    {
+      "id": "0666-poke-ball",
+      "name": "Pokéball Vivillon",
+      "spriteId": 666,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using vivillon."
+    },
+    {
+      "id": "0869-vanilla-cream-berry",
+      "name": "Alcremie (Vanilla Cream Berry)",
+      "spriteId": 869,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using alcremie."
+    },
+    {
+      "id": "0869-vanilla-cream-love",
+      "name": "Alcremie (Vanilla Cream Love)",
+      "spriteId": 869,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using alcremie."
+    },
+    {
+      "id": "0869-vanilla-cream-star",
+      "name": "Alcremie (Vanilla Cream Star)",
+      "spriteId": 869,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using alcremie."
+    },
+    {
+      "id": "0869-vanilla-cream-clover",
+      "name": "Alcremie (Vanilla Cream Clover)",
+      "spriteId": 869,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using alcremie."
+    },
+    {
+      "id": "0869-vanilla-cream-flower",
+      "name": "Alcremie (Vanilla Cream Flower)",
+      "spriteId": 869,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using alcremie."
+    },
+    {
+      "id": "0869-vanilla-cream-ribbon",
+      "name": "Alcremie (Vanilla Cream Ribbon)",
+      "spriteId": 869,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using alcremie."
+    },
+    {
+      "id": "0869-ruby-cream-strawberry",
+      "name": "Alcremie (Ruby Cream Strawberry)",
+      "spriteId": 869,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using alcremie."
+    },
+    {
+      "id": "0869-ruby-cream-berry",
+      "name": "Alcremie (Ruby Cream Berry)",
+      "spriteId": 869,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using alcremie."
+    },
+    {
+      "id": "0869-ruby-cream-love",
+      "name": "Alcremie (Ruby Cream Love)",
+      "spriteId": 869,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using alcremie."
+    },
+    {
+      "id": "0869-ruby-cream-star",
+      "name": "Alcremie (Ruby Cream Star)",
+      "spriteId": 869,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using alcremie."
+    },
+    {
+      "id": "0869-ruby-cream-clover",
+      "name": "Alcremie (Ruby Cream Clover)",
+      "spriteId": 869,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using alcremie."
+    },
+    {
+      "id": "0869-ruby-cream-flower",
+      "name": "Alcremie (Ruby Cream Flower)",
+      "spriteId": 869,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using alcremie."
+    },
+    {
+      "id": "0869-ruby-cream-ribbon",
+      "name": "Alcremie (Ruby Cream Ribbon)",
+      "spriteId": 869,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using alcremie."
+    },
+    {
+      "id": "0869-matcha-cream-strawberry",
+      "name": "Alcremie (Matcha Cream Strawberry)",
+      "spriteId": 869,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using alcremie."
+    },
+    {
+      "id": "0869-matcha-cream-berry",
+      "name": "Alcremie (Matcha Cream Berry)",
+      "spriteId": 869,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using alcremie."
+    },
+    {
+      "id": "0869-matcha-cream-love",
+      "name": "Alcremie (Matcha Cream Love)",
+      "spriteId": 869,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using alcremie."
+    },
+    {
+      "id": "0869-matcha-cream-star",
+      "name": "Alcremie (Matcha Cream Star)",
+      "spriteId": 869,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using alcremie."
+    },
+    {
+      "id": "0869-matcha-cream-clover",
+      "name": "Alcremie (Matcha Cream Clover)",
+      "spriteId": 869,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using alcremie."
+    },
+    {
+      "id": "0869-matcha-cream-flower",
+      "name": "Alcremie (Matcha Cream Flower)",
+      "spriteId": 869,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using alcremie."
+    },
+    {
+      "id": "0869-matcha-cream-ribbon",
+      "name": "Alcremie (Matcha Cream Ribbon)",
+      "spriteId": 869,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using alcremie."
+    },
+    {
+      "id": "0869-mint-cream-strawberry",
+      "name": "Alcremie (Mint Cream Strawberry)",
+      "spriteId": 869,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using alcremie."
+    },
+    {
+      "id": "0869-mint-cream-berry",
+      "name": "Alcremie (Mint Cream Berry)",
+      "spriteId": 869,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using alcremie."
+    },
+    {
+      "id": "0869-mint-cream-love",
+      "name": "Alcremie (Mint Cream Love)",
+      "spriteId": 869,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using alcremie."
+    },
+    {
+      "id": "0869-mint-cream-star",
+      "name": "Alcremie (Mint Cream Star)",
+      "spriteId": 869,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using alcremie."
+    },
+    {
+      "id": "0869-mint-cream-clover",
+      "name": "Alcremie (Mint Cream Clover)",
+      "spriteId": 869,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using alcremie."
+    },
+    {
+      "id": "0869-mint-cream-flower",
+      "name": "Alcremie (Mint Cream Flower)",
+      "spriteId": 869,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using alcremie."
+    },
+    {
+      "id": "0869-mint-cream-ribbon",
+      "name": "Alcremie (Mint Cream Ribbon)",
+      "spriteId": 869,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using alcremie."
+    },
+    {
+      "id": "0869-lemon-cream-strawberry",
+      "name": "Alcremie (Lemon Cream Strawberry)",
+      "spriteId": 869,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using alcremie."
+    },
+    {
+      "id": "0869-lemon-cream-berry",
+      "name": "Alcremie (Lemon Cream Berry)",
+      "spriteId": 869,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using alcremie."
+    },
+    {
+      "id": "0869-lemon-cream-love",
+      "name": "Alcremie (Lemon Cream Love)",
+      "spriteId": 869,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using alcremie."
+    },
+    {
+      "id": "0869-lemon-cream-star",
+      "name": "Alcremie (Lemon Cream Star)",
+      "spriteId": 869,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using alcremie."
+    },
+    {
+      "id": "0869-lemon-cream-clover",
+      "name": "Alcremie (Lemon Cream Clover)",
+      "spriteId": 869,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using alcremie."
+    },
+    {
+      "id": "0869-lemon-cream-flower",
+      "name": "Alcremie (Lemon Cream Flower)",
+      "spriteId": 869,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using alcremie."
+    },
+    {
+      "id": "0869-lemon-cream-ribbon",
+      "name": "Alcremie (Lemon Cream Ribbon)",
+      "spriteId": 869,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using alcremie."
+    },
+    {
+      "id": "0869-salted-cream-strawberry",
+      "name": "Alcremie (Salted Cream Strawberry)",
+      "spriteId": 869,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using alcremie."
+    },
+    {
+      "id": "0869-salted-cream-berry",
+      "name": "Alcremie (Salted Cream Berry)",
+      "spriteId": 869,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using alcremie."
+    },
+    {
+      "id": "0869-salted-cream-love",
+      "name": "Alcremie (Salted Cream Love)",
+      "spriteId": 869,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using alcremie."
+    },
+    {
+      "id": "0869-salted-cream-star",
+      "name": "Alcremie (Salted Cream Star)",
+      "spriteId": 869,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using alcremie."
+    },
+    {
+      "id": "0869-salted-cream-clover",
+      "name": "Alcremie (Salted Cream Clover)",
+      "spriteId": 869,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using alcremie."
+    },
+    {
+      "id": "0869-salted-cream-flower",
+      "name": "Alcremie (Salted Cream Flower)",
+      "spriteId": 869,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using alcremie."
+    },
+    {
+      "id": "0869-salted-cream-ribbon",
+      "name": "Alcremie (Salted Cream Ribbon)",
+      "spriteId": 869,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using alcremie."
+    },
+    {
+      "id": "0869-ruby-swirl-strawberry",
+      "name": "Alcremie (Ruby Swirl Strawberry)",
+      "spriteId": 869,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using alcremie."
+    },
+    {
+      "id": "0869-ruby-swirl-berry",
+      "name": "Alcremie (Ruby Swirl Berry)",
+      "spriteId": 869,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using alcremie."
+    },
+    {
+      "id": "0869-ruby-swirl-love",
+      "name": "Alcremie (Ruby Swirl Love)",
+      "spriteId": 869,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using alcremie."
+    },
+    {
+      "id": "0869-ruby-swirl-star",
+      "name": "Alcremie (Ruby Swirl Star)",
+      "spriteId": 869,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using alcremie."
+    },
+    {
+      "id": "0869-ruby-swirl-clover",
+      "name": "Alcremie (Ruby Swirl Clover)",
+      "spriteId": 869,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using alcremie."
+    },
+    {
+      "id": "0869-ruby-swirl-flower",
+      "name": "Alcremie (Ruby Swirl Flower)",
+      "spriteId": 869,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using alcremie."
+    },
+    {
+      "id": "0869-ruby-swirl-ribbon",
+      "name": "Alcremie (Ruby Swirl Ribbon)",
+      "spriteId": 869,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using alcremie."
+    },
+    {
+      "id": "0869-caramel-swirl-strawberry",
+      "name": "Alcremie (Caramel Swirl Strawberry)",
+      "spriteId": 869,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using alcremie."
+    },
+    {
+      "id": "0869-caramel-swirl-berry",
+      "name": "Alcremie (Caramel Swirl Berry)",
+      "spriteId": 869,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using alcremie."
+    },
+    {
+      "id": "0869-caramel-swirl-love",
+      "name": "Alcremie (Caramel Swirl Love)",
+      "spriteId": 869,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using alcremie."
+    },
+    {
+      "id": "0869-caramel-swirl-star",
+      "name": "Alcremie (Caramel Swirl Star)",
+      "spriteId": 869,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using alcremie."
+    },
+    {
+      "id": "0869-caramel-swirl-clover",
+      "name": "Alcremie (Caramel Swirl Clover)",
+      "spriteId": 869,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using alcremie."
+    },
+    {
+      "id": "0869-caramel-swirl-flower",
+      "name": "Alcremie (Caramel Swirl Flower)",
+      "spriteId": 869,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using alcremie."
+    },
+    {
+      "id": "0869-caramel-swirl-ribbon",
+      "name": "Alcremie (Caramel Swirl Ribbon)",
+      "spriteId": 869,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using alcremie."
+    },
+    {
+      "id": "0869-rainbow-swirl-strawberry",
+      "name": "Alcremie (Rainbow Swirl Strawberry)",
+      "spriteId": 869,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using alcremie."
+    },
+    {
+      "id": "0869-rainbow-swirl-berry",
+      "name": "Alcremie (Rainbow Swirl Berry)",
+      "spriteId": 869,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using alcremie."
+    },
+    {
+      "id": "0869-rainbow-swirl-love",
+      "name": "Alcremie (Rainbow Swirl Love)",
+      "spriteId": 869,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using alcremie."
+    },
+    {
+      "id": "0869-rainbow-swirl-star",
+      "name": "Alcremie (Rainbow Swirl Star)",
+      "spriteId": 869,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using alcremie."
+    },
+    {
+      "id": "0869-rainbow-swirl-clover",
+      "name": "Alcremie (Rainbow Swirl Clover)",
+      "spriteId": 869,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using alcremie."
+    },
+    {
+      "id": "0869-rainbow-swirl-flower",
+      "name": "Alcremie (Rainbow Swirl Flower)",
+      "spriteId": 869,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using alcremie."
+    },
+    {
+      "id": "0869-rainbow-swirl-ribbon",
+      "name": "Alcremie (Rainbow Swirl Ribbon)",
+      "spriteId": 869,
+      "note": "No dedicated HOME sprite in PokeAPI/sprites; using alcremie."
+    }
+  ]
+}

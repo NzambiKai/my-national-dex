@@ -1,5 +1,8 @@
 import { locationText, slotPosition } from "./location.js";
+import { normalizeQuery } from "./search.js";
 import { buildBoxSpaces } from "./spaces.js";
+
+const boxIndex = new WeakMap();
 
 async function fetchJson(path) {
   const response = await fetch(path);
@@ -19,7 +22,11 @@ export async function loadCatalog() {
 
   const games = gameFile.games;
   const gameById = new Map(games.map((game) => [game.id, game]));
-  const caughtById = new Map(collection.entries.map((entry) => [entry.id, entry.caught === true]));
+  const caughtIds = new Set(
+    Array.isArray(collection.caught)
+      ? collection.caught
+      : (collection.entries ?? []).filter((entry) => entry.caught === true).map((entry) => entry.id),
+  );
   const boxById = new Map(boxFile.boxes.map((box) => [box.id, box]));
 
   const entries = dex.entries.map((entry) => {
@@ -29,13 +36,26 @@ export async function loadCatalog() {
     }
     return {
       ...entry,
-      caught: caughtById.get(entry.id) === true,
+      caught: caughtIds.has(entry.id),
       box,
       position: slotPosition(entry.slot),
       locationText: locationText(box, entry.slot),
       gamesResolved: entry.games.map((id) => gameById.get(id)).filter(Boolean),
+      searchText: normalizeQuery(
+        [entry.title, entry.name, entry.formName, entry.formDetail, ...(entry.aliases ?? []), String(entry.nationalDex), String(entry.nationalDex).padStart(4, "0")]
+          .filter(Boolean)
+          .join(" "),
+      ),
     };
   });
+
+  const byBox = new Map();
+  for (const entry of entries) {
+    const list = byBox.get(entry.boxId);
+    if (list) list.push(entry);
+    else byBox.set(entry.boxId, [entry]);
+  }
+  boxIndex.set(entries, byBox);
 
   return {
     entries,
@@ -55,6 +75,8 @@ export function matchesView(entry, { filter = "all", gameId = "" } = {}) {
 }
 
 export function entriesInBox(entries, boxId) {
+  const indexed = boxIndex.get(entries)?.get(boxId);
+  if (indexed) return indexed;
   return entries.filter((entry) => entry.boxId === boxId).sort((a, b) => a.slot - b.slot);
 }
 

@@ -90,7 +90,7 @@ function slotButton(entry, { selected, highlighted, filtered }) {
     <button type="button" class="${classes}" data-mon-id="${escapeHtml(entry.id)}" aria-pressed="${selected ? "true" : "false"}" aria-label="${escapeHtml(`${entry.title}, ${formatDex(entry.nationalDex)}, ${entry.caught ? "caught" : "missing"}, ${entry.locationText}`)}" ${filtered ? 'tabindex="-1"' : ""}>
       ${badge}
       <span class="slot-sprite">
-        <img src="${spritePath(entry.spriteId)}" alt="" width="128" height="128" draggable="false">
+        <img src="${spritePath(entry.spriteId)}" alt="" width="128" height="128" draggable="false" loading="lazy" decoding="async">
       </span>
       <span class="slot-meta">
         <span class="slot-dex">${formatDex(entry.nationalDex)}</span>

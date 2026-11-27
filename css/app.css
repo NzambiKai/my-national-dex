@@ -448,6 +448,8 @@ body {
   top: calc(100% + 0.4rem);
   left: 0;
   width: min(100%, 26rem);
+  max-height: min(70vh, 34rem);
+  overflow: auto;
   padding: 0.7rem;
   border-radius: 20px;
   background: #fff;

@@ -67,6 +67,7 @@ export function renderDetail(entry, activeGame = null) {
         ${form}
       </div>
       <div class="type-row">${entry.types.map(typePill).join("")}</div>
+      ${entry.spriteNote ? `<p class="detail-note">${escapeHtml(entry.spriteNote)}</p>` : ""}
       ${statusBanner(entry)}
       <section class="detail-section">
         <h3>Box location</h3>

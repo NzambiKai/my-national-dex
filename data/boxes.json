@@ -18,8 +18,8 @@
       "group": "standard",
       "number": 1,
       "title": "Kanto",
-      "rangeLabel": "#0001\u2013#0030",
-      "subtitle": "Bulbasaur \u2013 Nidorina",
+      "rangeLabel": "#0001–#0030",
+      "subtitle": "Bulbasaur – Nidorina",
       "dexStart": 1,
       "dexEnd": 30,
       "catalogued": true
@@ -29,8 +29,8 @@
       "group": "standard",
       "number": 2,
       "title": "Kanto",
-      "rangeLabel": "#0031\u2013#0060",
-      "subtitle": "Nidoqueen \u2013 Poliwag",
+      "rangeLabel": "#0031–#0060",
+      "subtitle": "Nidoqueen – Poliwag",
       "dexStart": 31,
       "dexEnd": 60,
       "catalogued": true
@@ -40,349 +40,349 @@
       "group": "standard",
       "number": 3,
       "title": "Kanto",
-      "rangeLabel": "#0061\u2013#0090",
-      "subtitle": "Poliwhirl \u2013 Shellder",
+      "rangeLabel": "#0061–#0090",
+      "subtitle": "Poliwhirl – Shellder",
       "dexStart": 61,
       "dexEnd": 90,
-      "catalogued": false
+      "catalogued": true
     },
     {
       "id": "standard-04",
       "group": "standard",
       "number": 4,
       "title": "Kanto",
-      "rangeLabel": "#0091\u2013#0120",
-      "subtitle": "Cloyster \u2013 Staryu",
+      "rangeLabel": "#0091–#0120",
+      "subtitle": "Cloyster – Staryu",
       "dexStart": 91,
       "dexEnd": 120,
-      "catalogued": false
+      "catalogued": true
     },
     {
       "id": "standard-05",
       "group": "standard",
       "number": 5,
       "title": "Kanto",
-      "rangeLabel": "#0121\u2013#0150",
-      "subtitle": "Starmie \u2013 Mewtwo",
+      "rangeLabel": "#0121–#0150",
+      "subtitle": "Starmie – Mewtwo",
       "dexStart": 121,
       "dexEnd": 150,
-      "catalogued": false
+      "catalogued": true
     },
     {
       "id": "standard-06",
       "group": "standard",
       "number": 6,
-      "title": "Kanto \u00b7 Johto",
-      "rangeLabel": "#0151\u2013#0180",
-      "subtitle": "Mew \u2013 Flaaffy",
+      "title": "Kanto · Johto",
+      "rangeLabel": "#0151–#0180",
+      "subtitle": "Mew – Flaaffy",
       "dexStart": 151,
       "dexEnd": 180,
-      "catalogued": false
+      "catalogued": true
     },
     {
       "id": "standard-07",
       "group": "standard",
       "number": 7,
       "title": "Johto",
-      "rangeLabel": "#0181\u2013#0210",
-      "subtitle": "Ampharos \u2013 Granbull",
+      "rangeLabel": "#0181–#0210",
+      "subtitle": "Ampharos – Granbull",
       "dexStart": 181,
       "dexEnd": 210,
-      "catalogued": false
+      "catalogued": true
     },
     {
       "id": "standard-08",
       "group": "standard",
       "number": 8,
       "title": "Johto",
-      "rangeLabel": "#0211\u2013#0240",
-      "subtitle": "Qwilfish \u2013 Magby",
+      "rangeLabel": "#0211–#0240",
+      "subtitle": "Qwilfish – Magby",
       "dexStart": 211,
       "dexEnd": 240,
-      "catalogued": false
+      "catalogued": true
     },
     {
       "id": "standard-09",
       "group": "standard",
       "number": 9,
-      "title": "Johto \u00b7 Hoenn",
-      "rangeLabel": "#0241\u2013#0270",
-      "subtitle": "Miltank \u2013 Lotad",
+      "title": "Johto · Hoenn",
+      "rangeLabel": "#0241–#0270",
+      "subtitle": "Miltank – Lotad",
       "dexStart": 241,
       "dexEnd": 270,
-      "catalogued": false
+      "catalogued": true
     },
     {
       "id": "standard-10",
       "group": "standard",
       "number": 10,
       "title": "Hoenn",
-      "rangeLabel": "#0271\u2013#0300",
-      "subtitle": "Lombre \u2013 Skitty",
+      "rangeLabel": "#0271–#0300",
+      "subtitle": "Lombre – Skitty",
       "dexStart": 271,
       "dexEnd": 300,
-      "catalogued": false
+      "catalogued": true
     },
     {
       "id": "standard-11",
       "group": "standard",
       "number": 11,
       "title": "Hoenn",
-      "rangeLabel": "#0301\u2013#0330",
-      "subtitle": "Delcatty \u2013 Flygon",
+      "rangeLabel": "#0301–#0330",
+      "subtitle": "Delcatty – Flygon",
       "dexStart": 301,
       "dexEnd": 330,
-      "catalogued": false
+      "catalogued": true
     },
     {
       "id": "standard-12",
       "group": "standard",
       "number": 12,
       "title": "Hoenn",
-      "rangeLabel": "#0331\u2013#0360",
-      "subtitle": "Cacnea \u2013 Wynaut",
+      "rangeLabel": "#0331–#0360",
+      "subtitle": "Cacnea – Wynaut",
       "dexStart": 331,
       "dexEnd": 360,
-      "catalogued": false
+      "catalogued": true
     },
     {
       "id": "standard-13",
       "group": "standard",
       "number": 13,
-      "title": "Hoenn \u00b7 Sinnoh",
-      "rangeLabel": "#0361\u2013#0390",
-      "subtitle": "Snorunt \u2013 Chimchar",
+      "title": "Hoenn · Sinnoh",
+      "rangeLabel": "#0361–#0390",
+      "subtitle": "Snorunt – Chimchar",
       "dexStart": 361,
       "dexEnd": 390,
-      "catalogued": false
+      "catalogued": true
     },
     {
       "id": "standard-14",
       "group": "standard",
       "number": 14,
       "title": "Sinnoh",
-      "rangeLabel": "#0391\u2013#0420",
-      "subtitle": "Monferno \u2013 Cherubi",
+      "rangeLabel": "#0391–#0420",
+      "subtitle": "Monferno – Cherubi",
       "dexStart": 391,
       "dexEnd": 420,
-      "catalogued": false
+      "catalogued": true
     },
     {
       "id": "standard-15",
       "group": "standard",
       "number": 15,
       "title": "Sinnoh",
-      "rangeLabel": "#0421\u2013#0450",
-      "subtitle": "Cherrim \u2013 Hippowdon",
+      "rangeLabel": "#0421–#0450",
+      "subtitle": "Cherrim – Hippowdon",
       "dexStart": 421,
       "dexEnd": 450,
-      "catalogued": false
+      "catalogued": true
     },
     {
       "id": "standard-16",
       "group": "standard",
       "number": 16,
       "title": "Sinnoh",
-      "rangeLabel": "#0451\u2013#0480",
-      "subtitle": "Skorupi \u2013 Uxie",
+      "rangeLabel": "#0451–#0480",
+      "subtitle": "Skorupi – Uxie",
       "dexStart": 451,
       "dexEnd": 480,
-      "catalogued": false
+      "catalogued": true
     },
     {
       "id": "standard-17",
       "group": "standard",
       "number": 17,
-      "title": "Sinnoh \u00b7 Unova",
-      "rangeLabel": "#0481\u2013#0510",
-      "subtitle": "Mesprit \u2013 Liepard",
+      "title": "Sinnoh · Unova",
+      "rangeLabel": "#0481–#0510",
+      "subtitle": "Mesprit – Liepard",
       "dexStart": 481,
       "dexEnd": 510,
-      "catalogued": false
+      "catalogued": true
     },
     {
       "id": "standard-18",
       "group": "standard",
       "number": 18,
       "title": "Unova",
-      "rangeLabel": "#0511\u2013#0540",
-      "subtitle": "Pansage \u2013 Sewaddle",
+      "rangeLabel": "#0511–#0540",
+      "subtitle": "Pansage – Sewaddle",
       "dexStart": 511,
       "dexEnd": 540,
-      "catalogued": false
+      "catalogued": true
     },
     {
       "id": "standard-19",
       "group": "standard",
       "number": 19,
       "title": "Unova",
-      "rangeLabel": "#0541\u2013#0570",
-      "subtitle": "Swadloon \u2013 Zorua",
+      "rangeLabel": "#0541–#0570",
+      "subtitle": "Swadloon – Zorua",
       "dexStart": 541,
       "dexEnd": 570,
-      "catalogued": false
+      "catalogued": true
     },
     {
       "id": "standard-20",
       "group": "standard",
       "number": 20,
       "title": "Unova",
-      "rangeLabel": "#0571\u2013#0600",
-      "subtitle": "Zoroark \u2013 Klang",
+      "rangeLabel": "#0571–#0600",
+      "subtitle": "Zoroark – Klang",
       "dexStart": 571,
       "dexEnd": 600,
-      "catalogued": false
+      "catalogued": true
     },
     {
       "id": "standard-21",
       "group": "standard",
       "number": 21,
       "title": "Unova",
-      "rangeLabel": "#0601\u2013#0630",
-      "subtitle": "Klinklang \u2013 Mandibuzz",
+      "rangeLabel": "#0601–#0630",
+      "subtitle": "Klinklang – Mandibuzz",
       "dexStart": 601,
       "dexEnd": 630,
-      "catalogued": false
+      "catalogued": true
     },
     {
       "id": "standard-22",
       "group": "standard",
       "number": 22,
-      "title": "Unova \u00b7 Kalos",
-      "rangeLabel": "#0631\u2013#0660",
-      "subtitle": "Heatmor \u2013 Diggersby",
+      "title": "Unova · Kalos",
+      "rangeLabel": "#0631–#0660",
+      "subtitle": "Heatmor – Diggersby",
       "dexStart": 631,
       "dexEnd": 660,
-      "catalogued": false
+      "catalogued": true
     },
     {
       "id": "standard-23",
       "group": "standard",
       "number": 23,
       "title": "Kalos",
-      "rangeLabel": "#0661\u2013#0690",
-      "subtitle": "Fletchling \u2013 Skrelp",
+      "rangeLabel": "#0661–#0690",
+      "subtitle": "Fletchling – Skrelp",
       "dexStart": 661,
       "dexEnd": 690,
-      "catalogued": false
+      "catalogued": true
     },
     {
       "id": "standard-24",
       "group": "standard",
       "number": 24,
       "title": "Kalos",
-      "rangeLabel": "#0691\u2013#0720",
-      "subtitle": "Dragalge \u2013 Hoopa",
+      "rangeLabel": "#0691–#0720",
+      "subtitle": "Dragalge – Hoopa",
       "dexStart": 691,
       "dexEnd": 720,
-      "catalogued": false
+      "catalogued": true
     },
     {
       "id": "standard-25",
       "group": "standard",
       "number": 25,
-      "title": "Kalos \u00b7 Alola",
-      "rangeLabel": "#0721\u2013#0750",
-      "subtitle": "Volcanion \u2013 Mudsdale",
+      "title": "Kalos · Alola",
+      "rangeLabel": "#0721–#0750",
+      "subtitle": "Volcanion – Mudsdale",
       "dexStart": 721,
       "dexEnd": 750,
-      "catalogued": false
+      "catalogued": true
     },
     {
       "id": "standard-26",
       "group": "standard",
       "number": 26,
       "title": "Alola",
-      "rangeLabel": "#0751\u2013#0780",
-      "subtitle": "Dewpider \u2013 Drampa",
+      "rangeLabel": "#0751–#0780",
+      "subtitle": "Dewpider – Drampa",
       "dexStart": 751,
       "dexEnd": 780,
-      "catalogued": false
+      "catalogued": true
     },
     {
       "id": "standard-27",
       "group": "standard",
       "number": 27,
-      "title": "Alola \u00b7 Galar & Hisui",
-      "rangeLabel": "#0781\u2013#0810",
-      "subtitle": "Dhelmise \u2013 Grookey",
+      "title": "Alola · Galar",
+      "rangeLabel": "#0781–#0810",
+      "subtitle": "Dhelmise – Grookey",
       "dexStart": 781,
       "dexEnd": 810,
-      "catalogued": false
+      "catalogued": true
     },
     {
       "id": "standard-28",
       "group": "standard",
       "number": 28,
-      "title": "Galar & Hisui",
-      "rangeLabel": "#0811\u2013#0840",
-      "subtitle": "Thwackey \u2013 Applin",
+      "title": "Galar",
+      "rangeLabel": "#0811–#0840",
+      "subtitle": "Thwackey – Applin",
       "dexStart": 811,
       "dexEnd": 840,
-      "catalogued": false
+      "catalogued": true
     },
     {
       "id": "standard-29",
       "group": "standard",
       "number": 29,
-      "title": "Galar & Hisui",
-      "rangeLabel": "#0841\u2013#0870",
-      "subtitle": "Flapple \u2013 Falinks",
+      "title": "Galar",
+      "rangeLabel": "#0841–#0870",
+      "subtitle": "Flapple – Falinks",
       "dexStart": 841,
       "dexEnd": 870,
-      "catalogued": false
+      "catalogued": true
     },
     {
       "id": "standard-30",
       "group": "standard",
       "number": 30,
-      "title": "Galar & Hisui",
-      "rangeLabel": "#0871\u2013#0900",
-      "subtitle": "Pincurchin \u2013 Kleavor",
+      "title": "Galar · Hisui",
+      "rangeLabel": "#0871–#0900",
+      "subtitle": "Pincurchin – Kleavor",
       "dexStart": 871,
       "dexEnd": 900,
-      "catalogued": false
+      "catalogued": true
     },
     {
       "id": "standard-31",
       "group": "standard",
       "number": 31,
-      "title": "Galar & Hisui \u00b7 Paldea",
-      "rangeLabel": "#0901\u2013#0930",
-      "subtitle": "Ursaluna \u2013 Arboliva",
+      "title": "Hisui · Paldea",
+      "rangeLabel": "#0901–#0930",
+      "subtitle": "Ursaluna – Arboliva",
       "dexStart": 901,
       "dexEnd": 930,
-      "catalogued": false
+      "catalogued": true
     },
     {
       "id": "standard-32",
       "group": "standard",
       "number": 32,
       "title": "Paldea",
-      "rangeLabel": "#0931\u2013#0960",
-      "subtitle": "Squawkabilly \u2013 Wiglett",
+      "rangeLabel": "#0931–#0960",
+      "subtitle": "Squawkabilly – Wiglett",
       "dexStart": 931,
       "dexEnd": 960,
-      "catalogued": false
+      "catalogued": true
     },
     {
       "id": "standard-33",
       "group": "standard",
       "number": 33,
       "title": "Paldea",
-      "rangeLabel": "#0961\u2013#0990",
-      "subtitle": "Wugtrio \u2013 Iron Treads",
+      "rangeLabel": "#0961–#0990",
+      "subtitle": "Wugtrio – Iron Treads",
       "dexStart": 961,
       "dexEnd": 990,
-      "catalogued": false
+      "catalogued": true
     },
     {
       "id": "standard-34",
       "group": "standard",
       "number": 34,
       "title": "Paldea",
-      "rangeLabel": "#0991\u2013#1020",
-      "subtitle": "Iron Bundle \u2013 Gouging Fire",
+      "rangeLabel": "#0991–#1020",
+      "subtitle": "Iron Bundle – Gouging Fire",
       "dexStart": 991,
       "dexEnd": 1020,
       "catalogued": true
@@ -392,19 +392,239 @@
       "group": "standard",
       "number": 35,
       "title": "Paldea",
-      "rangeLabel": "#1021\u2013#1025",
-      "subtitle": "Raging Bolt \u2013 Pecharunt",
+      "rangeLabel": "#1021–#1025",
+      "subtitle": "Raging Bolt – Pecharunt",
       "dexStart": 1021,
       "dexEnd": 1025,
-      "catalogued": false
+      "catalogued": true
     },
     {
       "id": "alt-01",
       "group": "alt",
       "number": 1,
-      "title": "Regional Forms & Variants",
-      "rangeLabel": "Alola \u00b7 Galar \u00b7 Hisui \u00b7 Paldea",
-      "subtitle": "Rattata \u2013 Indeedee",
+      "title": "Alolan Forms",
+      "rangeLabel": "Alolan Forms",
+      "subtitle": "Alolan Rattata – Alolan Marowak",
+      "dexStart": null,
+      "dexEnd": null,
+      "catalogued": true
+    },
+    {
+      "id": "alt-02",
+      "group": "alt",
+      "number": 2,
+      "title": "Galarian Forms",
+      "rangeLabel": "Galarian Forms",
+      "subtitle": "Galarian Meowth – Galarian Stunfisk",
+      "dexStart": null,
+      "dexEnd": null,
+      "catalogued": true
+    },
+    {
+      "id": "alt-03",
+      "group": "alt",
+      "number": 3,
+      "title": "Hisuian Forms",
+      "rangeLabel": "Hisuian Forms",
+      "subtitle": "Hisuian Growlithe – Hisuian Decidueye",
+      "dexStart": null,
+      "dexEnd": null,
+      "catalogued": true
+    },
+    {
+      "id": "alt-04",
+      "group": "alt",
+      "number": 4,
+      "title": "Paldean Forms",
+      "rangeLabel": "Paldean Forms",
+      "subtitle": "Paldean Tauros – Paldean Wooper",
+      "dexStart": null,
+      "dexEnd": null,
+      "catalogued": true
+    },
+    {
+      "id": "alt-05",
+      "group": "alt",
+      "number": 5,
+      "title": "Gender-Specific Forms",
+      "rangeLabel": "Gender-Specific Forms",
+      "subtitle": "Venusaur (Male) – Hypno (Female)",
+      "dexStart": null,
+      "dexEnd": null,
+      "catalogued": true
+    },
+    {
+      "id": "alt-06",
+      "group": "alt",
+      "number": 6,
+      "title": "Gender-Specific Forms",
+      "rangeLabel": "Gender-Specific Forms",
+      "subtitle": "Rhyhorn (Male) – Aipom (Female)",
+      "dexStart": null,
+      "dexEnd": null,
+      "catalogued": true
+    },
+    {
+      "id": "alt-07",
+      "group": "alt",
+      "number": 7,
+      "title": "Gender-Specific Forms",
+      "rangeLabel": "Gender-Specific Forms",
+      "subtitle": "Wooper (Male) – Houndoom (Female)",
+      "dexStart": null,
+      "dexEnd": null,
+      "catalogued": true
+    },
+    {
+      "id": "alt-08",
+      "group": "alt",
+      "number": 8,
+      "title": "Gender-Specific Forms",
+      "rangeLabel": "Gender-Specific Forms",
+      "subtitle": "Donphan (Male) – Numel (Female)",
+      "dexStart": null,
+      "dexEnd": null,
+      "catalogued": true
+    },
+    {
+      "id": "alt-09",
+      "group": "alt",
+      "number": 9,
+      "title": "Gender-Specific Forms",
+      "rangeLabel": "Gender-Specific Forms",
+      "subtitle": "Camerupt (Male) – Roserade (Female)",
+      "dexStart": null,
+      "dexEnd": null,
+      "catalogued": true
+    },
+    {
+      "id": "alt-10",
+      "group": "alt",
+      "number": 10,
+      "title": "Gender-Specific Forms",
+      "rangeLabel": "Gender-Specific Forms",
+      "subtitle": "Combee (Male) – Snover (Female)",
+      "dexStart": null,
+      "dexEnd": null,
+      "catalogued": true
+    },
+    {
+      "id": "alt-11",
+      "group": "alt",
+      "number": 11,
+      "title": "Gender-Specific Forms",
+      "rangeLabel": "Gender-Specific Forms",
+      "subtitle": "Abomasnow (Male) – Oinkologne (Female)",
+      "dexStart": null,
+      "dexEnd": null,
+      "catalogued": true
+    },
+    {
+      "id": "alt-12",
+      "group": "alt",
+      "number": 12,
+      "title": "Alt Forms",
+      "rangeLabel": "Alt Forms",
+      "subtitle": "Normal Pikachu – Frost Rotom",
+      "dexStart": null,
+      "dexEnd": null,
+      "catalogued": true
+    },
+    {
+      "id": "alt-13",
+      "group": "alt",
+      "number": 13,
+      "title": "Alt Forms",
+      "rangeLabel": "Alt Forms",
+      "subtitle": "Fan Rotom – White Flabébé",
+      "dexStart": null,
+      "dexEnd": null,
+      "catalogued": true
+    },
+    {
+      "id": "alt-14",
+      "group": "alt",
+      "number": 14,
+      "title": "Alt Forms",
+      "rangeLabel": "Alt Forms",
+      "subtitle": "Red Floette – 50% Zygarde",
+      "dexStart": null,
+      "dexEnd": null,
+      "catalogued": true
+    },
+    {
+      "id": "alt-15",
+      "group": "alt",
+      "number": 15,
+      "title": "Alt Forms",
+      "rangeLabel": "Alt Forms",
+      "subtitle": "Confined Hoopa – Dada Zarude",
+      "dexStart": null,
+      "dexEnd": null,
+      "catalogued": true
+    },
+    {
+      "id": "alt-16",
+      "group": "alt",
+      "number": 16,
+      "title": "Alt Forms",
+      "rangeLabel": "Alt Forms",
+      "subtitle": "Normal Ursaluna – Sinistcha (Masterpiece Form)",
+      "dexStart": null,
+      "dexEnd": null,
+      "catalogued": true
+    },
+    {
+      "id": "alt-17",
+      "group": "alt",
+      "number": 17,
+      "title": "Unown Forms",
+      "rangeLabel": "Unown Forms",
+      "subtitle": "Unown (A) – Unown (?)",
+      "dexStart": null,
+      "dexEnd": null,
+      "catalogued": true
+    },
+    {
+      "id": "alt-18",
+      "group": "alt",
+      "number": 18,
+      "title": "Vivillon Forms",
+      "rangeLabel": "Vivillon Forms",
+      "subtitle": "Vivillon (Icy Snow) – Pokéball Vivillon",
+      "dexStart": null,
+      "dexEnd": null,
+      "catalogued": true
+    },
+    {
+      "id": "alt-19",
+      "group": "alt",
+      "number": 19,
+      "title": "Alcremie Forms",
+      "rangeLabel": "Alcremie Forms",
+      "subtitle": "Alcremie (Vanilla Cream Strawberry) – Alcremie (Lemon Cream Berry)",
+      "dexStart": null,
+      "dexEnd": null,
+      "catalogued": true
+    },
+    {
+      "id": "alt-20",
+      "group": "alt",
+      "number": 20,
+      "title": "Alcremie Forms",
+      "rangeLabel": "Alcremie Forms",
+      "subtitle": "Alcremie (Lemon Cream Love) – Alcremie (Rainbow Swirl Star)",
+      "dexStart": null,
+      "dexEnd": null,
+      "catalogued": true
+    },
+    {
+      "id": "alt-21",
+      "group": "alt",
+      "number": 21,
+      "title": "Alcremie Forms",
+      "rangeLabel": "Alcremie Forms",
+      "subtitle": "Alcremie (Rainbow Swirl Clover) – Alcremie (Rainbow Swirl Ribbon)",
       "dexStart": null,
       "dexEnd": null,
       "catalogued": true

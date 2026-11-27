@@ -24,7 +24,7 @@ export function renderSearchResults(root, { query, results, activeIndex }) {
           const active = index === activeIndex;
           return `
             <button type="button" class="search-result${active ? " is-active" : ""}" role="option" data-result-id="${escapeHtml(entry.id)}" aria-selected="${active ? "true" : "false"}">
-              <img src="${spritePath(entry.spriteId)}" alt="" width="56" height="56">
+              <img src="${spritePath(entry.spriteId)}" alt="" width="56" height="56" loading="lazy" decoding="async">
               <span class="search-copy">
                 <span class="search-title">
                   <span class="search-dex">${formatDex(entry.nationalDex)}</span>
