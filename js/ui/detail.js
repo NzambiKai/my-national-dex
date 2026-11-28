@@ -12,20 +12,11 @@ function statusBanner(entry, mode) {
   return `<p class="status-banner is-missing">Still missing</p>`;
 }
 
-function gameFocus(entry, activeGame) {
-  if (!activeGame) return "";
-  const inGame = entry.games.includes(activeGame.id);
-  const label = inGame ? `Catchable in ${activeGame.short}` : `Not catchable in ${activeGame.short}`;
-  return `<p class="game-focus${inGame ? " is-in" : " is-out"}">${escapeHtml(label)}</p>`;
-}
-
-function gamesSection(entry, activeGame) {
-  const focus = gameFocus(entry, activeGame);
+function gamesSection(entry) {
   if (entry.gamesResolved.length === 0) {
     return `
       <section class="detail-section">
         <h3>Catchable on Nintendo Switch</h3>
-        ${focus}
         <div class="unavailable">
           <strong>Not currently catchable in any Nintendo Switch main-series game.</strong>
           ${entry.availabilityNote ? `<p>${escapeHtml(entry.availabilityNote)}</p>` : ""}
@@ -37,7 +28,6 @@ function gamesSection(entry, activeGame) {
   return `
     <section class="detail-section">
       <h3>Catchable on Nintendo Switch</h3>
-      ${focus}
       <div class="game-list">${entry.gamesResolved.map(gamePill).join("")}</div>
       <p class="detail-note">Main-series Switch games only. A version that is not listed cannot be obtained in that game without a trade.</p>
       ${entry.availabilityNote ? `<p class="detail-note">${escapeHtml(entry.availabilityNote)}</p>` : ""}
@@ -45,7 +35,7 @@ function gamesSection(entry, activeGame) {
   `;
 }
 
-export function renderDetail(entry, activeGame = null, mode = "normal") {
+export function renderDetail(entry, mode = "normal") {
   if (!entry) {
     return `
       <div class="detail-empty">
@@ -78,7 +68,7 @@ export function renderDetail(entry, activeGame = null, mode = "normal") {
         <p class="location-callout">${escapeHtml(locationText(entry.box, entry.slot, mode))}</p>
         <button type="button" class="btn home-btn" data-action="focus-selected">Highlight this slot</button>
       </section>
-      ${gamesSection(entry, activeGame)}
+      ${gamesSection(entry)}
     </article>
   `;
 }

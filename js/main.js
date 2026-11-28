@@ -5,7 +5,7 @@ import { searchEntries } from "./model/search.js";
 import { loadPreferences, savePreferences } from "./state/store.js";
 import { renderBox, renderStrip } from "./ui/box.js";
 import { renderDetail } from "./ui/detail.js";
-import { renderFilters, renderProgress } from "./ui/progress.js";
+import { renderProgress } from "./ui/progress.js";
 import { renderSearchResults } from "./ui/search.js";
 
 const $ = (selector) => document.querySelector(selector);
@@ -26,16 +26,10 @@ function currentBox() {
   return catalog.boxes.find((box) => box.id === state.boxId) ?? catalog.boxes[0];
 }
 
-function activeGame() {
-  return catalog.games.find((game) => game.id === state.gameId) ?? null;
-}
-
 function remember() {
   savePreferences({
     boxId: state.boxId,
     selectedId: state.selectedId,
-    filter: state.filter,
-    gameId: state.gameId,
     mode: state.mode,
   });
 }
@@ -61,15 +55,7 @@ function paint({ scrollSlot = false } = {}) {
   const restoreAction = document.activeElement?.dataset?.action;
   const box = currentBox();
   const entries = entriesInBox(catalog.entries, box.id);
-  renderProgress($("#progress-root"), catalog, { gameId: state.gameId, mode: state.mode });
-  renderFilters($("#filter-root"), {
-    filter: state.filter,
-    gameId: state.gameId,
-    games: catalog.games,
-    boxEntries: entries,
-    enabled: box.catalogued,
-    mode: state.mode,
-  });
+  renderProgress($("#progress-root"), catalog, state.mode);
   renderStrip($("#strip-root"), catalog, {
     boxId: state.boxId,
     spaceIndex: viewedSpaceIndex(),
@@ -79,14 +65,12 @@ function paint({ scrollSlot = false } = {}) {
   renderBox($("#box-root"), {
     box,
     entries,
-    filter: state.filter,
-    gameId: state.gameId,
     selectedId: state.selectedId,
     highlightId: state.highlightId,
     mode: state.mode,
   });
 
-  const html = renderDetail(selectedEntry(), activeGame(), state.mode);
+  const html = renderDetail(selectedEntry(), state.mode);
   $("#detail-desktop").innerHTML = html;
   $("#detail-offcanvas-body").innerHTML = html;
   const selected = selectedEntry();
@@ -135,10 +119,9 @@ function toggleSpaces() {
   paint();
 }
 
-function selectEntry(entry, { pulse = false, jump = false } = {}) {
+function selectEntry(entry, { pulse = false } = {}) {
   state.selectedId = entry.id;
   state.boxId = entry.boxId;
-  if (jump) state.filter = "all";
   state.highlightId = pulse ? entry.id : state.highlightId;
   state.spaceOpen = false;
   state.spaceCursor = null;
@@ -161,18 +144,6 @@ function setMode(mode) {
   if (state.query.trim()) refreshSearch();
   paint();
   document.querySelector(`.mode-btn[data-mode="${state.mode}"]`)?.focus();
-}
-
-function setFilter(filter) {
-  state.filter = filter;
-  remember();
-  paint();
-}
-
-function setGame(gameId) {
-  state.gameId = catalog.games.some((game) => game.id === gameId) ? gameId : "";
-  remember();
-  paint();
 }
 
 function refreshSearch() {
@@ -207,7 +178,7 @@ function bind() {
       const entry = state.results[state.activeIndex] ?? state.results[0];
       if (!entry) return;
       event.preventDefault();
-      selectEntry(entry, { pulse: true, jump: true });
+      selectEntry(entry, { pulse: true });
       return;
     }
     if (event.key === "Escape") {
@@ -221,7 +192,7 @@ function bind() {
     if (!button) return;
     event.preventDefault();
     const entry = catalog.entries.find((item) => item.id === button.dataset.resultId);
-    if (entry) selectEntry(entry, { pulse: true, jump: true });
+    if (entry) selectEntry(entry, { pulse: true });
   });
 
   document.addEventListener("click", (event) => {
@@ -240,17 +211,6 @@ function bind() {
     const button = event.target.closest("[data-mode]");
     if (!button) return;
     setMode(button.dataset.mode);
-  });
-
-  $("#filter-root").addEventListener("click", (event) => {
-    const gameButton = event.target.closest("[data-game-id]");
-    if (gameButton) {
-      setGame(gameButton.dataset.gameId);
-      return;
-    }
-    const button = event.target.closest("[data-filter]");
-    if (!button || button.disabled) return;
-    setFilter(button.dataset.filter);
   });
 
   $("#strip-root").addEventListener("click", (event) => {
@@ -280,7 +240,7 @@ function bind() {
       return;
     }
     const slot = event.target.closest("[data-mon-id]");
-    if (!slot || slot.classList.contains("is-filtered")) return;
+    if (!slot) return;
     const entry = catalog.entries.find((item) => item.id === slot.dataset.monId);
     if (entry) selectEntry(entry, { pulse: true });
   });
@@ -289,7 +249,7 @@ function bind() {
     host.addEventListener("click", (event) => {
       if (!event.target.closest("[data-action='focus-selected']")) return;
       const entry = selectedEntry();
-      if (entry) selectEntry(entry, { pulse: true, jump: true });
+      if (entry) selectEntry(entry, { pulse: true });
     });
   }
 
@@ -347,8 +307,6 @@ async function start() {
   state = {
     boxId: view.boxId,
     selectedId: view.selectedId,
-    filter: ["all", "caught", "missing"].includes(prefs.filter) ? prefs.filter : "all",
-    gameId: catalog.games.some((game) => game.id === prefs.gameId) ? prefs.gameId : "",
     mode: normalizeMode(prefs.mode),
     spaceOpen: false,
     spaceCursor: null,

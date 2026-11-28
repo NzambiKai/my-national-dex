@@ -25,7 +25,7 @@ import { DEXDB_SNAPSHOT, readDexdbUrl } from "./lib/dexdb-source.mjs";
 import { entryId } from "./lib/entry-id.mjs";
 import { loadDexData } from "./lib/load-dex.mjs";
 import { flattenLayout, layoutFromDexData } from "./lib/box-order.mjs";
-import { caughtIn, matchesView } from "../js/model/catalog.js";
+import { caughtIn } from "../js/model/catalog.js";
 import { locationText, slotPosition, standardPlacement } from "../js/model/location.js";
 import { searchEntries } from "../js/model/search.js";
 import { shinySpriteRecord } from "../js/model/sprites.js";
@@ -156,16 +156,8 @@ expect(byId.get("1010").games.length === 0, "Iron Leaves is not currently catcha
 expect(byId.get("0037-alola").games.includes("la"), "Alolan Vulpix is obtainable in Hisui");
 expect(byId.get("0077-galar").games.join() === "sh", "Galarian Ponyta is Shield only");
 
-const sample = byId.get("0006");
-expect(matchesView(sample, { filter: "all", gameId: "s" }) === sample.games.includes("s"), "game filter should follow Scarlet");
-expect(matchesView({ caught: false, games: ["s"] }, { filter: "missing", gameId: "s" }), "missing + game keeps catchable gaps");
-expect(!matchesView({ caught: true, games: ["s"] }, { filter: "missing", gameId: "s" }), "missing + game hides caught");
-expect(!matchesView({ caught: false, games: [] }, { filter: "missing", gameId: "s" }), "missing + game hides Pokémon that are not in that game");
 expect(caughtIn({ caught: true, shinyCaught: false }, "normal") && !caughtIn({ caught: true, shinyCaught: false }, "shiny"), "shiny mode reads shinyCaught");
-expect(caughtIn({ caught: false, shinyCaught: true }, "shiny") && matchesView({ caught: false, shinyCaught: true, games: ["s"] }, { filter: "caught", mode: "shiny" }), "shiny caught filter keeps shiny catches");
-expect(!matchesView({ caught: true, shinyCaught: false, games: ["s"] }, { filter: "caught", mode: "shiny" }), "shiny caught filter ignores normal catches");
-const standardBox1 = dex.entries.filter((entry) => entry.boxId === "standard-01");
-expect(standardBox1.filter((entry) => matchesView(entry, { filter: "all", gameId: "bd" })).every((entry) => entry.games.includes("bd")), "box filter stays inside the selected game");
+expect(caughtIn({ caught: false, shinyCaught: true }, "shiny") && !caughtIn({ caught: false, shinyCaught: true }, "normal"), "normal mode ignores shinyCaught");
 
 let missingSprites = 0;
 let badSprites = 0;
