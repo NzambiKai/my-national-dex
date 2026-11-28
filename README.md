@@ -2,7 +2,7 @@
 
 A static, Pokémon HOME–inspired tracker for the full National Living Dex. It is a plain site for GitHub Pages: Bootstrap 5.3.9 and Nunito come from a CDN, and every sprite and Pokédex record is stored in this repository. Nothing calls PokéAPI, or any other sprite host, while you browse.
 
-The address bar stays on the site URL. The last box, the selected Pokémon, the All / Caught / Missing filter, the Switch game filter, and the Normal / Shiny mode are saved in `localStorage`.
+The address bar stays on the site URL. The last box, the selected Pokémon, and the Normal / Shiny mode are saved in `localStorage`. Older saves may still contain a status filter or a Switch game filter; those keys are ignored.
 
 ## What is in the dex
 
@@ -24,7 +24,7 @@ Each row has its National Dex number, name, form label, types, Box / Row / Col /
 - `"caught"` is the Normal Living Dex.
 - `"shinyCaught"` is the Shiny Living Dex, kept in box/slot order.
 
-Add an id when a Pokémon is caught, for example `"0001"` or `"0037-alola"`. Remove an id to mark it missing in that mode. Everything not listed is missing. A segmented Normal / Shiny control above the boxes switches which list the progress, filters, sprites, and box labels use. Shiny boxes use Pokémon HOME's `S ` labels, such as `S 0001-0030` and `S Alt 1`.
+Add an id when a Pokémon is caught, for example `"0001"` or `"0037-alola"`. Remove an id to mark it missing in that mode. Everything not listed is missing. A segmented Normal / Shiny control above the boxes switches which list the progress, sprites, and box labels use. Shiny boxes use Pokémon HOME's `S ` labels, such as `S 0001-0030` and `S Alt 1`. Caught and missing slots are told apart by colour in both modes.
 
 ## Run it
 
@@ -32,7 +32,7 @@ From the repository root, serve the folder with any static file server. Opening 
 
 Search by name or Dex number, then press Enter. A Dex number returns every form of that species (Alcremie included) and jumps to the one you pick. The grid jumps to that box, pulses the slot, and opens the detail panel: a side card on a wide screen, an offcanvas sheet on a phone.
 
-The All / Caught / Missing filter combines with a Nintendo Switch game filter. Missing plus a game shows what is still uncaught and obtainable there. Uncaught slots use a darker desaturated sprite.
+The Box Space control and the search field share one row. From the `xl` breakpoint up, that row uses the same columns as the box and the detail card: Box Space over the box, search over the detail. Below that they stack, Box Space first. Uncaught slots use a darker desaturated sprite.
 
 ## Layout
 
@@ -41,7 +41,7 @@ The All / Caught / Missing filter combines with a Nintendo Switch game filter. M
 - `data/sprite-fallbacks.json` lists forms that have no dedicated HOME file in PokeAPI/sprites and which local sprite is used instead.
 - `data/shiny-sprites.json` maps each sprite id to a local shiny HOME file, or to a recorded fallback.
 - `js/model/` loads that data and owns slot math, Box Spaces, search, Living Dex mode, and sprite paths. Search text is indexed once when the catalog loads.
-- `js/state/store.js` persists the box, the selected Pokémon, the status filter, the game filter, and the Normal / Shiny mode.
+- `js/state/store.js` persists the box, the selected Pokémon, and the Normal / Shiny mode. It ignores leftover `filter` and `gameId` keys from older saves.
 - `js/ui/box.js` is the Box Space bar, the box picker, and the 6×5 grid. Slot images use `loading="lazy"`.
 - `assets/sprites/` holds the Pokémon HOME PNGs. Female differences that are not their own Pokémon id are stored as `<id>-f.png`. `assets/sprites/shiny/` holds the shiny HOME PNGs.
 

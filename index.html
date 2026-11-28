@@ -23,10 +23,7 @@
       <div class="container-xxl header-inner">
         <div class="brand">
           <img class="brand-mark" src="./assets/icons/icon-512.png" width="46" height="46" alt="">
-          <div>
-            <p class="brand-kicker">Inspired by Pokémon HOME</p>
-            <h1>National Living Dex</h1>
-          </div>
+          <h1>National Living Dex</h1>
         </div>
       </div>
     </header>
@@ -34,8 +31,9 @@
     <main class="container-xxl app-shell">
       <div id="app-error" class="alert alert-danger" role="alert" hidden></div>
       <div id="progress-root" aria-live="polite"></div>
-      <div class="toolbar">
-        <div id="search-wrap" class="search-wrap">
+      <div class="row g-4 align-items-center toolbar">
+        <div class="col-xl-8" id="strip-root"></div>
+        <div class="col-xl-4 search-wrap" id="search-wrap">
           <label class="visually-hidden" for="search-input">Search by Pokémon name or Dex number</label>
           <div class="search-field">
             <svg class="search-icon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
@@ -46,9 +44,7 @@
           </div>
           <div id="search-results" class="search-results" hidden></div>
         </div>
-        <div id="filter-root"></div>
       </div>
-      <div id="strip-root"></div>
       <div class="row g-4 align-items-start">
         <div class="col-xl-8" id="box-root">
           <p class="loading-copy">Loading the Living Dex…</p>

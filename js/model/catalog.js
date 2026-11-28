@@ -73,7 +73,6 @@ export async function loadCatalog() {
     boxes: boxFile.boxes,
     groups: boxFile.groups,
     spaces: buildBoxSpaces(boxFile.boxes),
-    games,
     columns: boxFile.columns,
     slotsPerBox: boxFile.slotsPerBox,
   };
@@ -81,13 +80,6 @@ export async function loadCatalog() {
 
 export function caughtIn(entry, mode = "normal") {
   return isShinyMode(mode) ? entry.shinyCaught === true : entry.caught === true;
-}
-
-export function matchesView(entry, { filter = "all", gameId = "", mode = "normal" } = {}) {
-  const caught = caughtIn(entry, mode);
-  const statusOk = filter === "all" || (filter === "caught" ? caught : !caught);
-  const gameOk = !gameId || entry.games.includes(gameId);
-  return statusOk && gameOk;
 }
 
 export function entriesInBox(entries, boxId) {

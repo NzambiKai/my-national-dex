@@ -1,4 +1,4 @@
-import { boxProgress, caughtIn, matchesView } from "../model/catalog.js";
+import { boxProgress, caughtIn } from "../model/catalog.js";
 import { formatDex, locationText } from "../model/location.js";
 import { isShinyMode } from "../model/mode.js";
 import { spriteFileFor } from "../model/sprites.js";
@@ -13,13 +13,6 @@ function chevron(direction) {
 function caret(open) {
   const points = open ? "6 14 12 8 18 14" : "6 10 12 16 18 10";
   return `<svg class="space-caret" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><polyline points="${points}" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"></polyline></svg>`;
-}
-
-function caughtMark(mode) {
-  if (isShinyMode(mode)) {
-    return `<span class="caught-badge is-shiny" title="Shiny caught"><svg viewBox="0 0 16 16" width="12" height="12" aria-hidden="true"><path fill="currentColor" d="M8 1.1 9.2 6.1 14.2 8 9.2 9.9 8 14.9 6.8 9.9 1.8 8 6.8 6.1Z"></path></svg></span>`;
-  }
-  return `<span class="caught-badge" title="Caught"><svg viewBox="0 0 16 16" width="12" height="12" aria-hidden="true"><path d="M3.2 8.3 6.3 11.4 12.8 4.6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path></svg></span>`;
 }
 
 function spaceTile(box, entries, currentBoxId, mode) {
@@ -87,7 +80,7 @@ export function renderStrip(root, catalog, { boxId, spaceIndex, open, mode = "no
   `;
 }
 
-function slotButton(entry, { selected, highlighted, filtered, mode }) {
+function slotButton(entry, { selected, highlighted, mode }) {
   const caught = caughtIn(entry, mode);
   const place = locationText(entry.box, entry.slot, mode);
   const classes = [
@@ -95,15 +88,12 @@ function slotButton(entry, { selected, highlighted, filtered, mode }) {
     caught ? "is-caught" : "is-missing",
     selected ? "is-selected" : "",
     highlighted ? "is-highlighted" : "",
-    filtered ? "is-filtered" : "",
   ]
     .filter(Boolean)
     .join(" ");
-  const badge = caught ? caughtMark(mode) : "";
   const form = entry.formName ? `<span class="slot-form">${escapeHtml(entry.formDetail || entry.formName)}</span>` : "";
   return `
-    <button type="button" class="${classes}" data-mon-id="${escapeHtml(entry.id)}" aria-pressed="${selected ? "true" : "false"}" aria-label="${escapeHtml(`${entry.title}, ${formatDex(entry.nationalDex)}, ${caught ? "caught" : "missing"}, ${place}`)}" ${filtered ? 'tabindex="-1"' : ""}>
-      ${badge}
+    <button type="button" class="${classes}" data-mon-id="${escapeHtml(entry.id)}" aria-pressed="${selected ? "true" : "false"}" aria-label="${escapeHtml(`${entry.title}, ${formatDex(entry.nationalDex)}, ${caught ? "caught" : "missing"}, ${place}`)}">
       <span class="slot-sprite">
         <img src="${spriteFileFor(entry, mode)}" alt="" width="128" height="128" draggable="false" loading="lazy" decoding="async">
       </span>
@@ -116,7 +106,7 @@ function slotButton(entry, { selected, highlighted, filtered, mode }) {
   `;
 }
 
-export function renderBox(root, { box, entries, filter, gameId = "", selectedId, highlightId, mode = "normal" }) {
+export function renderBox(root, { box, entries, selectedId, highlightId, mode = "normal" }) {
   const caughtCount = entries.filter((entry) => caughtIn(entry, mode)).length;
   const progress = entries.length ? `${caughtCount}/${entries.length}` : "—";
   const heading = boxHeading(box, mode);
@@ -154,15 +144,11 @@ export function renderBox(root, { box, entries, filter, gameId = "", selectedId,
   }
 
   const cells = entries
-    .map((entry) => {
-      const filtered = entry.id !== selectedId && entry.id !== highlightId && !matchesView(entry, { filter, gameId, mode });
-      return slotButton(entry, {
-        selected: entry.id === selectedId,
-        highlighted: entry.id === highlightId,
-        filtered,
-        mode,
-      });
-    })
+    .map((entry) => slotButton(entry, {
+      selected: entry.id === selectedId,
+      highlighted: entry.id === highlightId,
+      mode,
+    }))
     .join("");
 
   root.innerHTML = `
